@@ -19,6 +19,7 @@ class ViewController: UIViewController {
         print("OnBoarding finished, we won't show it again. Have fun using this app.")
         onBoardingHappenedAlready = true
         storeOnBoardingState()
+        goToHomePage()
         
     }
     
@@ -51,25 +52,9 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         skipButton.isHidden = true
         
-        checkIfOnBoardingHappenedBefore()
+        setupPaperOnboardingView()
+        view.bringSubviewToFront(skipButton)
         
-        if(!onBoardingHappenedAlready) {
-            setupPaperOnboardingView()
-            view.bringSubviewToFront(skipButton)
-        }
-        
-    }
-    
-    private func checkIfOnBoardingHappenedBefore() {
-        let preferences = UserDefaults.standard
-
-        let onBoardingKey = "onBoarding"
-
-        if preferences.object(forKey: onBoardingKey) == nil {
-            onBoardingHappenedAlready = false
-        } else {
-            onBoardingHappenedAlready = preferences.bool(forKey: onBoardingKey)
-        }
     }
     
     private func storeOnBoardingState() {
@@ -85,6 +70,10 @@ class ViewController: UIViewController {
         if !didSave {
             //  Couldn't save (I've never seen this happen in real world testing)
         }
+    }
+    
+    private func goToHomePage() {
+        self.present(ViewControllerHomePage(), animated: true, completion: nil)
     }
     
     private func setupPaperOnboardingView() {
