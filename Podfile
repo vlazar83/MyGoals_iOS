@@ -7,5 +7,8 @@ target 'MyGoals_iOS' do
 
   # Pods for MyGoals_iOS
   pod 'paper-onboarding'
+  pod 'SideMenu'
+  pod 'Shuffle-iOS'
+  pod 'PopBounceButton'
 
 end

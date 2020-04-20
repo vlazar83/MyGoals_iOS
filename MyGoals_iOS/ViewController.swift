@@ -13,8 +13,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var skipButton: UIButton!
     
+    var onBoardingHappenedAlready = false
+    
     @IBAction func skipButtonTapped(_ sender: Any) {
-        print(#function)
+        print("OnBoarding finished, we won't show it again. Have fun using this app.")
+        onBoardingHappenedAlready = true
+        storeOnBoardingState()
+        
     }
     
     fileprivate let items = [
@@ -46,8 +51,40 @@ class ViewController: UIViewController {
         // Do any additional setup after loading the view.
         skipButton.isHidden = true
         
-        setupPaperOnboardingView()
-        view.bringSubviewToFront(skipButton)
+        checkIfOnBoardingHappenedBefore()
+        
+        if(!onBoardingHappenedAlready) {
+            setupPaperOnboardingView()
+            view.bringSubviewToFront(skipButton)
+        }
+        
+    }
+    
+    private func checkIfOnBoardingHappenedBefore() {
+        let preferences = UserDefaults.standard
+
+        let onBoardingKey = "onBoarding"
+
+        if preferences.object(forKey: onBoardingKey) == nil {
+            onBoardingHappenedAlready = false
+        } else {
+            onBoardingHappenedAlready = preferences.bool(forKey: onBoardingKey)
+        }
+    }
+    
+    private func storeOnBoardingState() {
+        let preferences = UserDefaults.standard
+
+        let onBoardingKey = "onBoarding"
+
+        preferences.set(onBoardingHappenedAlready, forKey: onBoardingKey)
+
+        //  Save to disk
+        let didSave = preferences.synchronize()
+
+        if !didSave {
+            //  Couldn't save (I've never seen this happen in real world testing)
+        }
     }
     
     private func setupPaperOnboardingView() {
@@ -71,14 +108,6 @@ class ViewController: UIViewController {
     }
 
 
-}
-
-// MARK: Actions
-
-extension ViewController {
-
-
-    
 }
 
 // MARK: PaperOnboardingDelegate
