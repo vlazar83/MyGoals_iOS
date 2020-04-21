@@ -98,7 +98,7 @@ class ViewControllerHomePage: UIViewController {
         cardStack.anchor(top: view.safeAreaLayoutGuide.topAnchor,
                          left: view.safeAreaLayoutGuide.leftAnchor,
                          bottom: buttonStackView.topAnchor,
-                         right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 0)
+                         right: view.safeAreaLayoutGuide.rightAnchor, paddingTop: 40)
     }
     
     @objc private func handleShift(_ sender: UIButton) {
