@@ -3,7 +3,7 @@ import Shuffle_iOS
 class SampleCard: SwipeCard {
     
     override var swipeDirections: [SwipeDirection] {
-        return [.left, .up, .right]
+        return [.left, .right]
     }
     
     override init(frame: CGRect) {
@@ -30,6 +30,6 @@ class SampleCard: SwipeCard {
     
     func configure(withModel model: SampleCardModel) {
         content = SampleCardContentView(withImage: model.image)
-        footer = SampleCardFooterView(withTitle: "\(model.name), \(model.age)", subtitle: model.occupation)
+        footer = SampleCardFooterView(withTitle: "\(model.cardGoal)", subtitle: model.cardGoalDescription)
     }
 }

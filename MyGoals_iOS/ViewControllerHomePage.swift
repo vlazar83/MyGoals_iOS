@@ -14,37 +14,8 @@ class ViewControllerHomePage: UIViewController {
     private let cardStack = SwipeCardStack()
     
     private let buttonStackView = ButtonStackView()
-    
-    private let cardModels = [
-        SampleCardModel(name: "Michelle",
-                        age: 26,
-                        occupation: "Graphic Designer",
-                        image: UIImage(named: "michelle")),
-        SampleCardModel(name: "Joshua",
-                        age: 27,
-                        occupation: "Business Services Sales Representative",
-                        image: UIImage(named: "joshua")),
-        SampleCardModel(name: "Daiane",
-                        age: 23,
-                        occupation: "Graduate Student",
-                        image: UIImage(named: "daiane")),
-        SampleCardModel(name: "Julian",
-                        age: 25,
-                        occupation: "Model/Photographer",
-                        image: UIImage(named: "julian")),
-        SampleCardModel(name: "Andrew",
-                        age: 26,
-                        occupation: nil,
-                        image: UIImage(named: "andrew")),
-        SampleCardModel(name: "Bailey",
-                        age: 25,
-                        occupation: "Software Engineer",
-                        image: UIImage(named: "bailey")),
-        SampleCardModel(name: "Rachel",
-                        age: 27,
-                        occupation: "Interior Designer",
-                        image: UIImage(named: "rachel"))
-    ]
+        
+    private let cardModels = DefaultCardSet.shared.getCardModels()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -125,11 +96,11 @@ extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSou
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didUndoCardAt index: Int, from direction: SwipeDirection) {
-        print("Undo \(direction) swipe on \(cardModels[index].name)")
+        print("Undo \(direction) swipe on \(cardModels[index].cardGoal)")
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
-        print("Swiped \(direction) on \(cardModels[index].name)")
+        print("Swiped \(direction) on \(cardModels[index].cardGoal)")
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {

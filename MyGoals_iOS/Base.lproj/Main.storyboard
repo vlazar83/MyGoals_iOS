@@ -114,14 +114,23 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-5f-DUa">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
                                         <state key="normal" title="Settings"/>
+                                        <connections>
+                                            <segue destination="ppB-xj-I66" kind="showDetail" id="WwL-yK-Mqa"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nB5-LO-DFB">
                                         <rect key="frame" x="0.0" y="48" width="95" height="30"/>
                                         <state key="normal" title="Own Card Set"/>
+                                        <connections>
+                                            <segue destination="1Ve-8b-wG4" kind="showDetail" id="nkW-hC-UNI"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSq-oD-CSW">
                                         <rect key="frame" x="0.0" y="96" width="95" height="30"/>
                                         <state key="normal" title="About"/>
+                                        <connections>
+                                            <segue destination="Dpp-gZ-iQ1" kind="showDetail" id="s3f-Ia-QKs"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                             </stackView>
@@ -138,6 +147,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hHU-aH-0yo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2441" y="108"/>
+        </scene>
+        <!--Settings-->
+        <scene sceneID="jOM-Q3-wUb">
+            <objects>
+                <viewController title="Settings" id="ppB-xj-I66" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="nFY-tr-D5g">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="BCD-QM-2Ae"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NpB-ch-1Qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3302" y="-417"/>
+        </scene>
+        <!--Own Card Set-->
+        <scene sceneID="nlc-A3-HYB">
+            <objects>
+                <viewController title="Own Card Set" id="1Ve-8b-wG4" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="Sgw-Tm-HRV">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="Wcv-ez-H3D"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uLK-Qh-WfY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3302" y="264"/>
+        </scene>
+        <!--About-->
+        <scene sceneID="fCB-uy-Yhg">
+            <objects>
+                <viewController title="About" id="Dpp-gZ-iQ1" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="B8o-1p-02J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="LRL-Vh-Sww"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="NGR-VN-Gwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3302" y="1053"/>
         </scene>
     </scenes>
     <resources>

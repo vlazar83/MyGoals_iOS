@@ -4,7 +4,7 @@ class SampleCardOverlay: UIView {
     
     static func left() -> UIView {
         let overlay = UIView()
-        let leftTextView = SampleOverlayLabelView(withTitle: "NOPE",
+        let leftTextView = SampleOverlayLabelView(withTitle: "LATER",
                                                   color: .sampleRed,
                                                   rotation: CGFloat.pi/10)
         overlay.addSubview(leftTextView)
@@ -27,7 +27,7 @@ class SampleCardOverlay: UIView {
     
     static func right() -> UIView {
         let overlay = UIView()
-        let rightTextView = SampleOverlayLabelView(withTitle: "LIKE",
+        let rightTextView = SampleOverlayLabelView(withTitle: "DONE",
                                                    color: .sampleGreen,
                                                    rotation: -CGFloat.pi/10)
         overlay.addSubview(rightTextView)
