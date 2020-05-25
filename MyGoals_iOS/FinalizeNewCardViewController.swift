@@ -11,6 +11,8 @@ import UIKit
 
 class FinalizeNewCardViewController: UIViewController, UINavigationControllerDelegate, UIImagePickerControllerDelegate {
     
+    @IBOutlet weak var imageTitle: UITextField!
+    @IBOutlet weak var imageDetails: UITextField!
     @IBOutlet weak var imageView: UIImageView!
     
     override func viewDidLoad() {
@@ -19,7 +21,7 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
         navigationController?.setToolbarHidden(false, animated: false)
         
     }
-    
+
     @IBAction func takePhoto(_ sender: Any) {
         let vc = UIImagePickerController()
         vc.sourceType = .camera
@@ -28,7 +30,24 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
         present(vc, animated: true)
     }
     @IBAction func createNewCard(_ sender: Any) {
+        
+        let newCard = SampleCardModel(cardGoal: imageTitle.text ?? "title",
+                                      cardGoalDescription: imageDetails.text ?? "details",
+                                      image: imageView.image,
+                                      cardType: SampleCardModel.cardTypes.Red)
+        
+        CreatedCardSet.shared.addCardModel(card: newCard)
+        
+        navigateBack()
+        
     }
+    
+    func navigateBack(){
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let createdCardsViewController = storyBoard.instantiateViewController(withIdentifier: "ownCardSet") as! CreatedCardsViewController
+        self.present(createdCardsViewController, animated: true, completion: nil)
+    }
+    
     override open var shouldAutorotate: Bool {
         return false
     }

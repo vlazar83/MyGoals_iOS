@@ -13,12 +13,16 @@ class CreatedCardSet{
 
     static let shared = CreatedCardSet()
 
-    private let cardModels : [SampleCardModel] = []
+    private var cardModels : [SampleCardModel] = []
     //Initializer access level change now
     private init(){}
 
     func getCardModels() -> [SampleCardModel]{
         return cardModels
+    }
+    
+    func addCardModel(card: SampleCardModel) -> (){
+        cardModels.append(card)
     }
 
 }

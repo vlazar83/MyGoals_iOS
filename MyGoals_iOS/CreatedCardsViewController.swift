@@ -124,8 +124,8 @@ extension CreatedCardsViewController: ButtonStackViewDelegateForCreatedCards, Sw
         case 5:
             // new card creation starting here
             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "finalizeNewCard") as! FinalizeNewCardViewController
-            self.present(balanceViewController, animated: true, completion: nil)
+            let finalizeNewCardViewController = storyBoard.instantiateViewController(withIdentifier: "finalizeNewCard") as! FinalizeNewCardViewController
+            self.present(finalizeNewCardViewController, animated: true, completion: nil)
         default:
             break
         }

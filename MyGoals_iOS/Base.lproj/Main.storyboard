@@ -166,7 +166,7 @@
         <!--Own Card Set-->
         <scene sceneID="nlc-A3-HYB">
             <objects>
-                <viewController title="Own Card Set" id="1Ve-8b-wG4" customClass="CreatedCardsViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ownCardSet" title="Own Card Set" id="1Ve-8b-wG4" customClass="CreatedCardsViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgw-Tm-HRV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -228,42 +228,52 @@
                                     </textField>
                                 </subviews>
                             </stackView>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-HH-oa9">
-                                <rect key="frame" x="164" y="617" width="46" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Create"/>
-                                <connections>
-                                    <action selector="createNewCard:" destination="U5i-9u-0cg" eventType="touchUpInside" id="sKR-MD-pBi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-CH-GYb">
-                                <rect key="frame" x="149" y="579" width="76" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-CH-GYb">
+                                <rect key="frame" x="149" y="525" width="76" height="30"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="takePhoto:" destination="U5i-9u-0cg" eventType="touchUpInside" id="ecK-eY-DbF"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-qR-G4L">
-                                <rect key="frame" x="16" y="197" width="343" height="374"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-qR-G4L">
+                                <rect key="frame" x="16" y="197" width="343" height="320"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-HH-oa9">
+                                <rect key="frame" x="164" y="563" width="46" height="30"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createNewCard:" destination="U5i-9u-0cg" eventType="touchUpInside" id="sKR-MD-pBi"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="yeZ-CH-GYb" secondAttribute="trailing" constant="150" id="2tx-GP-CtX"/>
+                            <constraint firstItem="dTH-qR-G4L" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="16" id="8hm-sT-SDI"/>
+                            <constraint firstItem="yeZ-CH-GYb" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="149" id="CPC-ba-SPh"/>
+                            <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="dTH-qR-G4L" secondAttribute="trailing" constant="16" id="Cb8-UZ-unB"/>
+                            <constraint firstItem="1d1-eq-Gha" firstAttribute="bottom" secondItem="RgR-HH-oa9" secondAttribute="bottom" constant="74" id="Ge9-h6-8JO"/>
                             <constraint firstItem="rQi-Vg-XrO" firstAttribute="top" secondItem="1d1-eq-Gha" secondAttribute="top" constant="20" id="LvY-R7-vyh"/>
                             <constraint firstItem="rQi-Vg-XrO" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="97" id="O6s-LE-qMO"/>
+                            <constraint firstItem="RgR-HH-oa9" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="164" id="Pyo-Ay-dBx"/>
                             <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="rQi-Vg-XrO" secondAttribute="trailing" constant="96.5" id="RuU-Wt-QHt"/>
+                            <constraint firstItem="dTH-qR-G4L" firstAttribute="top" secondItem="rQi-Vg-XrO" secondAttribute="bottom" constant="8" id="Wzr-Nc-svF"/>
+                            <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="RgR-HH-oa9" secondAttribute="trailing" constant="165" id="m5E-SJ-VS5"/>
+                            <constraint firstItem="RgR-HH-oa9" firstAttribute="top" secondItem="yeZ-CH-GYb" secondAttribute="bottom" constant="8" id="mMd-ra-rHM"/>
+                            <constraint firstItem="yeZ-CH-GYb" firstAttribute="top" secondItem="dTH-qR-G4L" secondAttribute="bottom" constant="8" id="rTx-d0-aMc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1d1-eq-Gha"/>
                     </view>
+                    <navigationItem key="navigationItem" id="PSg-Mo-vhT"/>
                     <connections>
+                        <outlet property="imageDetails" destination="bcz-fK-lM5" id="sPU-9g-iE1"/>
+                        <outlet property="imageTitle" destination="6eG-3M-HrW" id="2eW-x4-bba"/>
                         <outlet property="imageView" destination="dTH-qR-G4L" id="S1b-FJ-vyh"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zbb-9Z-0W7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4304.8000000000002" y="262.21889055472263"/>
+            <point key="canvasLocation" x="4144.8000000000002" y="262.21889055472263"/>
         </scene>
     </scenes>
     <resources>
