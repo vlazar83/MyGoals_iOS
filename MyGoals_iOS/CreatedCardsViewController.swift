@@ -1,21 +1,21 @@
 //
-//  ViewControllerHomePage.swift
+//  CreatedCardsViewController.swift
 //  MyGoals_iOS
 //
-//  Created by admin on 2020. 04. 20..
+//  Created by admin on 2020. 05. 25..
 //  Copyright © 2020. admin. All rights reserved.
 //
 import Shuffle_iOS
 import UIKit
 import PopBounceButton
 
-class ViewControllerHomePage: UIViewController {
+class CreatedCardsViewController: UIViewController {
 
     private let cardStack = SwipeCardStack()
     
-    private let buttonStackView = ButtonStackView()
+    private let buttonStackView = ButtonStackViewForCreatedCards()
         
-    private let cardModels = DefaultCardSet.shared.getCardModels()
+    private let cardModels = CreatedCardSet.shared.getCardModels()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -83,7 +83,7 @@ class ViewControllerHomePage: UIViewController {
 }
 
 //MARK: Data Source + Delegates
-extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSource, SwipeCardStackDelegate {
+extension CreatedCardsViewController: ButtonStackViewDelegateForCreatedCards, SwipeCardStackDataSource, SwipeCardStackDelegate {
     
     func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
         let card = SampleCard()
@@ -121,6 +121,11 @@ extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSou
             cardStack.swipe(.up, animated: true)
         case 4:
             cardStack.swipe(.right, animated: true)
+        case 5:
+            // new card creation starting here
+            let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+            let balanceViewController = storyBoard.instantiateViewController(withIdentifier: "finalizeNewCard") as! FinalizeNewCardViewController
+            self.present(balanceViewController, animated: true, completion: nil)
         default:
             break
         }

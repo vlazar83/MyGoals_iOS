@@ -24,6 +24,10 @@
 		8409B5D72449825B00D83EC8 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8409B5D62449825B00D83EC8 /* Assets.xcassets */; };
 		8409B5DA2449825B00D83EC8 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8409B5D82449825B00D83EC8 /* LaunchScreen.storyboard */; };
 		8411AE20245196D9001D0737 /* DefaultCardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8411AE1F245196D9001D0737 /* DefaultCardSet.swift */; };
+		8433542F247BDC4F00280D75 /* CreatedCardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8433542E247BDC4F00280D75 /* CreatedCardSet.swift */; };
+		84335431247BDD9600280D75 /* CreatedCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84335430247BDD9600280D75 /* CreatedCardsViewController.swift */; };
+		84335433247BE28000280D75 /* ButtonStackViewForCreatedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84335432247BE28000280D75 /* ButtonStackViewForCreatedCards.swift */; };
+		84335435247BE3FA00280D75 /* FinalizeNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84335434247BE3FA00280D75 /* FinalizeNewCardViewController.swift */; };
 		84F238612449852800D474A7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F238602449852800D474A7 /* Images.swift */; };
 		84F238672449855100D474A7 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238632449855100D474A7 /* Nunito-Light.ttf */; };
 		84F238682449855100D474A7 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238642449855100D474A7 /* Nunito-Regular.ttf */; };
@@ -53,6 +57,10 @@
 		8409B5D92449825B00D83EC8 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8409B5DB2449825B00D83EC8 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8411AE1F245196D9001D0737 /* DefaultCardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultCardSet.swift; sourceTree = "<group>"; };
+		8433542E247BDC4F00280D75 /* CreatedCardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedCardSet.swift; sourceTree = "<group>"; };
+		84335430247BDD9600280D75 /* CreatedCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedCardsViewController.swift; sourceTree = "<group>"; };
+		84335432247BE28000280D75 /* ButtonStackViewForCreatedCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStackViewForCreatedCards.swift; sourceTree = "<group>"; };
+		84335434247BE3FA00280D75 /* FinalizeNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalizeNewCardViewController.swift; sourceTree = "<group>"; };
 		84F238602449852800D474A7 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		84F238632449855100D474A7 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		84F238642449855100D474A7 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				8406BA0E244DDE9200F6BABF /* ButtonStackView.swift */,
+				84335432247BE28000280D75 /* ButtonStackViewForCreatedCards.swift */,
 				8406BA0F244DDE9200F6BABF /* TinderButton.swift */,
 				8406BA10244DDE9200F6BABF /* SampleCard */,
 			);
@@ -101,6 +110,7 @@
 				8406BA14244DDE9200F6BABF /* SampleCardFooterView.swift */,
 				8406BA15244DDE9200F6BABF /* SampleCardModel.swift */,
 				8411AE1F245196D9001D0737 /* DefaultCardSet.swift */,
+				8433542E247BDC4F00280D75 /* CreatedCardSet.swift */,
 			);
 			path = SampleCard;
 			sourceTree = "<group>";
@@ -147,6 +157,8 @@
 				8409B5D82449825B00D83EC8 /* LaunchScreen.storyboard */,
 				8409B5DB2449825B00D83EC8 /* Info.plist */,
 				8409B5D32449825900D83EC8 /* MyGoals_iOS.xcdatamodeld */,
+				84335430247BDD9600280D75 /* CreatedCardsViewController.swift */,
+				84335434247BE3FA00280D75 /* FinalizeNewCardViewController.swift */,
 			);
 			path = MyGoals_iOS;
 			sourceTree = "<group>";
@@ -303,14 +315,18 @@
 				8406BA1C244DDE9300F6BABF /* SampleCardModel.swift in Sources */,
 				8406BA1B244DDE9300F6BABF /* SampleCardFooterView.swift in Sources */,
 				8406BA17244DDE9300F6BABF /* TinderButton.swift in Sources */,
+				84335435247BE3FA00280D75 /* FinalizeNewCardViewController.swift in Sources */,
 				8409B5CB2449825900D83EC8 /* AppDelegate.swift in Sources */,
 				8406BA1F244DDEDC00F6BABF /* UIView+Extensions.swift in Sources */,
 				84F238612449852800D474A7 /* Images.swift in Sources */,
+				84335433247BE28000280D75 /* ButtonStackViewForCreatedCards.swift in Sources */,
 				8411AE20245196D9001D0737 /* DefaultCardSet.swift in Sources */,
 				8406BA1A244DDE9300F6BABF /* SampleCardOverlay.swift in Sources */,
+				84335431247BDD9600280D75 /* CreatedCardsViewController.swift in Sources */,
 				8406BA19244DDE9300F6BABF /* SampleCardContentView.swift in Sources */,
 				8406BA16244DDE9300F6BABF /* ButtonStackView.swift in Sources */,
 				8409B5D52449825900D83EC8 /* MyGoals_iOS.xcdatamodeld in Sources */,
+				8433542F247BDC4F00280D75 /* CreatedCardSet.swift in Sources */,
 				8409B5CD2449825900D83EC8 /* SceneDelegate.swift in Sources */,
 				8406BA18244DDE9300F6BABF /* SampleCard.swift in Sources */,
 			);

@@ -8,13 +8,14 @@ class SampleCardModel {
         case Blue
         case Red
         case Green
+        case LightGreen
     }
     
     let cardGoal: String
     let cardGoalDescription: String
     let image: UIImage?
     let cardId: Int
-    let cardType: cardTypes    // Blue / Red / Green
+    let cardType: cardTypes    // Blue / Red / Green / LightGreen
     
     internal init(cardGoal: String, cardGoalDescription: String, image: UIImage?, cardType: cardTypes) {
         

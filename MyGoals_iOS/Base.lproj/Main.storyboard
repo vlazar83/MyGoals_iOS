@@ -166,7 +166,7 @@
         <!--Own Card Set-->
         <scene sceneID="nlc-A3-HYB">
             <objects>
-                <viewController title="Own Card Set" id="1Ve-8b-wG4" sceneMemberID="viewController">
+                <viewController title="Own Card Set" id="1Ve-8b-wG4" customClass="CreatedCardsViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Sgw-Tm-HRV">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -192,6 +192,78 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGR-VN-Gwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3302" y="1053"/>
+        </scene>
+        <!--Finalize New Card View Controller-->
+        <scene sceneID="Jbr-jv-XtT">
+            <objects>
+                <viewController storyboardIdentifier="finalizeNewCard" id="U5i-9u-0cg" customClass="FinalizeNewCardViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1Nv-be-8Tz">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="rQi-Vg-XrO">
+                                <rect key="frame" x="97" y="20" width="181.5" height="169"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter New Card Title:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6i4-iR-zcb">
+                                        <rect key="frame" x="9.5" y="0.0" width="162.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="title goes here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="6eG-3M-HrW">
+                                        <rect key="frame" x="30.5" y="40.5" width="120.5" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter New Card Details:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qqe-nD-gnc">
+                                        <rect key="frame" x="0.0" y="94.5" width="181.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="details goes here" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="bcz-fK-lM5">
+                                        <rect key="frame" x="21.5" y="135" width="139" height="34"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits"/>
+                                    </textField>
+                                </subviews>
+                            </stackView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-HH-oa9">
+                                <rect key="frame" x="164" y="617" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Create"/>
+                                <connections>
+                                    <action selector="createNewCard:" destination="U5i-9u-0cg" eventType="touchUpInside" id="sKR-MD-pBi"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-CH-GYb">
+                                <rect key="frame" x="149" y="579" width="76" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Take Photo"/>
+                                <connections>
+                                    <action selector="takePhoto:" destination="U5i-9u-0cg" eventType="touchUpInside" id="ecK-eY-DbF"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-qR-G4L">
+                                <rect key="frame" x="16" y="197" width="343" height="374"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="rQi-Vg-XrO" firstAttribute="top" secondItem="1d1-eq-Gha" secondAttribute="top" constant="20" id="LvY-R7-vyh"/>
+                            <constraint firstItem="rQi-Vg-XrO" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="97" id="O6s-LE-qMO"/>
+                            <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="rQi-Vg-XrO" secondAttribute="trailing" constant="96.5" id="RuU-Wt-QHt"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="1d1-eq-Gha"/>
+                    </view>
+                    <connections>
+                        <outlet property="imageView" destination="dTH-qR-G4L" id="S1b-FJ-vyh"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Zbb-9Z-0W7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4304.8000000000002" y="262.21889055472263"/>
         </scene>
     </scenes>
     <resources>

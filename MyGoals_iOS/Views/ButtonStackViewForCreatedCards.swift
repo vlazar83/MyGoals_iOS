@@ -1,12 +1,19 @@
+//
+//  ButtonStackViewForCreatedCards.swift
+//  MyGoals_iOS
+//
+//  Created by admin on 2020. 05. 25..
+//  Copyright © 2020. admin. All rights reserved.
+//
 import PopBounceButton
 
-protocol ButtonStackViewDelegate: class {
+protocol ButtonStackViewDelegateForCreatedCards: class {
     func didTapButton(button: TinderButton)
 }
 
-class ButtonStackView: UIStackView {
+class ButtonStackViewForCreatedCards: UIStackView {
     
-    weak var delegate: ButtonStackViewDelegate?
+    weak var delegate: ButtonStackViewDelegateForCreatedCards?
     
     private let undoButton: TinderButton = {
         let button = TinderButton()
@@ -66,8 +73,9 @@ class ButtonStackView: UIStackView {
         addArrangedSubview(from: passButton, diameterMultiplier: largeMultiplier)
         addArrangedSubview(from: undoButton, diameterMultiplier: smallMultiplier)
         //addArrangedSubview(from: superLikeButton, diameterMultiplier: smallMultiplier)
+        addArrangedSubview(from: boostButton, diameterMultiplier: smallMultiplier)
         addArrangedSubview(from: likeButton, diameterMultiplier: largeMultiplier)
-        //addArrangedSubview(from: boostButton, diameterMultiplier: smallMultiplier)
+
     }
     
     private func addArrangedSubview(from button: TinderButton, diameterMultiplier: CGFloat) {
