@@ -29,7 +29,7 @@ class SampleCard: SwipeCard {
     }
     
     func configure(withModel model: SampleCardModel) {
-        content = SampleCardContentView(withImage: model.image)
+        content = SampleCardContentView(withImage: model.image?.getImage())
         footer = SampleCardFooterView(withTitle: "\(model.cardGoal)", subtitle: model.cardGoalDescription)
     }
 }

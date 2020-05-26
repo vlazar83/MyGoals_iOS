@@ -12,6 +12,7 @@ import UIKit
 class CreatedCardSet{
 
     static let shared = CreatedCardSet()
+    static let createdCardSetKey = "CREATED_CARD_SET"
 
     private var cardModels : [SampleCardModel] = []
     //Initializer access level change now
@@ -19,6 +20,10 @@ class CreatedCardSet{
 
     func getCardModels() -> [SampleCardModel]{
         return cardModels
+    }
+    
+    func setCardModels(NewCardModels: [SampleCardModel]) -> (){
+        self.cardModels = NewCardModels
     }
     
     func addCardModel(card: SampleCardModel) -> (){

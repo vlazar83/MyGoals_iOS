@@ -1,10 +1,11 @@
 import UIKit
+import Foundation
 
-class SampleCardModel {
+class SampleCardModel :NSObject, Codable{
     
     static var cardsCount = 0
     
-    enum cardTypes {
+    enum cardTypes: String, Codable {
         case Blue
         case Red
         case Green
@@ -13,11 +14,11 @@ class SampleCardModel {
     
     let cardGoal: String
     let cardGoalDescription: String
-    let image: UIImage?
+    let image: Image?
     let cardId: Int
     let cardType: cardTypes    // Blue / Red / Green / LightGreen
     
-    internal init(cardGoal: String, cardGoalDescription: String, image: UIImage?, cardType: cardTypes) {
+    internal init(cardGoal: String, cardGoalDescription: String, image: Image?, cardType: cardTypes) {
         
         SampleCardModel.cardsCount += 1
         
@@ -27,6 +28,23 @@ class SampleCardModel {
         self.cardId = SampleCardModel.cardsCount
         self.cardType = cardType
         
+    }
+    
+    struct Image: Codable{
+        let imageData: Data?
+        
+        init(withImage image: UIImage) {
+            self.imageData = image.jpegData(compressionQuality: 0.5)
+        }
+
+        func getImage() -> UIImage? {
+            guard let imageData = self.imageData else {
+                return nil
+            }
+            let image = UIImage(data: imageData)
+            
+            return image
+        }
     }
     
 }

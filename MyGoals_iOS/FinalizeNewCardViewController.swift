@@ -29,17 +29,36 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
         vc.delegate = self
         present(vc, animated: true)
     }
+    
     @IBAction func createNewCard(_ sender: Any) {
         
         let newCard = SampleCardModel(cardGoal: imageTitle.text ?? "title",
                                       cardGoalDescription: imageDetails.text ?? "details",
-                                      image: imageView.image,
+                                      image: SampleCardModel.Image(withImage: imageView!.image!),
                                       cardType: SampleCardModel.cardTypes.Red)
         
         CreatedCardSet.shared.addCardModel(card: newCard)
         
+        storeData()
+        
         navigateBack()
         
+    }
+    
+    func storeData(){
+        do {
+            // Create JSON Encoder
+            let encoder = JSONEncoder()
+
+            // Encode Note
+            let data = try encoder.encode(CreatedCardSet.shared.getCardModels())
+
+            // Write/Set Data
+            UserDefaults.standard.set(data, forKey: CreatedCardSet.createdCardSetKey)
+
+        } catch {
+            print("Unable to Encode Array of Notes (\(error))")
+        }
     }
     
     func navigateBack(){
