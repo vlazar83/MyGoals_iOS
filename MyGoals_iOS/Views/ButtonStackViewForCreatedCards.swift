@@ -31,9 +31,9 @@ class ButtonStackViewForCreatedCards: UIStackView {
         return button
     }()
     
-    private let superLikeButton: TinderButton = {
+    private let deleteButton: TinderButton = {
         let button = TinderButton()
-        button.setImage(UIImage(named: "star"), for: .normal)
+        button.setImage(UIImage(named: "deleteBin"), for: .normal)
         button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
         button.tag = 3
         return button
@@ -47,7 +47,7 @@ class ButtonStackViewForCreatedCards: UIStackView {
         return button
     }()
     
-    private let boostButton: TinderButton = {
+    private let takephotoButton: TinderButton = {
         let button = TinderButton()
         button.setImage(UIImage(named: "lightning"), for: .normal)
         button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
@@ -72,8 +72,8 @@ class ButtonStackViewForCreatedCards: UIStackView {
         //addArrangedSubview(from: undoButton, diameterMultiplier: smallMultiplier)
         addArrangedSubview(from: passButton, diameterMultiplier: largeMultiplier)
         addArrangedSubview(from: undoButton, diameterMultiplier: smallMultiplier)
-        //addArrangedSubview(from: superLikeButton, diameterMultiplier: smallMultiplier)
-        addArrangedSubview(from: boostButton, diameterMultiplier: smallMultiplier)
+        addArrangedSubview(from: deleteButton, diameterMultiplier: smallMultiplier)
+        addArrangedSubview(from: takephotoButton, diameterMultiplier: smallMultiplier)
         addArrangedSubview(from: likeButton, diameterMultiplier: largeMultiplier)
 
     }

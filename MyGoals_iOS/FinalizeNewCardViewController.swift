@@ -39,26 +39,10 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
         
         CreatedCardSet.shared.addCardModel(card: newCard)
         
-        storeData()
+        Utils.storeCreatedCardsToUserDefaults()
         
         navigateBack()
         
-    }
-    
-    func storeData(){
-        do {
-            // Create JSON Encoder
-            let encoder = JSONEncoder()
-
-            // Encode Note
-            let data = try encoder.encode(CreatedCardSet.shared.getCardModels())
-
-            // Write/Set Data
-            UserDefaults.standard.set(data, forKey: CreatedCardSet.createdCardSetKey)
-
-        } catch {
-            print("Unable to Encode Array of Notes (\(error))")
-        }
     }
     
     func navigateBack(){

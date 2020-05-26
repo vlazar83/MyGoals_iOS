@@ -29,5 +29,22 @@ class CreatedCardSet{
     func addCardModel(card: SampleCardModel) -> (){
         cardModels.append(card)
     }
+    
+    func deleteCardModel(cardId: Int) -> (){
+        var foundAtIndex = -1;
+        for (index, element) in cardModels.enumerated() {
+            
+            if(cardId == element.cardId) {
+                foundAtIndex = index;
+                break;
+            }
+            
+            
+        }
+        if(foundAtIndex != -1) {
+            cardModels.remove(at: foundAtIndex)
+        }
+        
+    }
 
 }

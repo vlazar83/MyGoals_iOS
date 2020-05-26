@@ -15,7 +15,7 @@ class CreatedCardsViewController: UIViewController {
     
     private let buttonStackView = ButtonStackViewForCreatedCards()
         
-    private let cardModels = CreatedCardSet.shared.getCardModels()
+    private var cardModels = CreatedCardSet.shared.getCardModels()
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -118,7 +118,13 @@ extension CreatedCardsViewController: ButtonStackViewDelegateForCreatedCards, Sw
         case 2:
             cardStack.swipe(.left, animated: true)
         case 3:
-            cardStack.swipe(.up, animated: true)
+            if(cardModels.count > 0) {
+                CreatedCardSet.shared.deleteCardModel(cardId: cardModels[cardStack.topCardIndex].cardId)
+                cardStack.swipe(.up, animated: true)
+                cardModels = CreatedCardSet.shared.getCardModels()
+                cardStack.reloadData()
+                Utils.storeCreatedCardsToUserDefaults()
+            }
         case 4:
             cardStack.swipe(.right, animated: true)
         case 5:

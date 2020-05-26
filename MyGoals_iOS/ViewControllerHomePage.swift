@@ -28,24 +28,8 @@ class ViewControllerHomePage: UIViewController {
         layoutButtonStackView()
         layoutCardStackView()
         configureBackgroundGradient()
-        loadCreatedCardsFromUserDefaults()
+        Utils.loadCreatedCardsFromUserDefaults()
         
-    }
-    
-    private func loadCreatedCardsFromUserDefaults() {
-        if let data = UserDefaults.standard.data(forKey: CreatedCardSet.createdCardSetKey) {
-            do {
-                // Create JSON Decoder
-                let decoder = JSONDecoder()
-
-                // Decode Note
-                let createdCards = try decoder.decode([SampleCardModel].self, from: data)
-                CreatedCardSet.shared.setCardModels(NewCardModels: createdCards)
-
-            } catch {
-                print("Unable to Decode Notes (\(error))")
-            }
-        }
     }
 
     private func configureNavigationBar() {
