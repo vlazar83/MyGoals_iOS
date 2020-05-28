@@ -42,4 +42,39 @@ class Utils {
         }
     }
     
+    static func loadCardsFromUserDefaults(key: String) -> [SampleCardModel] {
+        var createdCards:[SampleCardModel] = []
+        if let data = UserDefaults.standard.data(forKey: key) {
+            do {
+                // Create JSON Decoder
+                let decoder = JSONDecoder()
+
+                // Decode Note
+                createdCards = try decoder.decode([SampleCardModel].self, from: data)
+
+                } catch {
+                    print("Unable to Decode Notes (\(error))")
+                }
+        }
+        return createdCards
+    }
+    
+    static func storeCardsToUserDefaults(cardSet: [SampleCardModel], key: String){
+        do {
+            // Create JSON Encoder
+            let encoder = JSONEncoder()
+
+            // Encode Note
+            let data = try encoder.encode(cardSet)
+
+            // Write/Set Data
+            UserDefaults.standard.set(data, forKey: key)
+
+        } catch {
+            print("Unable to Encode Array of Notes (\(error))")
+        }
+    }
+    
+    
+    
 }

@@ -47,9 +47,7 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
     }
     
     func navigateBack(){
-        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
-        let createdCardsViewController = storyBoard.instantiateViewController(withIdentifier: "ownCardSet") as! CreatedCardsViewController
-        self.present(createdCardsViewController, animated: true, completion: nil)
+        dismiss(animated: true, completion: nil)
     }
     
     override open var shouldAutorotate: Bool {

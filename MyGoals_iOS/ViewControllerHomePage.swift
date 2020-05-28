@@ -15,11 +15,12 @@ class ViewControllerHomePage: UIViewController {
     
     private let buttonStackView = ButtonStackView()
         
-    private let cardModels = DefaultCardSet.shared.getCardModels()
+    private var cardModels = PlannedCardSet.shared.getCardModels()
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        cardModels = Utils.loadCardsFromUserDefaults(key: PlannedCardSet.plannedCardSetKey)
         cardStack.delegate = self
         cardStack.dataSource = self
         buttonStackView.delegate = self
