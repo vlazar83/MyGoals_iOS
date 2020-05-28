@@ -111,11 +111,11 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="lwK-vC-HRZ">
                                 <rect key="frame" x="16" y="72" width="95" height="174"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-5f-DUa">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cms-Vd-OQq">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
-                                        <state key="normal" title="Settings"/>
+                                        <state key="normal" title="Planning"/>
                                         <connections>
-                                            <segue destination="ppB-xj-I66" kind="showDetail" id="WwL-yK-Mqa"/>
+                                            <segue destination="HQi-kR-XgV" kind="showDetail" id="WhR-Sh-E2w"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nB5-LO-DFB">
@@ -125,11 +125,11 @@
                                             <segue destination="1Ve-8b-wG4" kind="showDetail" id="nkW-hC-UNI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cms-Vd-OQq">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-5f-DUa">
                                         <rect key="frame" x="0.0" y="96" width="95" height="30"/>
-                                        <state key="normal" title="Planning"/>
+                                        <state key="normal" title="Settings"/>
                                         <connections>
-                                            <segue destination="HQi-kR-XgV" kind="showDetail" id="WhR-Sh-E2w"/>
+                                            <segue destination="ppB-xj-I66" kind="showDetail" id="WwL-yK-Mqa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSq-oD-CSW">
@@ -293,13 +293,90 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <viewLayoutGuide key="safeArea" id="MfH-4B-gZV"/>
                     </view>
+                    <navigationItem key="navigationItem" id="wqv-im-gCQ"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Ca7-WH-C6Z" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="3302" y="-1130"/>
         </scene>
+        <!--Create New Card View Controller-->
+        <scene sceneID="TsA-Gb-Sc5">
+            <objects>
+                <viewController storyboardIdentifier="createNewCard" id="vkW-kn-w2Y" customClass="CreateNewCardViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VTu-zd-kI1">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Card Goal" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HSG-zy-ugh">
+                                <rect key="frame" x="16" y="20" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Enter Card Details" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Zxi-bZ-LrV">
+                                <rect key="frame" x="16" y="91" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter card goal" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="laC-75-Jyv">
+                                <rect key="frame" x="16" y="49" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="card details goes here..." textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="xOj-jO-KSl">
+                                <rect key="frame" x="16" y="120" width="343" height="34"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqc-PS-xR0">
+                                <rect key="frame" x="157" y="162" width="60" height="65"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="65" id="BUs-HO-Q7e"/>
+                                    <constraint firstAttribute="width" constant="60" id="dEr-Iq-obg"/>
+                                    <constraint firstAttribute="width" secondItem="oqc-PS-xR0" secondAttribute="height" multiplier="12:13" id="kRb-bk-P4y"/>
+                                </constraints>
+                                <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
+                                <state key="normal" title="Create" image="addButton"/>
+                                <connections>
+                                    <action selector="createbuttonClicked:" destination="vkW-kn-w2Y" eventType="touchUpInside" id="zsh-0c-ExQ"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="laC-75-Jyv" secondAttribute="trailing" constant="16" id="1HG-kC-K5b"/>
+                            <constraint firstItem="oqc-PS-xR0" firstAttribute="top" secondItem="xOj-jO-KSl" secondAttribute="bottom" constant="8" id="31y-kO-Sjt"/>
+                            <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="oqc-PS-xR0" secondAttribute="trailing" constant="158" id="3ko-ds-tr0"/>
+                            <constraint firstItem="Zxi-bZ-LrV" firstAttribute="top" secondItem="laC-75-Jyv" secondAttribute="bottom" constant="8" id="5jj-gV-fWI"/>
+                            <constraint firstItem="oqc-PS-xR0" firstAttribute="top" secondItem="xOj-jO-KSl" secondAttribute="bottom" constant="8" id="6A0-7i-Owo"/>
+                            <constraint firstItem="HSG-zy-ugh" firstAttribute="leading" secondItem="0aQ-Gl-ON9" secondAttribute="leading" constant="16" id="8Ff-RO-Pof"/>
+                            <constraint firstItem="oqc-PS-xR0" firstAttribute="leading" secondItem="0aQ-Gl-ON9" secondAttribute="leading" constant="157" id="8t9-8Q-JZE"/>
+                            <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="HSG-zy-ugh" secondAttribute="trailing" constant="16" id="EPc-fr-gl2"/>
+                            <constraint firstItem="xOj-jO-KSl" firstAttribute="top" secondItem="Zxi-bZ-LrV" secondAttribute="bottom" constant="8" id="HMz-Sk-X6z"/>
+                            <constraint firstItem="HSG-zy-ugh" firstAttribute="top" secondItem="0aQ-Gl-ON9" secondAttribute="top" constant="20" id="bir-AA-ZV7"/>
+                            <constraint firstItem="laC-75-Jyv" firstAttribute="leading" secondItem="0aQ-Gl-ON9" secondAttribute="leading" constant="16" id="cJQ-Va-RGt"/>
+                            <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="Zxi-bZ-LrV" secondAttribute="trailing" constant="16" id="cky-c5-R0I"/>
+                            <constraint firstItem="xOj-jO-KSl" firstAttribute="leading" secondItem="0aQ-Gl-ON9" secondAttribute="leading" constant="16" id="grF-bp-zpE"/>
+                            <constraint firstItem="laC-75-Jyv" firstAttribute="top" secondItem="HSG-zy-ugh" secondAttribute="bottom" constant="8" id="lmr-dw-xUi"/>
+                            <constraint firstItem="Zxi-bZ-LrV" firstAttribute="leading" secondItem="0aQ-Gl-ON9" secondAttribute="leading" constant="16" id="mN3-uf-e8Z"/>
+                            <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="xOj-jO-KSl" secondAttribute="trailing" constant="16" id="trq-mb-DYw"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="0aQ-Gl-ON9"/>
+                    </view>
+                    <connections>
+                        <outlet property="cardDetailsTextField" destination="xOj-jO-KSl" id="DSX-jA-Fqp"/>
+                        <outlet property="cardGoalTextField" destination="laC-75-Jyv" id="M3P-Jz-Yg6"/>
+                        <outlet property="createButtonOutlet" destination="oqc-PS-xR0" id="cnL-Pp-WWl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Pkv-6w-1kv" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="4144.8000000000002" y="-1130.2848575712144"/>
+        </scene>
     </scenes>
     <resources>
+        <image name="addButton" width="128" height="128"/>
         <image name="menu" width="48" height="48"/>
     </resources>
 </document>

@@ -119,7 +119,8 @@ class PlanTheCardSetViewController: UIViewController {
             //    cardStack.reloadData()
             case 2:
                 cardStack.swipe(.left, animated: true)
-            //case 3:
+            case 3:
+                openCreateNewCardView()
             case 4:
                 PlannedCardSet.shared.addCardModel(card: cardModels[cardStack.topCardIndex])
                 cardStack.swipe(.right, animated: true)
@@ -134,6 +135,16 @@ class PlanTheCardSetViewController: UIViewController {
         
         func navigateBack(){
             dismiss(animated: true, completion: nil)
+        }
+        
+        func openCreateNewCardView(){
+            if(cardStack.topCard != nil) {
+                let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+                let createNewCardViewController = storyBoard.instantiateViewController(withIdentifier: "createNewCard") as! CreateNewCardViewController
+                createNewCardViewController.sampleCard = cardModels[cardStack.topCardIndex]
+                self.present(createNewCardViewController, animated: true, completion: nil)
+            }
+            
         }
         
     }

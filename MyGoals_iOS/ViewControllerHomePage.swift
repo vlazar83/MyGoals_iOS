@@ -116,6 +116,9 @@ extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSou
     func didTapButton(button: TinderButton) {
         switch button.tag {
         case 1:
+            PlannedCardSet.shared.setCardModels(NewCardModels: Utils.loadCardsFromUserDefaults(key: PlannedCardSet.plannedCardSetKey))
+            cardModels = PlannedCardSet.shared.getCardModels()
+            
             cardStack.reloadData()
         case 2:
             cardStack.swipe(.left, animated: true)

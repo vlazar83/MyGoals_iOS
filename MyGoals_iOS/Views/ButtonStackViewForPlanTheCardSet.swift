@@ -31,9 +31,9 @@ class ButtonStackViewForPlanTheCardSet: UIStackView {
         return button
     }()
     
-    private let deleteButton: TinderButton = {
+    private let createCardBasedOnTheTopCardButton: TinderButton = {
         let button = TinderButton()
-        button.setImage(UIImage(named: "deleteBin"), for: .normal)
+        button.setImage(UIImage(named: "star"), for: .normal)
         button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
         button.tag = 3
         return button
@@ -72,7 +72,7 @@ class ButtonStackViewForPlanTheCardSet: UIStackView {
         //addArrangedSubview(from: undoButton, diameterMultiplier: smallMultiplier)
         addArrangedSubview(from: passButton, diameterMultiplier: largeMultiplier)
         addArrangedSubview(from: takeTheseChosenCardsButton, diameterMultiplier: smallMultiplier)
-        //addArrangedSubview(from: deleteButton, diameterMultiplier: smallMultiplier)
+        addArrangedSubview(from: createCardBasedOnTheTopCardButton, diameterMultiplier: smallMultiplier)
         //addArrangedSubview(from: takephotoButton, diameterMultiplier: smallMultiplier)
         addArrangedSubview(from: likeButton, diameterMultiplier: largeMultiplier)
 

@@ -32,6 +32,7 @@
 		84335431247BDD9600280D75 /* CreatedCardsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84335430247BDD9600280D75 /* CreatedCardsViewController.swift */; };
 		84335433247BE28000280D75 /* ButtonStackViewForCreatedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84335432247BE28000280D75 /* ButtonStackViewForCreatedCards.swift */; };
 		84335435247BE3FA00280D75 /* FinalizeNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84335434247BE3FA00280D75 /* FinalizeNewCardViewController.swift */; };
+		84C0D47024801805008D9D1C /* CreateNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84C0D46F24801805008D9D1C /* CreateNewCardViewController.swift */; };
 		84F238612449852800D474A7 /* Images.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84F238602449852800D474A7 /* Images.swift */; };
 		84F238672449855100D474A7 /* Nunito-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238632449855100D474A7 /* Nunito-Light.ttf */; };
 		84F238682449855100D474A7 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238642449855100D474A7 /* Nunito-Regular.ttf */; };
@@ -69,6 +70,7 @@
 		84335430247BDD9600280D75 /* CreatedCardsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatedCardsViewController.swift; sourceTree = "<group>"; };
 		84335432247BE28000280D75 /* ButtonStackViewForCreatedCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonStackViewForCreatedCards.swift; sourceTree = "<group>"; };
 		84335434247BE3FA00280D75 /* FinalizeNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinalizeNewCardViewController.swift; sourceTree = "<group>"; };
+		84C0D46F24801805008D9D1C /* CreateNewCardViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateNewCardViewController.swift; sourceTree = "<group>"; };
 		84F238602449852800D474A7 /* Images.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Images.swift; sourceTree = "<group>"; };
 		84F238632449855100D474A7 /* Nunito-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Light.ttf"; sourceTree = "<group>"; };
 		84F238642449855100D474A7 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
@@ -170,6 +172,7 @@
 				84335430247BDD9600280D75 /* CreatedCardsViewController.swift */,
 				84335434247BE3FA00280D75 /* FinalizeNewCardViewController.swift */,
 				8424E4A3247FDEEE00E4664F /* PlanTheCardSetViewController.swift */,
+				84C0D46F24801805008D9D1C /* CreateNewCardViewController.swift */,
 				840D03A5247D198F00376145 /* Utils.swift */,
 			);
 			path = MyGoals_iOS;
@@ -336,6 +339,7 @@
 				84F238612449852800D474A7 /* Images.swift in Sources */,
 				84335433247BE28000280D75 /* ButtonStackViewForCreatedCards.swift in Sources */,
 				8411AE20245196D9001D0737 /* DefaultCardSet.swift in Sources */,
+				84C0D47024801805008D9D1C /* CreateNewCardViewController.swift in Sources */,
 				8406BA1A244DDE9300F6BABF /* SampleCardOverlay.swift in Sources */,
 				84335431247BDD9600280D75 /* CreatedCardsViewController.swift in Sources */,
 				8406BA19244DDE9300F6BABF /* SampleCardContentView.swift in Sources */,
