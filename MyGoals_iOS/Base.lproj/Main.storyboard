@@ -329,15 +329,10 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqc-PS-xR0">
-                                <rect key="frame" x="157" y="162" width="60" height="65"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="65" id="BUs-HO-Q7e"/>
-                                    <constraint firstAttribute="width" constant="60" id="dEr-Iq-obg"/>
-                                    <constraint firstAttribute="width" secondItem="oqc-PS-xR0" secondAttribute="height" multiplier="12:13" id="kRb-bk-P4y"/>
-                                </constraints>
+                            <button clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oqc-PS-xR0">
+                                <rect key="frame" x="158" y="162" width="58" height="50"/>
                                 <color key="tintColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
-                                <state key="normal" title="Create" image="addButton"/>
+                                <state key="normal" title="Create" image="plusRed"/>
                                 <connections>
                                     <action selector="createbuttonClicked:" destination="vkW-kn-w2Y" eventType="touchUpInside" id="zsh-0c-ExQ"/>
                                 </connections>
@@ -346,14 +341,14 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="laC-75-Jyv" secondAttribute="trailing" constant="16" id="1HG-kC-K5b"/>
-                            <constraint firstItem="oqc-PS-xR0" firstAttribute="top" secondItem="xOj-jO-KSl" secondAttribute="bottom" constant="8" id="31y-kO-Sjt"/>
-                            <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="oqc-PS-xR0" secondAttribute="trailing" constant="158" id="3ko-ds-tr0"/>
+                            <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="oqc-PS-xR0" secondAttribute="trailing" constant="159" id="1UD-Kw-qao"/>
                             <constraint firstItem="Zxi-bZ-LrV" firstAttribute="top" secondItem="laC-75-Jyv" secondAttribute="bottom" constant="8" id="5jj-gV-fWI"/>
                             <constraint firstItem="oqc-PS-xR0" firstAttribute="top" secondItem="xOj-jO-KSl" secondAttribute="bottom" constant="8" id="6A0-7i-Owo"/>
                             <constraint firstItem="HSG-zy-ugh" firstAttribute="leading" secondItem="0aQ-Gl-ON9" secondAttribute="leading" constant="16" id="8Ff-RO-Pof"/>
-                            <constraint firstItem="oqc-PS-xR0" firstAttribute="leading" secondItem="0aQ-Gl-ON9" secondAttribute="leading" constant="157" id="8t9-8Q-JZE"/>
                             <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="HSG-zy-ugh" secondAttribute="trailing" constant="16" id="EPc-fr-gl2"/>
                             <constraint firstItem="xOj-jO-KSl" firstAttribute="top" secondItem="Zxi-bZ-LrV" secondAttribute="bottom" constant="8" id="HMz-Sk-X6z"/>
+                            <constraint firstItem="oqc-PS-xR0" firstAttribute="leading" secondItem="0aQ-Gl-ON9" secondAttribute="leading" constant="158" id="Lo9-Ub-n28"/>
+                            <constraint firstItem="oqc-PS-xR0" firstAttribute="top" secondItem="xOj-jO-KSl" secondAttribute="bottom" constant="8" id="Q1L-PQ-Qpi"/>
                             <constraint firstItem="HSG-zy-ugh" firstAttribute="top" secondItem="0aQ-Gl-ON9" secondAttribute="top" constant="20" id="bir-AA-ZV7"/>
                             <constraint firstItem="laC-75-Jyv" firstAttribute="leading" secondItem="0aQ-Gl-ON9" secondAttribute="leading" constant="16" id="cJQ-Va-RGt"/>
                             <constraint firstItem="0aQ-Gl-ON9" firstAttribute="trailing" secondItem="Zxi-bZ-LrV" secondAttribute="trailing" constant="16" id="cky-c5-R0I"/>
@@ -376,7 +371,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="addButton" width="128" height="128"/>
         <image name="menu" width="48" height="48"/>
+        <image name="plusRed" width="50" height="50"/>
     </resources>
 </document>

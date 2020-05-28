@@ -120,6 +120,8 @@ extension CreatedCardsViewController: ButtonStackViewDelegateForCreatedCards, Sw
         case 3:
             if(cardModels.count > 0 && cardStack.topCard != nil) {
                 CreatedCardSet.shared.deleteCardModel(cardId: cardModels[cardStack.topCardIndex].cardId)
+                PlannedCardSet.shared.deleteCardModel(cardId: cardModels[cardStack.topCardIndex].cardId)
+                Utils.storeCardsToUserDefaults(cardSet: PlannedCardSet.shared.getCardModels(), key: PlannedCardSet.plannedCardSetKey)
                 cardStack.swipe(.up, animated: true)
                 cardModels = CreatedCardSet.shared.getCardModels()
                 cardStack.reloadData()

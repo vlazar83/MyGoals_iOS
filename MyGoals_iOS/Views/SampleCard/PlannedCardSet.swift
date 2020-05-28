@@ -39,4 +39,21 @@ class PlannedCardSet{
         cardModels.removeAll()
     }
     
+    func deleteCardModel(cardId: Int) -> (){
+        var foundAtIndex = -1;
+        for (index, element) in cardModels.enumerated() {
+            
+            if(cardId == element.cardId) {
+                foundAtIndex = index;
+                break;
+            }
+            
+            
+        }
+        if(foundAtIndex != -1) {
+            cardModels.remove(at: foundAtIndex)
+        }
+        
+    }
+    
 }

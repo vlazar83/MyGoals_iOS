@@ -41,6 +41,17 @@ class CreateNewCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        switch sampleCard.cardType {
+        case .Red:
+            createButtonOutlet.setImage(UIImage(named: "plusRed"), for: .normal)
+        case .Blue:
+            createButtonOutlet.setImage(UIImage(named: "plusBlue"), for: .normal)
+        case .Green:
+            createButtonOutlet.setImage(UIImage(named: "plusGreen"), for: .normal)
+        case .LightGreen:
+            createButtonOutlet.setImage(UIImage(named: "plusLightGreen"), for: .normal)
+        }
+        //
         
     }
     
