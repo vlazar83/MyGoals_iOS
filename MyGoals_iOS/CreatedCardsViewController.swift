@@ -118,7 +118,7 @@ extension CreatedCardsViewController: ButtonStackViewDelegateForCreatedCards, Sw
         case 2:
             cardStack.swipe(.left, animated: true)
         case 3:
-            if(cardModels.count > 0) {
+            if(cardModels.count > 0 && cardStack.topCard != nil) {
                 CreatedCardSet.shared.deleteCardModel(cardId: cardModels[cardStack.topCardIndex].cardId)
                 cardStack.swipe(.up, animated: true)
                 cardModels = CreatedCardSet.shared.getCardModels()

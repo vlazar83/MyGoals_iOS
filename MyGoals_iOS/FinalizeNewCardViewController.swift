@@ -14,12 +14,13 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var imageTitle: UITextField!
     @IBOutlet weak var imageDetails: UITextField!
     @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var createButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationController?.setToolbarHidden(false, animated: false)
-        
+        createButton.isHidden = true
     }
 
     @IBAction func takePhoto(_ sender: Any) {
@@ -66,5 +67,6 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
 
         // print out the image size as a test
         print(image.size)
+        createButton.isHidden = false
     }
 }

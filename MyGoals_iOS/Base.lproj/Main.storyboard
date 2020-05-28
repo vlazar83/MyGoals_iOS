@@ -266,6 +266,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="PSg-Mo-vhT"/>
                     <connections>
+                        <outlet property="createButton" destination="RgR-HH-oa9" id="ljP-bj-Ca7"/>
                         <outlet property="imageDetails" destination="bcz-fK-lM5" id="sPU-9g-iE1"/>
                         <outlet property="imageTitle" destination="6eG-3M-HrW" id="2eW-x4-bba"/>
                         <outlet property="imageView" destination="dTH-qR-G4L" id="S1b-FJ-vyh"/>
