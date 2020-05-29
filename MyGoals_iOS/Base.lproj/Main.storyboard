@@ -109,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="lwK-vC-HRZ">
-                                <rect key="frame" x="16" y="72" width="95" height="222"/>
+                                <rect key="frame" x="16" y="72" width="95" height="270"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cms-Vd-OQq">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
@@ -132,15 +132,22 @@
                                             <segue destination="1Ve-8b-wG4" kind="showDetail" id="nkW-hC-UNI"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-5f-DUa">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hlI-Ao-5BF">
                                         <rect key="frame" x="0.0" y="144" width="95" height="30"/>
+                                        <state key="normal" title="Statistics"/>
+                                        <connections>
+                                            <segue destination="s4X-BZ-DRv" kind="showDetail" id="jxf-oL-M8Z"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-5f-DUa">
+                                        <rect key="frame" x="0.0" y="192" width="95" height="30"/>
                                         <state key="normal" title="Settings"/>
                                         <connections>
                                             <segue destination="ppB-xj-I66" kind="showDetail" id="WwL-yK-Mqa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSq-oD-CSW">
-                                        <rect key="frame" x="0.0" y="192" width="95" height="30"/>
+                                        <rect key="frame" x="0.0" y="240" width="95" height="30"/>
                                         <state key="normal" title="About"/>
                                         <connections>
                                             <segue destination="Dpp-gZ-iQ1" kind="showDetail" id="s3f-Ia-QKs"/>
@@ -289,6 +296,58 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zbb-9Z-0W7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4144.8000000000002" y="262.21889055472263"/>
+        </scene>
+        <!--Statistics View Controller-->
+        <scene sceneID="PMG-nS-OSg">
+            <objects>
+                <viewController id="s4X-BZ-DRv" customClass="StatisticsViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="zbH-L6-KoN">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LnK-Ry-Jiu">
+                                <rect key="frame" x="98" y="16" width="179.5" height="49"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-Gq-tRU">
+                                        <rect key="frame" x="54.5" y="0.0" width="70.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Cards : Day / Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-zh-7dR">
+                                        <rect key="frame" x="0.0" y="28.5" width="179.5" height="20.5"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTQ-C3-A14">
+                                <rect key="frame" x="153" y="73" width="68.5" height="20.5"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="LnK-Ry-Jiu" firstAttribute="top" secondItem="Sfw-RG-YO5" secondAttribute="top" constant="16" id="5ce-Wc-g4h"/>
+                            <constraint firstItem="eTQ-C3-A14" firstAttribute="top" secondItem="LnK-Ry-Jiu" secondAttribute="bottom" constant="8" id="Hn8-Sj-Eph"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="eTQ-C3-A14" secondAttribute="trailing" constant="153.5" id="QYX-Tf-MbB"/>
+                            <constraint firstItem="eTQ-C3-A14" firstAttribute="top" secondItem="LnK-Ry-Jiu" secondAttribute="bottom" constant="8" id="TWc-qc-Ezl"/>
+                            <constraint firstItem="LnK-Ry-Jiu" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="98" id="Zpg-tG-s8N"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="LnK-Ry-Jiu" secondAttribute="trailing" constant="97.5" id="fSH-qu-zCu"/>
+                            <constraint firstItem="eTQ-C3-A14" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="153" id="j3r-ip-06T"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="Sfw-RG-YO5"/>
+                    </view>
+                    <connections>
+                        <outlet property="redCardsStatisticsLabel" destination="eTQ-C3-A14" id="avB-Ew-wgg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="R5R-ey-kaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3302" y="-2522"/>
         </scene>
         <!--Leading Idea View Controller-->
         <scene sceneID="iit-ez-183">

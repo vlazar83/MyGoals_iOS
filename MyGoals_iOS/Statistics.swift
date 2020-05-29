@@ -37,6 +37,10 @@ class Statistics :NSObject, Codable{
         return statisticsArray
     }
     
+    func getStatisticsForDay(day:Int) -> Day{
+        return statisticsArray[day]
+    }
+    
     func setStatistics(newStatisticsArray: [Day]) -> (){
         self.statisticsArray = newStatisticsArray
     }
@@ -52,12 +56,12 @@ class Statistics :NSObject, Codable{
 class Day :NSObject, Codable{
     
     // shows which day we are at
-    private var dayOfYear:Int
+    var dayOfYear:Int
     
-    private var lightGreenCardCount:Int
-    private var greenCardCount:Int
-    private var blueCardCount:Int
-    private var redCardCount:Int
+    var lightGreenCardCount:Int
+    var greenCardCount:Int
+    var blueCardCount:Int
+    var redCardCount:Int
     
     //Initializer access level change now
     init(dayOfYear : Int){

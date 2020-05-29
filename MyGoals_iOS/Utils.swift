@@ -82,8 +82,8 @@ class Utils {
                 let decoder = JSONDecoder()
 
                 // Decode Note
-                let statistics = try decoder.decode(Statistics.self, from: data)
-                Statistics.shared.setStatistics(newStatisticsArray: statistics.getStatistics())
+                let statistics = try decoder.decode([Day].self, from: data)
+                Statistics.shared.setStatistics(newStatisticsArray: statistics)
             } catch {
                 print("Unable to Decode Notes (\(error))")
             }
@@ -106,6 +106,47 @@ class Utils {
         }
     }
     
+    static func getDayOfYear() -> Int{
+        let date = Date() // now
+        let cal = Calendar.current
+        let day = cal.ordinality(of: .day, in: .year, for: date)
+        return day!
+    }
     
+    // returns an integer from 1 - 7, with 1 being Sunday and 7 being Saturday
+    static func getDayOfWeek() -> Int {
+        return Date().dayNumberOfWeek()!
+    }
     
+    static func getDayOfWeekInCorrectFormat() -> Int {
+        
+        switch getDayOfWeek() {
+        case 1:
+            return 7
+        case 2:
+            return 1
+        case 3:
+            return 2
+        case 4:
+            return 3
+        case 5:
+            return 4
+        case 6:
+            return 5
+        case 7:
+            return 6
+        default:
+            // TODO later
+            print("This should not happen..TODO Case")
+        }
+        
+        return Date().dayNumberOfWeek()!
+    }
+    
+}
+
+extension Date {
+    func dayNumberOfWeek() -> Int? {
+        return Calendar.current.dateComponents([.weekday], from: self).weekday
+    }
 }

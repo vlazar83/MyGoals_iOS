@@ -30,6 +30,7 @@ class ViewControllerHomePage: UIViewController {
         layoutCardStackView()
         configureBackgroundGradient()
         Utils.loadCreatedCardsFromUserDefaults()
+        Utils.loadStatisticsFromUserDefaults()
         
     }
 
@@ -125,7 +126,24 @@ extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSou
         case 3:
             cardStack.swipe(.up, animated: true)
         case 4:
+            //cardStack.swipe(.right, animated: true)
+            
+            switch cardModels[cardStack.topCardIndex].cardType {
+                case SampleCardModel.cardTypes.Blue:
+                    Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).blueCardCount+=1
+                case SampleCardModel.cardTypes.Red:
+                    Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).redCardCount+=1
+                case SampleCardModel.cardTypes.Green:
+                    Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).greenCardCount+=1
+                case SampleCardModel.cardTypes.LightGreen:
+                    Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).lightGreenCardCount+=1
+                case SampleCardModel.cardTypes.LeadingIdea:
+                    // do nothing
+                    print("Leading Idea card does not calculated into Statistics!")
+                }
+            Utils.storeStatisticsToUserDefaults()
             cardStack.swipe(.right, animated: true)
+            
         default:
             break
         }
