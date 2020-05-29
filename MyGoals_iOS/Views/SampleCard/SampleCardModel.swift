@@ -10,13 +10,14 @@ class SampleCardModel :NSObject, Codable{
         case Red
         case Green
         case LightGreen
+        case LeadingIdea
     }
     
     let cardGoal: String
     let cardGoalDescription: String
     let image: Image?
     let cardId: Int
-    let cardType: cardTypes    // Blue / Red / Green / LightGreen
+    let cardType: cardTypes    // Blue / Red / Green / LightGreen / LeadingIdea
     
     internal init(cardGoal: String, cardGoalDescription: String, image: Image?, cardType: cardTypes) {
         

@@ -109,7 +109,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="18" translatesAutoresizingMaskIntoConstraints="NO" id="lwK-vC-HRZ">
-                                <rect key="frame" x="16" y="72" width="95" height="174"/>
+                                <rect key="frame" x="16" y="72" width="95" height="222"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cms-Vd-OQq">
                                         <rect key="frame" x="0.0" y="0.0" width="95" height="30"/>
@@ -118,22 +118,29 @@
                                             <segue destination="HQi-kR-XgV" kind="showDetail" id="WhR-Sh-E2w"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nB5-LO-DFB">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oVI-jP-19N">
                                         <rect key="frame" x="0.0" y="48" width="95" height="30"/>
+                                        <state key="normal" title="Leading Idea"/>
+                                        <connections>
+                                            <segue destination="DYu-Yr-gB1" kind="showDetail" id="et2-Q0-LlC"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nB5-LO-DFB">
+                                        <rect key="frame" x="0.0" y="96" width="95" height="30"/>
                                         <state key="normal" title="Own Card Set"/>
                                         <connections>
                                             <segue destination="1Ve-8b-wG4" kind="showDetail" id="nkW-hC-UNI"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="H5c-5f-DUa">
-                                        <rect key="frame" x="0.0" y="96" width="95" height="30"/>
+                                        <rect key="frame" x="0.0" y="144" width="95" height="30"/>
                                         <state key="normal" title="Settings"/>
                                         <connections>
                                             <segue destination="ppB-xj-I66" kind="showDetail" id="WwL-yK-Mqa"/>
                                         </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hSq-oD-CSW">
-                                        <rect key="frame" x="0.0" y="144" width="95" height="30"/>
+                                        <rect key="frame" x="0.0" y="192" width="95" height="30"/>
                                         <state key="normal" title="About"/>
                                         <connections>
                                             <segue destination="Dpp-gZ-iQ1" kind="showDetail" id="s3f-Ia-QKs"/>
@@ -282,6 +289,47 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zbb-9Z-0W7" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="4144.8000000000002" y="262.21889055472263"/>
+        </scene>
+        <!--Leading Idea View Controller-->
+        <scene sceneID="iit-ez-183">
+            <objects>
+                <viewController id="DYu-Yr-gB1" customClass="LeadingIdeaViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="erL-J8-vpy">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="enter leading idea here" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="tTC-Hf-803">
+                                <rect key="frame" x="16" y="49" width="343" height="34"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jy3-dk-4Hm">
+                                <rect key="frame" x="162" y="91" width="51" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Update"/>
+                                <connections>
+                                    <action selector="updateButtonClicked:" destination="DYu-Yr-gB1" eventType="touchUpInside" id="Rti-mp-TYR"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Leading Idea" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VUo-U2-63E">
+                                <rect key="frame" x="138" y="20" width="98" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <viewLayoutGuide key="safeArea" id="oXS-ot-Agh"/>
+                    </view>
+                    <connections>
+                        <outlet property="enteredLeadingIdea" destination="tTC-Hf-803" id="9Se-qu-3YB"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="L4L-gU-JWD" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3301.5999999999999" y="-1826.5367316341831"/>
         </scene>
         <!--Plan The Card Set View Controller-->
         <scene sceneID="XwN-HT-Idn">

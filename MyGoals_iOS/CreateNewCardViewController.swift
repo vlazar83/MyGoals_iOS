@@ -50,6 +50,8 @@ class CreateNewCardViewController: UIViewController {
             createButtonOutlet.setImage(UIImage(named: "plusGreen"), for: .normal)
         case .LightGreen:
             createButtonOutlet.setImage(UIImage(named: "plusLightGreen"), for: .normal)
+        case .LeadingIdea: // this should not be the case ever. The planning card set does not contain the Leading Idea card. We need to have it here to avoid compiler error.
+            createButtonOutlet.setImage(UIImage(named: "plusRed"), for: .normal)
         }
         //
         

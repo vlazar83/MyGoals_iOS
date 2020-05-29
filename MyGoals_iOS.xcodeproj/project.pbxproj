@@ -38,6 +38,9 @@
 		84F238682449855100D474A7 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238642449855100D474A7 /* Nunito-Regular.ttf */; };
 		84F238692449855100D474A7 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238652449855100D474A7 /* Nunito-Bold.ttf */; };
 		84F2386A2449855100D474A7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238662449855100D474A7 /* OpenSans-Regular.ttf */; };
+		84FDBB08248153310055CEFC /* LeadingIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDBB07248153310055CEFC /* LeadingIdeaViewController.swift */; };
+		84FDBB0A248154550055CEFC /* LeadingIdeaCardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDBB09248154550055CEFC /* LeadingIdeaCardSet.swift */; };
+		84FDBB0C24815A750055CEFC /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDBB0B24815A750055CEFC /* Statistics.swift */; };
 		BF9F6D404FA5E21264B1109B /* Pods_MyGoals_iOS.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 88F38AE9F2F42D60B27E33EF /* Pods_MyGoals_iOS.framework */; };
 /* End PBXBuildFile section */
 
@@ -76,6 +79,9 @@
 		84F238642449855100D474A7 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		84F238652449855100D474A7 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		84F238662449855100D474A7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		84FDBB07248153310055CEFC /* LeadingIdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingIdeaViewController.swift; sourceTree = "<group>"; };
+		84FDBB09248154550055CEFC /* LeadingIdeaCardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingIdeaCardSet.swift; sourceTree = "<group>"; };
+		84FDBB0B24815A750055CEFC /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
 		88F38AE9F2F42D60B27E33EF /* Pods_MyGoals_iOS.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyGoals_iOS.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7284B53FD6879B9FF889F17 /* Pods-MyGoals_iOS.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyGoals_iOS.release.xcconfig"; path = "Target Support Files/Pods-MyGoals_iOS/Pods-MyGoals_iOS.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -123,6 +129,7 @@
 				8411AE1F245196D9001D0737 /* DefaultCardSet.swift */,
 				8433542E247BDC4F00280D75 /* CreatedCardSet.swift */,
 				8424E4A7247FE5BF00E4664F /* PlannedCardSet.swift */,
+				84FDBB09248154550055CEFC /* LeadingIdeaCardSet.swift */,
 			);
 			path = SampleCard;
 			sourceTree = "<group>";
@@ -174,6 +181,8 @@
 				8424E4A3247FDEEE00E4664F /* PlanTheCardSetViewController.swift */,
 				84C0D46F24801805008D9D1C /* CreateNewCardViewController.swift */,
 				840D03A5247D198F00376145 /* Utils.swift */,
+				84FDBB07248153310055CEFC /* LeadingIdeaViewController.swift */,
+				84FDBB0B24815A750055CEFC /* Statistics.swift */,
 			);
 			path = MyGoals_iOS;
 			sourceTree = "<group>";
@@ -326,6 +335,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8406BA21244DE0B300F6BABF /* ViewControllerHomePage.swift in Sources */,
+				84FDBB0C24815A750055CEFC /* Statistics.swift in Sources */,
 				8424E4A4247FDEEE00E4664F /* PlanTheCardSetViewController.swift in Sources */,
 				8409B5CF2449825900D83EC8 /* ViewController.swift in Sources */,
 				8406BA1C244DDE9300F6BABF /* SampleCardModel.swift in Sources */,
@@ -333,6 +343,7 @@
 				8406BA1B244DDE9300F6BABF /* SampleCardFooterView.swift in Sources */,
 				8424E4A6247FDFFB00E4664F /* ButtonStackViewForPlanTheCardSet.swift in Sources */,
 				8406BA17244DDE9300F6BABF /* TinderButton.swift in Sources */,
+				84FDBB08248153310055CEFC /* LeadingIdeaViewController.swift in Sources */,
 				84335435247BE3FA00280D75 /* FinalizeNewCardViewController.swift in Sources */,
 				8409B5CB2449825900D83EC8 /* AppDelegate.swift in Sources */,
 				8406BA1F244DDEDC00F6BABF /* UIView+Extensions.swift in Sources */,
@@ -346,6 +357,7 @@
 				8406BA16244DDE9300F6BABF /* ButtonStackView.swift in Sources */,
 				840D03A6247D198F00376145 /* Utils.swift in Sources */,
 				8409B5D52449825900D83EC8 /* MyGoals_iOS.xcdatamodeld in Sources */,
+				84FDBB0A248154550055CEFC /* LeadingIdeaCardSet.swift in Sources */,
 				8433542F247BDC4F00280D75 /* CreatedCardSet.swift in Sources */,
 				8409B5CD2449825900D83EC8 /* SceneDelegate.swift in Sources */,
 				8406BA18244DDE9300F6BABF /* SampleCard.swift in Sources */,

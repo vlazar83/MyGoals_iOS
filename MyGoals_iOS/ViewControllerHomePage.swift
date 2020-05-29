@@ -20,7 +20,7 @@ class ViewControllerHomePage: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        cardModels = Utils.loadCardsFromUserDefaults(key: PlannedCardSet.plannedCardSetKey)
+        cardModels = Utils.loadCardsFromUserDefaults(key: LeadingIdeaCardSet.leadingIdeaCardSetKey) + Utils.loadCardsFromUserDefaults(key: PlannedCardSet.plannedCardSetKey)
         cardStack.delegate = self
         cardStack.dataSource = self
         buttonStackView.delegate = self
@@ -116,7 +116,7 @@ extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSou
     func didTapButton(button: TinderButton) {
         switch button.tag {
         case 1:
-            PlannedCardSet.shared.setCardModels(NewCardModels: Utils.loadCardsFromUserDefaults(key: PlannedCardSet.plannedCardSetKey))
+            PlannedCardSet.shared.setCardModels(NewCardModels: Utils.loadCardsFromUserDefaults(key: LeadingIdeaCardSet.leadingIdeaCardSetKey) + Utils.loadCardsFromUserDefaults(key: PlannedCardSet.plannedCardSetKey))
             cardModels = PlannedCardSet.shared.getCardModels()
             
             cardStack.reloadData()
