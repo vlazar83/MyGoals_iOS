@@ -118,6 +118,47 @@ class Utils {
         return defaults.integer(forKey: Statistics.statisticsYearKey)
     }
     
+    static func getRedCardsCountFromWeek() -> Int {
+        var total = 0
+        
+        for n in getFirstDayOfWeekBasedOnToday()...getLastDayOfWeekBasedOnToday(){
+            total += Statistics.shared.getStatisticsForDay(day: n).redCardCount
+        }
+        
+        return total
+    }
+    
+    static func getGreenCardsCountFromWeek() -> Int {
+        var total = 0
+        
+        for n in getFirstDayOfWeekBasedOnToday()...getLastDayOfWeekBasedOnToday(){
+            total += Statistics.shared.getStatisticsForDay(day: n).greenCardCount
+        }
+        
+        return total
+    }
+    
+    static func getLightGreenCardsCountFromWeek() -> Int {
+        var total = 0
+        
+        for n in getFirstDayOfWeekBasedOnToday()...getLastDayOfWeekBasedOnToday(){
+            total += Statistics.shared.getStatisticsForDay(day: n).lightGreenCardCount
+        }
+        
+        return total
+    }
+    
+    static func getBlueCardsCountFromWeek() -> Int {
+        var total = 0
+        
+        for n in getFirstDayOfWeekBasedOnToday()...getLastDayOfWeekBasedOnToday(){
+            total += Statistics.shared.getStatisticsForDay(day: n).blueCardCount
+        }
+        
+        return total
+    }
+    
+    
     static func getDayOfYear() -> Int{
         let date = Date() // now
         let cal = Calendar.current
@@ -128,6 +169,33 @@ class Utils {
     // returns an integer from 1 - 7, with 1 being Sunday and 7 being Saturday
     static func getDayOfWeek() -> Int {
         return Date().dayNumberOfWeek()!
+    }
+    
+    static func getFirstDayOfWeekBasedOnToday() -> Int {
+        
+        let todayInYear = getDayOfYear()
+        let todayInWeek = getDayOfWeekInCorrectFormat()
+        
+        if(todayInYear - todayInWeek + 1 <= 0){
+            return 1
+        } else {
+            return todayInYear - todayInWeek + 1
+        }
+        
+    }
+    
+    static func getLastDayOfWeekBasedOnToday() -> Int {
+        
+        let todayInYear = getDayOfYear()
+        let todayInWeek = getDayOfWeekInCorrectFormat()
+        
+        // TODO for better calculation in case of year end coming during the week.
+        if(todayInYear + 7 - todayInWeek >= 366){
+            return 366
+        } else {
+            return todayInYear + 7 - todayInWeek
+        }
+        
     }
     
     static func getDayOfWeekInCorrectFormat() -> Int {

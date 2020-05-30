@@ -21,11 +21,11 @@ class StatisticsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
 
-        redCardsStatisticsLabel.text = String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).redCardCount)
+        redCardsStatisticsLabel.text = String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).redCardCount) + " / " + String(Utils.getRedCardsCountFromWeek())
         
-        blueCardsStatisticsLabel.text = String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).blueCardCount)
+        blueCardsStatisticsLabel.text = String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).blueCardCount) + " / " + String(Utils.getBlueCardsCountFromWeek())
         
-        greenCardsStatisticsLabel.text = String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).greenCardCount + Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).lightGreenCardCount)
+        greenCardsStatisticsLabel.text = String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).greenCardCount + Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).lightGreenCardCount) + " / " + String(Utils.getGreenCardsCountFromWeek() + Utils.getLightGreenCardsCountFromWeek())
         
     }
     
