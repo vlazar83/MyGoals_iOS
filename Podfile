@@ -10,5 +10,6 @@ target 'MyGoals_iOS' do
   pod 'SideMenu'
   pod 'Shuffle-iOS'
   pod 'PopBounceButton'
+  pod 'UICircularProgressRing'
 
 end

@@ -5,12 +5,14 @@ PODS:
     - pop (~> 1.0)
   - Shuffle-iOS (0.1.3)
   - SideMenu (6.4.8)
+  - UICircularProgressRing (6.5.0)
 
 DEPENDENCIES:
   - paper-onboarding
   - PopBounceButton
   - Shuffle-iOS
   - SideMenu
+  - UICircularProgressRing
 
 SPEC REPOS:
   trunk:
@@ -19,6 +21,7 @@ SPEC REPOS:
     - PopBounceButton
     - Shuffle-iOS
     - SideMenu
+    - UICircularProgressRing
 
 SPEC CHECKSUMS:
   paper-onboarding: d3f16416e6f42add686117e8b32bfffaad899a79
@@ -26,7 +29,8 @@ SPEC CHECKSUMS:
   PopBounceButton: 34105a012678222f058f8d2621672724a3d5c9fb
   Shuffle-iOS: 03153c90ff2eb6c6f811157d601b2ac4e360c404
   SideMenu: 4a891be552d30bb6fa87ad404d62e485f8450c34
+  UICircularProgressRing: e6852e8f88e296cbbbe2720cccb55241acda6708
 
-PODFILE CHECKSUM: b98ee03441e7a7b0ad3e08a03b407e9288f45fb0
+PODFILE CHECKSUM: 6989db8638692dbb6253a56f511fb4a64ba8dd43
 
 COCOAPODS: 1.8.4

@@ -308,50 +308,89 @@
                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LnK-Ry-Jiu">
                                 <rect key="frame" x="98" y="16" width="179.5" height="49"/>
                                 <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-Gq-tRU">
-                                        <rect key="frame" x="54.5" y="0.0" width="70.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics  Day / Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-Gq-tRU">
+                                        <rect key="frame" x="7" y="0.0" width="166" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Cards : Day / Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-zh-7dR">
-                                        <rect key="frame" x="0.0" y="28.5" width="179.5" height="20.5"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Cards: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-zh-7dR">
+                                        <rect key="frame" x="45.5" y="28.5" width="88.5" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                 </subviews>
                             </stackView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eTQ-C3-A14">
-                                <rect key="frame" x="153" y="73" width="68.5" height="20.5"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Km-Pb-BCo">
+                                <rect key="frame" x="136.5" y="597" width="103" height="30"/>
+                                <state key="normal" title="Show Progress"/>
+                                <connections>
+                                    <action selector="buttonClicked:" destination="s4X-BZ-DRv" eventType="touchUpInside" id="IBV-89-mFc"/>
+                                </connections>
+                            </button>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-Ym-o1K" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="68" y="73" width="239.5" height="144"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                                        <color key="value" red="0.77291126943005184" green="0.3731269319152411" blue="0.23237960715522951" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                        <color key="value" systemColor="systemRedColor" red="1" green="0.23137254900000001" blue="0.18823529410000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mh-pE-Pyb" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="70" y="250.5" width="238" height="145"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                                        <color key="value" red="0.47193781740594953" green="0.78728141191709844" blue="0.18053570808945066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edH-QF-Lgs" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="70" y="445" width="238" height="144"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                                        <color key="value" red="0.093028629363869089" green="0.42368985797392816" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                        <color key="value" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Cards: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBz-MA-M0C">
+                                <rect key="frame" x="98" y="416.5" width="182" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Blue Cards : Day / Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBz-MA-M0C">
-                                <rect key="frame" x="98" y="101" width="183" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="blue statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ZMw-lg-Va8">
-                                <rect key="frame" x="135" y="130" width="106" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Green Cards : Day / Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYU-SF-FSn">
-                                <rect key="frame" x="89" y="158" width="196" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="green statistics" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LAi-6q-aRl">
-                                <rect key="frame" x="129" y="187" width="117" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green Cards: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYU-SF-FSn">
+                                <rect key="frame" x="91" y="222" width="196" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -360,24 +399,43 @@
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="LnK-Ry-Jiu" firstAttribute="top" secondItem="Sfw-RG-YO5" secondAttribute="top" constant="16" id="5ce-Wc-g4h"/>
-                            <constraint firstItem="eTQ-C3-A14" firstAttribute="top" secondItem="LnK-Ry-Jiu" secondAttribute="bottom" constant="8" id="Hn8-Sj-Eph"/>
-                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="eTQ-C3-A14" secondAttribute="trailing" constant="153.5" id="QYX-Tf-MbB"/>
-                            <constraint firstItem="eTQ-C3-A14" firstAttribute="top" secondItem="LnK-Ry-Jiu" secondAttribute="bottom" constant="8" id="TWc-qc-Ezl"/>
+                            <constraint firstItem="0Mh-pE-Pyb" firstAttribute="top" secondItem="TYU-SF-FSn" secondAttribute="bottom" constant="8" id="6qz-V9-Nkf"/>
+                            <constraint firstItem="6Km-Pb-BCo" firstAttribute="top" secondItem="edH-QF-Lgs" secondAttribute="bottom" constant="8" id="AIB-Fd-k8v"/>
+                            <constraint firstItem="gBz-MA-M0C" firstAttribute="centerX" secondItem="0Mh-pE-Pyb" secondAttribute="centerX" id="Cf0-mU-9Ei"/>
+                            <constraint firstAttribute="bottom" secondItem="gBz-MA-M0C" secondAttribute="bottom" constant="210" id="GYX-fD-HiF"/>
+                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="top" secondItem="LnK-Ry-Jiu" secondAttribute="bottom" constant="8" id="JMv-4m-4jR"/>
+                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="centerX" secondItem="LnK-Ry-Jiu" secondAttribute="centerX" id="M7U-9c-53G"/>
+                            <constraint firstItem="edH-QF-Lgs" firstAttribute="leading" secondItem="0Mh-pE-Pyb" secondAttribute="leading" id="OzG-4d-bqq"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="TYU-SF-FSn" secondAttribute="trailing" constant="88" id="Pzv-EX-GKp"/>
+                            <constraint firstItem="gBz-MA-M0C" firstAttribute="centerX" secondItem="TYU-SF-FSn" secondAttribute="centerX" id="UcO-Su-wQO"/>
+                            <constraint firstItem="edH-QF-Lgs" firstAttribute="top" secondItem="gBz-MA-M0C" secondAttribute="bottom" constant="8" id="Vnh-9z-ei5"/>
+                            <constraint firstItem="TYU-SF-FSn" firstAttribute="top" secondItem="zbH-L6-KoN" secondAttribute="top" constant="222" id="WP2-w4-3iQ"/>
                             <constraint firstItem="LnK-Ry-Jiu" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="98" id="Zpg-tG-s8N"/>
+                            <constraint firstItem="gBz-MA-M0C" firstAttribute="top" secondItem="0Mh-pE-Pyb" secondAttribute="bottom" constant="21" id="anR-tb-q3y"/>
+                            <constraint firstItem="gBz-MA-M0C" firstAttribute="leading" secondItem="LnK-Ry-Jiu" secondAttribute="leading" id="dhf-Tp-s6U"/>
+                            <constraint firstItem="gBz-MA-M0C" firstAttribute="centerX" secondItem="edH-QF-Lgs" secondAttribute="centerX" id="fDa-S0-vrx"/>
                             <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="LnK-Ry-Jiu" secondAttribute="trailing" constant="97.5" id="fSH-qu-zCu"/>
-                            <constraint firstItem="eTQ-C3-A14" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="153" id="j3r-ip-06T"/>
+                            <constraint firstItem="TYU-SF-FSn" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="91" id="gqr-Xs-3nr"/>
+                            <constraint firstItem="edH-QF-Lgs" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="70" id="jOy-Yw-xhV"/>
+                            <constraint firstItem="TYU-SF-FSn" firstAttribute="top" secondItem="Glb-Ym-o1K" secondAttribute="bottom" constant="5" id="qY6-Yg-49d"/>
+                            <constraint firstAttribute="bottom" secondItem="edH-QF-Lgs" secondAttribute="bottom" constant="58" id="wBb-5x-ejk"/>
+                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="68" id="ysg-4R-aNj"/>
+                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="centerX" secondItem="6Km-Pb-BCo" secondAttribute="centerX" id="yuU-2j-pzr"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sfw-RG-YO5"/>
                     </view>
                     <connections>
-                        <outlet property="blueCardsStatisticsLabel" destination="ZMw-lg-Va8" id="oCR-AO-kXS"/>
-                        <outlet property="greenCardsStatisticsLabel" destination="LAi-6q-aRl" id="Ad4-8v-s5T"/>
-                        <outlet property="redCardsStatisticsLabel" destination="eTQ-C3-A14" id="avB-Ew-wgg"/>
+                        <outlet property="blueCardsLabel" destination="gBz-MA-M0C" id="LZt-Zv-bkw"/>
+                        <outlet property="blueCircleRing" destination="edH-QF-Lgs" id="tvM-1v-zVo"/>
+                        <outlet property="greenCardsLabel" destination="TYU-SF-FSn" id="NBj-Pw-zEi"/>
+                        <outlet property="greenCircleRing" destination="0Mh-pE-Pyb" id="aof-J3-1BS"/>
+                        <outlet property="redCardsLabel" destination="0xM-zh-7dR" id="3WV-mp-zjg"/>
+                        <outlet property="redCircleRing" destination="Glb-Ym-o1K" id="cjA-cH-5oL"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5R-ey-kaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3302" y="-2522"/>
+            <point key="canvasLocation" x="3301.5999999999999" y="-2522.7886056971515"/>
         </scene>
         <!--Leading Idea View Controller-->
         <scene sceneID="iit-ez-183">
