@@ -122,7 +122,9 @@ class Utils {
         var total = 0
         
         for n in getFirstDayOfWeekBasedOnToday()...getLastDayOfWeekBasedOnToday(){
-            total += Statistics.shared.getStatisticsForDay(day: n).redCardCount
+            if(n<=366){
+                total += Statistics.shared.getStatisticsForDay(day: n).redCardCount
+            }
         }
         
         return total
@@ -132,7 +134,10 @@ class Utils {
         var total = 0
         
         for n in getFirstDayOfWeekBasedOnToday()...getLastDayOfWeekBasedOnToday(){
-            total += Statistics.shared.getStatisticsForDay(day: n).greenCardCount
+            if(n<=366){
+                total += Statistics.shared.getStatisticsForDay(day: n).greenCardCount
+            }
+            
         }
         
         return total
@@ -142,7 +147,9 @@ class Utils {
         var total = 0
         
         for n in getFirstDayOfWeekBasedOnToday()...getLastDayOfWeekBasedOnToday(){
-            total += Statistics.shared.getStatisticsForDay(day: n).lightGreenCardCount
+            if(n<=366){
+                total += Statistics.shared.getStatisticsForDay(day: n).lightGreenCardCount
+            }
         }
         
         return total
@@ -152,7 +159,9 @@ class Utils {
         var total = 0
         
         for n in getFirstDayOfWeekBasedOnToday()...getLastDayOfWeekBasedOnToday(){
-            total += Statistics.shared.getStatisticsForDay(day: n).blueCardCount
+            if(n<=366){
+                total += Statistics.shared.getStatisticsForDay(day: n).blueCardCount
+            }
         }
         
         return total
@@ -188,13 +197,27 @@ class Utils {
         
         let todayInYear = getDayOfYear()
         let todayInWeek = getDayOfWeekInCorrectFormat()
+        var returnNumber = getDayOfYear()  // set to this starting point first
         
-        // TODO for better calculation in case of year end coming during the week.
+        // in case of year end coming during the week.
         if(todayInYear + 7 - todayInWeek >= 366){
-            return 366
+            
+            // Get the current year
+            let year = Calendar.current.component(.year, from: Date())
+            // Get the first day of next year
+            if let firstOfNextYear = Calendar.current.date(from: DateComponents(year: year + 1, month: 1, day: 1)) {
+                // Get the last day of the current year
+                let lastOfYear = Calendar.current.date(byAdding: .day, value: -1, to: firstOfNextYear)
+                let cal = Calendar.current
+                let day = cal.ordinality(of: .day, in: .year, for: lastOfYear!)
+                returnNumber = day!
+            }
+            
         } else {
-            return todayInYear + 7 - todayInWeek
+            returnNumber = todayInYear + 7 - todayInWeek
         }
+        
+        return returnNumber
         
     }
     
