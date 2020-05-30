@@ -30,8 +30,25 @@ class ViewControllerHomePage: UIViewController {
         layoutCardStackView()
         configureBackgroundGradient()
         Utils.loadCreatedCardsFromUserDefaults()
-        Utils.loadStatisticsFromUserDefaults()
+        setupStatistics()
         
+    }
+    
+    private func setupStatistics(){
+        
+        let yearOfSavedStatistics = Utils.loadStatisticsYearFromUserDefaults()
+        
+        // meaning no previous run happened
+        if(yearOfSavedStatistics == 0){
+            // start new statistics
+            Statistics.shared.resetValues()
+        } else if(yearOfSavedStatistics != Calendar.current.component(.year, from: Date())){
+            // start new statistics for a new year
+            Statistics.shared.resetValues()
+        } else {
+            // reload statistics, we are still in the current year
+            Utils.loadStatisticsFromUserDefaults()
+        }
     }
 
     private func configureNavigationBar() {
@@ -142,6 +159,7 @@ extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSou
                     print("Leading Idea card does not calculated into Statistics!")
                 }
             Utils.storeStatisticsToUserDefaults()
+            Utils.storeStatisticsYearToUserDefaults()
             cardStack.swipe(.right, animated: true)
             
         default:

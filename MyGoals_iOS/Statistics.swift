@@ -13,6 +13,7 @@ class Statistics :NSObject, Codable{
     var year: Int
     static let shared = Statistics()
     static let statisticsKey = "STATISTICS_KEY"
+    static let statisticsYearKey = "STATISTICS_YEAR_KEY"
     
     private var statisticsArray : [Day] = []
     

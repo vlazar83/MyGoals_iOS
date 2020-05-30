@@ -106,6 +106,18 @@ class Utils {
         }
     }
     
+    static func storeStatisticsYearToUserDefaults(){
+
+        let defaults = UserDefaults.standard
+        defaults.set(Statistics.shared.year, forKey: Statistics.statisticsYearKey)
+
+    }
+    
+    static func loadStatisticsYearFromUserDefaults() -> Int{
+        let defaults = UserDefaults.standard
+        return defaults.integer(forKey: Statistics.statisticsYearKey)
+    }
+    
     static func getDayOfYear() -> Int{
         let date = Date() // now
         let cal = Calendar.current
