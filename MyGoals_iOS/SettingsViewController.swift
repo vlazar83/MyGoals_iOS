@@ -9,13 +9,13 @@
 import Foundation
 import UIKit
 
-protocol ModalHandler {
-  func modalDismissed()
+protocol RefreshTableViewDelegateProtocol {
+  func refreshTableView()
 }
 
-class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ModalHandler {
+class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, RefreshTableViewDelegateProtocol {
     
-    func modalDismissed() {
+    func refreshTableView() {
       // do something
         self.tableView.reloadData()
     } 

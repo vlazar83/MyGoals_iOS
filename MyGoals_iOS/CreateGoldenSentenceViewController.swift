@@ -12,13 +12,14 @@ class CreateGoldenSentenceViewController: UIViewController {
 
     @IBOutlet weak var enteredText: UITextField!
     
-    var delegate: ModalHandler?
+    var delegate: RefreshTableViewDelegateProtocol?
     
     @IBAction func addButtonClicked(_ sender: Any) {
         
         if(!(enteredText.text?.isEmpty ?? true)){
             Settings.shared.getSettingsData().goldenSentences.append(enteredText.text ?? "new golden sentence")
-            self.delegate?.modalDismissed()
+            self.delegate?.refreshTableView()
+            Utils.storeSettingsToUserDefaults()
             dismiss(animated: true, completion: nil)
         } else {
             showToast(message: "Enter the new golden sentence first!")
@@ -31,12 +32,12 @@ class CreateGoldenSentenceViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
-        self.delegate = self.presentingViewController as? ModalHandler
+        self.delegate = self.presentingViewController as? RefreshTableViewDelegateProtocol
     }
     
     func showToast(message : String) {
 
-        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 75, y: self.view.frame.size.height-100, width: 150, height: 35))
+        let toastLabel = UILabel(frame: CGRect(x: self.view.frame.size.width/2 - 150, y: self.view.frame.size.height-100, width: 300, height: 35))
         toastLabel.backgroundColor = UIColor.black.withAlphaComponent(0.6)
         toastLabel.textColor = UIColor.white
         toastLabel.textAlignment = .center;
