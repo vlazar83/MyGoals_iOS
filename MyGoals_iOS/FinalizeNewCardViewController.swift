@@ -14,7 +14,10 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var imageTitle: UITextField!
     @IBOutlet weak var imageDetails: UITextField!
     @IBOutlet weak var imageView: UIImageView!
-    @IBOutlet weak var createButton: UIButton!
+    @IBOutlet weak var createNewGreenCardButton: UIButton!
+    @IBOutlet weak var createNewRedCardButton: UIButton!
+    @IBOutlet weak var createNewLightGreenCardButton: UIButton!
+    @IBOutlet weak var createNewBlueCardButton: UIButton!
     
     var delegate: RefreshOwnCardsDelegateProtocol?
     
@@ -22,7 +25,10 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationController?.setToolbarHidden(false, animated: false)
-        createButton.isHidden = true
+        createNewGreenCardButton.isHidden = true
+        createNewRedCardButton.isHidden = true
+        createNewBlueCardButton.isHidden = true
+        createNewLightGreenCardButton.isHidden = true
         self.delegate = self.presentingViewController as? RefreshOwnCardsDelegateProtocol
     }
 
@@ -34,22 +40,47 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
         present(vc, animated: true)
     }
     
-    @IBAction func createNewCard(_ sender: Any) {
+    @IBAction func createNewBlueCard(_ sender: Any) {
         
-        let newCard = SampleCardModel(cardGoal: imageTitle.text ?? "title",
-                                      cardGoalDescription: imageDetails.text ?? "details",
-                                      image: SampleCardModel.Image(withImage: imageView!.image!),
-                                      cardType: SampleCardModel.cardTypes.Red)
-        
-        CreatedCardSet.shared.addCardModel(card: newCard)
-        
-        Utils.storeCreatedCardsToUserDefaults()
-        
+        createTheNewCard(type: SampleCardModel.cardTypes.Blue)
         navigateBack()
         
     }
     
+    @IBAction func createNewRedCard(_ sender: Any) {
+        
+        createTheNewCard(type: SampleCardModel.cardTypes.Red)
+        navigateBack()
+        
+    }
+    
+    @IBAction func createNewLightGreenCard(_ sender: Any) {
+        
+        createTheNewCard(type: SampleCardModel.cardTypes.LightGreen)
+        navigateBack()
+        
+    }
+    
+    @IBAction func createNewGreenCard(_ sender: Any) {
+        
+        createTheNewCard(type: SampleCardModel.cardTypes.Green)
+        navigateBack()
+        
+    }
+    
+    func createTheNewCard(type: SampleCardModel.cardTypes){
+        let newCard = SampleCardModel(cardGoal: imageTitle.text ?? "title",
+                                      cardGoalDescription: imageDetails.text ?? "details",
+                                      image: SampleCardModel.Image(withImage: imageView!.image!),
+                                      cardType: type)
+        
+        CreatedCardSet.shared.addCardModel(card: newCard)
+        
+        Utils.storeCreatedCardsToUserDefaults()
+    }
+    
     func navigateBack(){
+        // ask the delegate to refresh the own card set
         self.delegate?.refreshOwnCards()
         dismiss(animated: true, completion: nil)
     }
@@ -69,6 +100,9 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
 
         // print out the image size as a test
         print(image.size)
-        createButton.isHidden = false
+        createNewGreenCardButton.isHidden = false
+        createNewRedCardButton.isHidden = false
+        createNewBlueCardButton.isHidden = false
+        createNewLightGreenCardButton.isHidden = false
     }
 }

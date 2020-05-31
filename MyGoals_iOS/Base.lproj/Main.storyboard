@@ -520,45 +520,77 @@ License: --</string>
                                     </textField>
                                 </subviews>
                             </stackView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-qR-G4L">
+                                <rect key="frame" x="16" y="197" width="343" height="300"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="300" id="7FX-5O-GQz"/>
+                                </constraints>
+                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yeZ-CH-GYb">
-                                <rect key="frame" x="149" y="525" width="76" height="30"/>
+                                <rect key="frame" x="149" y="505" width="76" height="30"/>
                                 <state key="normal" title="Take Photo"/>
                                 <connections>
                                     <action selector="takePhoto:" destination="U5i-9u-0cg" eventType="touchUpInside" id="ecK-eY-DbF"/>
                                 </connections>
                             </button>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="dTH-qR-G4L">
-                                <rect key="frame" x="16" y="197" width="343" height="320"/>
-                            </imageView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-HH-oa9">
-                                <rect key="frame" x="164" y="563" width="46" height="30"/>
-                                <state key="normal" title="Create"/>
-                                <connections>
-                                    <action selector="createNewCard:" destination="U5i-9u-0cg" eventType="touchUpInside" id="sKR-MD-pBi"/>
-                                </connections>
-                            </button>
+                            <stackView opaque="NO" contentMode="scaleToFill" spacing="45" translatesAutoresizingMaskIntoConstraints="NO" id="m36-mi-J0h">
+                                <rect key="frame" x="16" y="543" width="342" height="50"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l16-77-yhh">
+                                        <rect key="frame" x="0.0" y="0.0" width="57" height="50"/>
+                                        <state key="normal" image="plusRed"/>
+                                        <connections>
+                                            <action selector="createNewRedCard:" destination="U5i-9u-0cg" eventType="touchUpInside" id="rA3-Ts-QXd"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZMc-Fv-948">
+                                        <rect key="frame" x="102" y="0.0" width="50" height="50"/>
+                                        <state key="normal" image="plusLightGreen"/>
+                                        <connections>
+                                            <action selector="createNewLightGreenCard:" destination="U5i-9u-0cg" eventType="touchUpInside" id="qDs-CH-ldv"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RgR-HH-oa9">
+                                        <rect key="frame" x="197" y="0.0" width="50" height="50"/>
+                                        <state key="normal" image="plusGreen"/>
+                                        <connections>
+                                            <action selector="createNewGreenCard:" destination="U5i-9u-0cg" eventType="touchUpInside" id="c2c-SF-vwF"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iIs-Vk-ass">
+                                        <rect key="frame" x="292" y="0.0" width="50" height="50"/>
+                                        <state key="normal" image="plusBlue"/>
+                                        <connections>
+                                            <action selector="createNewBlueCard:" destination="U5i-9u-0cg" eventType="touchUpInside" id="rZ2-ND-IRj"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
                             <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="yeZ-CH-GYb" secondAttribute="trailing" constant="150" id="2tx-GP-CtX"/>
+                            <constraint firstItem="m36-mi-J0h" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="16" id="6S3-yG-ItB"/>
                             <constraint firstItem="dTH-qR-G4L" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="16" id="8hm-sT-SDI"/>
+                            <constraint firstItem="dTH-qR-G4L" firstAttribute="top" secondItem="rQi-Vg-XrO" secondAttribute="bottom" constant="8" id="A4N-re-RTu"/>
                             <constraint firstItem="yeZ-CH-GYb" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="149" id="CPC-ba-SPh"/>
                             <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="dTH-qR-G4L" secondAttribute="trailing" constant="16" id="Cb8-UZ-unB"/>
-                            <constraint firstItem="1d1-eq-Gha" firstAttribute="bottom" secondItem="RgR-HH-oa9" secondAttribute="bottom" constant="74" id="Ge9-h6-8JO"/>
                             <constraint firstItem="rQi-Vg-XrO" firstAttribute="top" secondItem="1d1-eq-Gha" secondAttribute="top" constant="20" id="LvY-R7-vyh"/>
                             <constraint firstItem="rQi-Vg-XrO" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="97" id="O6s-LE-qMO"/>
-                            <constraint firstItem="RgR-HH-oa9" firstAttribute="leading" secondItem="1d1-eq-Gha" secondAttribute="leading" constant="164" id="Pyo-Ay-dBx"/>
                             <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="rQi-Vg-XrO" secondAttribute="trailing" constant="96.5" id="RuU-Wt-QHt"/>
                             <constraint firstItem="dTH-qR-G4L" firstAttribute="top" secondItem="rQi-Vg-XrO" secondAttribute="bottom" constant="8" id="Wzr-Nc-svF"/>
-                            <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="RgR-HH-oa9" secondAttribute="trailing" constant="165" id="m5E-SJ-VS5"/>
-                            <constraint firstItem="RgR-HH-oa9" firstAttribute="top" secondItem="yeZ-CH-GYb" secondAttribute="bottom" constant="8" id="mMd-ra-rHM"/>
+                            <constraint firstItem="1d1-eq-Gha" firstAttribute="trailing" secondItem="m36-mi-J0h" secondAttribute="trailing" constant="17" id="gTS-Ae-1cG"/>
+                            <constraint firstItem="m36-mi-J0h" firstAttribute="top" secondItem="yeZ-CH-GYb" secondAttribute="bottom" constant="8" id="ihn-s9-gxV"/>
                             <constraint firstItem="yeZ-CH-GYb" firstAttribute="top" secondItem="dTH-qR-G4L" secondAttribute="bottom" constant="8" id="rTx-d0-aMc"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="1d1-eq-Gha"/>
                     </view>
                     <navigationItem key="navigationItem" id="PSg-Mo-vhT"/>
                     <connections>
-                        <outlet property="createButton" destination="RgR-HH-oa9" id="ljP-bj-Ca7"/>
+                        <outlet property="createNewBlueCardButton" destination="iIs-Vk-ass" id="hc7-Sb-6ZE"/>
+                        <outlet property="createNewGreenCardButton" destination="RgR-HH-oa9" id="OT6-TF-Mfl"/>
+                        <outlet property="createNewLightGreenCardButton" destination="ZMc-Fv-948" id="AaF-sB-YdK"/>
+                        <outlet property="createNewRedCardButton" destination="l16-77-yhh" id="DEf-xX-VVW"/>
                         <outlet property="imageDetails" destination="bcz-fK-lM5" id="sPU-9g-iE1"/>
                         <outlet property="imageTitle" destination="6eG-3M-HrW" id="2eW-x4-bba"/>
                         <outlet property="imageView" destination="dTH-qR-G4L" id="S1b-FJ-vyh"/>
@@ -847,7 +879,9 @@ License: --</string>
     </scenes>
     <resources>
         <image name="menu" width="48" height="48"/>
+        <image name="plusBlue" width="50" height="50"/>
         <image name="plusGreen" width="50" height="50"/>
+        <image name="plusLightGreen" width="50" height="50"/>
         <image name="plusRed" width="50" height="50"/>
     </resources>
 </document>
