@@ -11,6 +11,8 @@ import PopBounceButton
 
 class PlanTheCardSetViewController: UIViewController {
     
+        var delegate: RefreshCardsDelegateProtocol?
+    
         private let cardStack = SwipeCardStack()
         
         private let buttonStackView = ButtonStackViewForPlanTheCardSet()
@@ -20,6 +22,9 @@ class PlanTheCardSetViewController: UIViewController {
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
+            // there is a menu in between, therefore we need to jump 2 level up to reach the
+            // Main Page View Controller
+            self.delegate = self.presentingViewController?.presentingViewController as? RefreshCardsDelegateProtocol
             cardStack.delegate = self
             cardStack.dataSource = self
             buttonStackView.delegate = self
@@ -134,6 +139,8 @@ class PlanTheCardSetViewController: UIViewController {
         }
         
         func navigateBack(){
+            // refresh the cards set with delegate
+            self.delegate?.refreshCards()
             dismiss(animated: true, completion: nil)
         }
         

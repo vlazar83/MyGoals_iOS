@@ -243,7 +243,7 @@
                             <stackView opaque="NO" contentMode="scaleToFill" spacing="125" translatesAutoresizingMaskIntoConstraints="NO" id="JJ9-CS-Wd7">
                                 <rect key="frame" x="16" y="242.5" width="343" height="44"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhO-lE-2gm">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhO-lE-2gm">
                                         <rect key="frame" x="0.0" y="0.0" width="33" height="44"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="3">
@@ -253,8 +253,11 @@
                                             <action selector="redWeeklyTargetButtonClicked:" destination="ppB-xj-I66" eventType="touchUpInside" id="5Db-tN-Kur"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDu-V4-RvD">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vDu-V4-RvD">
                                         <rect key="frame" x="158" y="0.0" width="30" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="uCf-z7-TcC"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="3">
                                             <color key="titleColor" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -263,8 +266,11 @@
                                             <action selector="greenWeeklyTargetButtonClicked:" destination="ppB-xj-I66" eventType="touchUpInside" id="qle-aL-7tE"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yy0-Dh-FN2">
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yy0-Dh-FN2">
                                         <rect key="frame" x="313" y="0.0" width="30" height="44"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="30" id="v9e-g8-eMM"/>
+                                        </constraints>
                                         <fontDescription key="fontDescription" type="system" pointSize="26"/>
                                         <state key="normal" title="3"/>
                                         <connections>
@@ -284,14 +290,20 @@
                                             <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b75-7V-nfX">
-                                                    <rect key="frame" x="15" y="11" width="313" height="21"/>
-                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b75-7V-nfX">
+                                                    <rect key="frame" x="15" y="11" width="313" height="20.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                             </subviews>
+                                            <constraints>
+                                                <constraint firstItem="b75-7V-nfX" firstAttribute="leading" secondItem="mHg-dy-eze" secondAttribute="leadingMargin" id="Dns-zk-Pn0"/>
+                                                <constraint firstItem="b75-7V-nfX" firstAttribute="trailing" secondItem="mHg-dy-eze" secondAttribute="trailingMargin" id="JxB-5L-nrY"/>
+                                                <constraint firstItem="b75-7V-nfX" firstAttribute="top" secondItem="mHg-dy-eze" secondAttribute="topMargin" id="dhT-QZ-Hit"/>
+                                                <constraint firstItem="b75-7V-nfX" firstAttribute="leading" secondItem="mHg-dy-eze" secondAttribute="leadingMargin" id="dkE-NI-JwE"/>
+                                                <constraint firstItem="b75-7V-nfX" firstAttribute="top" secondItem="mHg-dy-eze" secondAttribute="topMargin" id="qGY-aD-E6r"/>
+                                            </constraints>
                                         </tableViewCellContentView>
                                         <connections>
                                             <outlet property="goldenSentenceLabel" destination="b75-7V-nfX" id="Yw3-lC-F1V"/>
