@@ -9,7 +9,16 @@
 import Foundation
 import UIKit
 
-class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+protocol ModalHandler {
+  func modalDismissed()
+}
+
+class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate, ModalHandler {
+    
+    func modalDismissed() {
+      // do something
+        self.tableView.reloadData()
+    } 
     
     @IBOutlet weak var tableView: UITableView!
     
@@ -111,7 +120,6 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         }
         
     }
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
