@@ -108,19 +108,67 @@ class SettingsViewController: UIViewController {
             Settings.shared.getSettingsData().weeklyBlueTarget = target
         }
         
-        Utils.storeSettingsToUserDefaults()
-        
     }
     
     
     override func viewDidLoad() {
         super.viewDidLoad()
         Utils.loadSettingsFromUserDefaults()
+        setupValuesOnUi()
         
+        enteredAgeTextView.addTarget(self, action: #selector(SettingsViewController.textFieldDidChange(_:)), for: .editingDidEnd)
+        
+    }
+    
+    @objc func textFieldDidChange(_ textField: UITextField) {
+        
+        if let ageValue = Int(enteredAgeTextView.text ?? "40"){
+            if(ageValue >= 15 && ageValue <= 100) {
+                 Settings.shared.getSettingsData().age = ageValue
+            } else {
+                Settings.shared.getSettingsData().age = 40
+            }
+        }
     }
     
     override func viewDidDisappear(_ animated: Bool) {
         Utils.storeSettingsToUserDefaults()
+    }
+    
+    private func setupValuesOnUi(){
+        
+        if(Settings.shared.getSettingsData().inFamily){
+            aloneOrInFamilySwitch.isOn = true
+            aloneOrInFamilyLabel.text = "In Family"
+        } else {
+            aloneOrInFamilySwitch.isOn = false
+            aloneOrInFamilyLabel.text = "Alone"
+        }
+        
+        if(Settings.shared.getSettingsData().isExtrovert){
+            introvertOrExtrovertSwitch.isOn = true
+            introvertOrExtrovertLabel.text = "Extrovert"
+        } else {
+            introvertOrExtrovertSwitch.isOn = false
+            introvertOrExtrovertLabel.text = "Introvert"
+        }
+        
+        if(Settings.shared.getSettingsData().isLark){
+            owlOrLarkSwitch.isOn = true
+            owlOrLarkLabel.text = "Lark"
+        } else {
+            owlOrLarkSwitch.isOn = false
+            owlOrLarkLabel.text = "Owl"
+        }
+        
+        enteredAgeTextView.text = String(Settings.shared.getSettingsData().age)
+        
+    redWeeklyTargetButtonLabel.setTitle(String(Settings.shared.getSettingsData().weeklyRedTarget), for: .normal)
+    
+    greenWeeklyTargetButtonLabel.setTitle(String(Settings.shared.getSettingsData().weeklyGreenTarget), for: .normal)
+    
+    blueWeeklyTargetButtonLabel.setTitle(String(Settings.shared.getSettingsData().weeklyBlueTarget), for: .normal)
+        
     }
     
     

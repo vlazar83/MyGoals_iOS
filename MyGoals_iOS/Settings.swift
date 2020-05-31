@@ -30,7 +30,7 @@ class Settings{
 class SettingsData: NSObject, Codable{
     
     private let defaultWeeklyTarget = 3
-    private let defaultAge = 40
+    public let defaultAge = 40
 
     var weeklyRedTarget: Int
     var weeklyGreenTarget: Int
