@@ -276,6 +276,28 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ffW-gj-46l">
                                 <rect key="frame" x="16" y="323" width="343" height="288"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="GoldenSentenceCell" id="JKC-b0-gp4" customClass="GoldenSentenceTableViewCell" customModule="MyGoals_iOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="28" width="343" height="43.5"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="JKC-b0-gp4" id="mHg-dy-eze">
+                                            <rect key="frame" x="0.0" y="0.0" width="343" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b75-7V-nfX">
+                                                    <rect key="frame" x="15" y="11" width="313" height="21"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="goldenSentenceLabel" destination="b75-7V-nfX" id="Yw3-lC-F1V"/>
+                                        </connections>
+                                    </tableViewCell>
+                                </prototypes>
                             </tableView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Golden Sentences:" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMb-2B-OJK">
                                 <rect key="frame" x="115" y="294.5" width="145" height="20.5"/>
@@ -317,6 +339,7 @@
                         <outlet property="owlOrLarkLabel" destination="JJK-Lx-YNk" id="x4Z-KK-UB5"/>
                         <outlet property="owlOrLarkSwitch" destination="ATD-wK-Cyq" id="Kad-l9-xN3"/>
                         <outlet property="redWeeklyTargetButtonLabel" destination="MhO-lE-2gm" id="JxM-6d-000"/>
+                        <outlet property="tableView" destination="ffW-gj-46l" id="ige-da-kMO"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NpB-ch-1Qu" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -348,7 +371,7 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVy-Pp-gVc">
                                 <rect key="frame" x="16" y="16" width="343" height="368"/>
-                                <mutableString key="text">Kairosz application credits
+                                <string key="text">Kairosz application credits
 Application version number: 1.0
 Project Code: https://github.com/vlazar83/MyGoals_iOS
 Copyright (c) 2020 Viktor Lázár
@@ -373,7 +396,7 @@ License: MIT license
 
 Name: UICircularProgressRing
 Project Code: https://github.com/luispadron/UICircularProgressRing
-License: --</mutableString>
+License: --</string>
                                 <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>

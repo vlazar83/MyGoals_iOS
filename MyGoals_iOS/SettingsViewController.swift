@@ -9,7 +9,9 @@
 import Foundation
 import UIKit
 
-class SettingsViewController: UIViewController {
+class SettingsViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
+    
+    @IBOutlet weak var tableView: UITableView!
     
     @IBOutlet weak var aloneOrInFamilyLabel: UILabel!
     
@@ -118,6 +120,9 @@ class SettingsViewController: UIViewController {
         
         enteredAgeTextView.addTarget(self, action: #selector(SettingsViewController.textFieldDidChange(_:)), for: .editingDidEnd)
         
+        tableView.delegate = self
+        tableView.dataSource = self
+        
     }
     
     @objc func textFieldDidChange(_ textField: UITextField) {
@@ -171,5 +176,14 @@ class SettingsViewController: UIViewController {
         
     }
     
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 10
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: "GoldenSentenceCell", for: indexPath) as! GoldenSentenceTableViewCell
+        cell.goldenSentenceLabel.text = "asdsad"
+        return cell
+    }   
     
 }
