@@ -177,13 +177,18 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 10
+        return Settings.shared.getSettingsData().goldenSentences.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "GoldenSentenceCell", for: indexPath) as! GoldenSentenceTableViewCell
-        cell.goldenSentenceLabel.text = "asdsad"
+        cell.goldenSentenceLabel.text = Settings.shared.getSettingsData().goldenSentences[indexPath.row]
         return cell
-    }   
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        Settings.shared.getSettingsData().goldenSentences.remove(at: indexPath.row)
+        self.tableView.reloadData()
+    }
     
 }
