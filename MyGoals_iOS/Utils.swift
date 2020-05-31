@@ -246,6 +246,38 @@ class Utils {
         return Date().dayNumberOfWeek()!
     }
     
+    static func loadSettingsFromUserDefaults() {
+        if let data = UserDefaults.standard.data(forKey: Settings.settingsKey) {
+            do {
+                // Create JSON Decoder
+                let decoder = JSONDecoder()
+
+                // Decode Note
+                let settings = try decoder.decode(SettingsData.self, from: data)
+                //Statistics.shared.setStatistics(newStatisticsArray: statistics)
+                Settings.shared.setSettingsData(newSettings: settings)
+            } catch {
+                print("Unable to Decode Notes (\(error))")
+            }
+        }
+    }
+    
+    static func storeSettingsToUserDefaults(){
+        do {
+            // Create JSON Encoder
+            let encoder = JSONEncoder()
+
+            // Encode Note
+            let data = try encoder.encode(Settings.shared.getSettingsData())
+
+            // Write/Set Data
+            UserDefaults.standard.set(data, forKey: Settings.settingsKey)
+
+        } catch {
+            print("Unable to Encode Array of Notes (\(error))")
+        }
+    }
+    
 }
 
 extension Date {

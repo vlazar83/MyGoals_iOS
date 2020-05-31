@@ -39,6 +39,7 @@
 		84F238682449855100D474A7 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238642449855100D474A7 /* Nunito-Regular.ttf */; };
 		84F238692449855100D474A7 /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238652449855100D474A7 /* Nunito-Bold.ttf */; };
 		84F2386A2449855100D474A7 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 84F238662449855100D474A7 /* OpenSans-Regular.ttf */; };
+		84FB83802483832F00ADAAA8 /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FB837F2483832F00ADAAA8 /* Settings.swift */; };
 		84FDBB08248153310055CEFC /* LeadingIdeaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDBB07248153310055CEFC /* LeadingIdeaViewController.swift */; };
 		84FDBB0A248154550055CEFC /* LeadingIdeaCardSet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDBB09248154550055CEFC /* LeadingIdeaCardSet.swift */; };
 		84FDBB0C24815A750055CEFC /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84FDBB0B24815A750055CEFC /* Statistics.swift */; };
@@ -82,6 +83,7 @@
 		84F238642449855100D474A7 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Regular.ttf"; sourceTree = "<group>"; };
 		84F238652449855100D474A7 /* Nunito-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		84F238662449855100D474A7 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		84FB837F2483832F00ADAAA8 /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
 		84FDBB07248153310055CEFC /* LeadingIdeaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingIdeaViewController.swift; sourceTree = "<group>"; };
 		84FDBB09248154550055CEFC /* LeadingIdeaCardSet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LeadingIdeaCardSet.swift; sourceTree = "<group>"; };
 		84FDBB0B24815A750055CEFC /* Statistics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Statistics.swift; sourceTree = "<group>"; };
@@ -189,6 +191,7 @@
 				84FDBB0B24815A750055CEFC /* Statistics.swift */,
 				84FDBB0D248164020055CEFC /* StatisticsViewController.swift */,
 				84A7257C2482D1610029B598 /* SettingsViewController.swift */,
+				84FB837F2483832F00ADAAA8 /* Settings.swift */,
 			);
 			path = MyGoals_iOS;
 			sourceTree = "<group>";
@@ -364,6 +367,7 @@
 				840D03A6247D198F00376145 /* Utils.swift in Sources */,
 				8409B5D52449825900D83EC8 /* MyGoals_iOS.xcdatamodeld in Sources */,
 				84A7257D2482D1610029B598 /* SettingsViewController.swift in Sources */,
+				84FB83802483832F00ADAAA8 /* Settings.swift in Sources */,
 				84FDBB0A248154550055CEFC /* LeadingIdeaCardSet.swift in Sources */,
 				8433542F247BDC4F00280D75 /* CreatedCardSet.swift in Sources */,
 				8409B5CD2449825900D83EC8 /* SceneDelegate.swift in Sources */,
