@@ -22,28 +22,23 @@ class StatisticsViewController: UIViewController {
         
         var redProgress, greenProgress, blueProgress: Int
         
-        // set this up later in Settings TODO!
-        let target = 3
-        
-        redProgress = Utils.getRedCardsCountFromWeek() * 100 / target
+        redProgress = Utils.getRedCardsCountFromWeek() * 100 / Settings.shared.getSettingsData().weeklyRedTarget
         
         redCircleRing.startProgress(to: CGFloat(redProgress), duration: 5.0) {
-          print("Done animating!")
-          // Do anything your heart desires...
+
         }
         
-        greenProgress = Utils.getGreenCardsCountFromWeek() * 100 / target
+        // green and lightGreen cards are calculated together!
+        greenProgress = (Utils.getGreenCardsCountFromWeek() + Utils.getLightGreenCardsCountFromWeek()) * 100 / Settings.shared.getSettingsData().weeklyGreenTarget
         
         greenCircleRing.startProgress(to: CGFloat(greenProgress), duration: 5.0) {
-          print("Done animating!")
-          // Do anything your heart desires...
+
         }
         
-        blueProgress = Utils.getBlueCardsCountFromWeek() * 100 / target
+        blueProgress = Utils.getBlueCardsCountFromWeek() * 100 / Settings.shared.getSettingsData().weeklyBlueTarget
         
         blueCircleRing.startProgress(to: CGFloat(blueProgress), duration: 5.0) {
-          print("Done animating!")
-          // Do anything your heart desires...
+
         }
         
     }
