@@ -16,11 +16,14 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
     @IBOutlet weak var imageView: UIImageView!
     @IBOutlet weak var createButton: UIButton!
     
+    var delegate: RefreshOwnCardsDelegateProtocol?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         navigationController?.setToolbarHidden(false, animated: false)
         createButton.isHidden = true
+        self.delegate = self.presentingViewController as? RefreshOwnCardsDelegateProtocol
     }
 
     @IBAction func takePhoto(_ sender: Any) {
@@ -47,6 +50,7 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
     }
     
     func navigateBack(){
+        self.delegate?.refreshOwnCards()
         dismiss(animated: true, completion: nil)
     }
     

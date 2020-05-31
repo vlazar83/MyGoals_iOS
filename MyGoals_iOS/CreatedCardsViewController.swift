@@ -9,8 +9,20 @@ import Shuffle_iOS
 import UIKit
 import PopBounceButton
 
-class CreatedCardsViewController: UIViewController {
+protocol RefreshOwnCardsDelegateProtocol {
+  func refreshOwnCards()
+}
 
+class CreatedCardsViewController: UIViewController, RefreshOwnCardsDelegateProtocol {
+
+    func refreshOwnCards() {
+
+        CreatedCardSet.shared.setCardModels(NewCardModels: Utils.loadCardsFromUserDefaults(key: CreatedCardSet.createdCardSetKey))
+        cardModels = CreatedCardSet.shared.getCardModels()
+        
+        cardStack.reloadData()
+    }
+    
     private let cardStack = SwipeCardStack()
     
     private let buttonStackView = ButtonStackViewForCreatedCards()
