@@ -8,12 +8,23 @@
 
 import UIKit
 import CoreData
+import UserNotifications
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
-
+    
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         // Override point for customization after application launch.
+        let options: UNAuthorizationOptions = [.alert, .sound, .badge]
+        let notificationCenter = UNUserNotificationCenter.current()
+        
+        notificationCenter.requestAuthorization(options: options) {
+            (didAllow, error) in
+            if !didAllow {
+                print("User has declined notifications")
+            }
+        }
+        
         return true
     }
 
@@ -78,3 +89,66 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 }
 
+extension AppDelegate: UNUserNotificationCenterDelegate {
+    
+    // Processing notifications in the foreground
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                                willPresent notification: UNNotification,
+                                withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
+        
+        /*
+        if notification.request.content.categoryIdentifier ==
+                 "MEETING_INVITATION" {
+           // Retrieve the meeting details.
+           let meetingID = notification.request.content.userInfo["MEETING_ID"] as! String
+           let userID = notification.request.content.userInfo["USER_ID"] as! String
+                 
+           // Add the meeting to the queue.
+           //sharedMeetingManager.queueMeetingForDelivery(user: userID, meetingID: meetingID)
+
+           // Play a sound to let the user know about the invitation.
+           completionHandler(.sound)
+           return
+        }
+        else {
+           // Handle other notification types...
+        }*/
+
+        // Don't alert the user for other types.
+        //completionHandler(UNNotificationPresentationOptions(rawValue: 0))
+        
+        // show alert while app is running in foreground
+        completionHandler([.alert, .badge, .sound])
+    }
+    
+    // Handling the actions for the notifications (is used for jumping to the correct viewController)
+    func userNotificationCenter(_ center: UNUserNotificationCenter,
+                didReceive response: UNNotificationResponse,
+                withCompletionHandler completionHandler:
+                   @escaping () -> Void) {
+       // Get the meeting ID from the original notification.
+       let userInfo = response.notification.request.content.userInfo
+            
+       if (response.notification.request.content.categoryIdentifier == "GOLDEN_SENTENCE_NOTIFICATION") {
+          // Retrieve the meeting details.
+          let sampleData1 = userInfo["SAMPLE_DATA_1"] as! String
+          let sampleData2 = userInfo["SAMPLE_DATA_2"] as! String
+                
+          switch response.actionIdentifier {
+          case "CLOSE_ACTION":
+             print(sampleData1 + sampleData2)
+             break
+                    
+          default:
+             break
+          }
+       }
+       else {
+          // Handle other notification types...
+       }
+        
+       // Always call the completion handler when done.
+       completionHandler()
+    }
+    
+}

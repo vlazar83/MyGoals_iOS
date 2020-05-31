@@ -172,7 +172,7 @@
         <!--Settings-->
         <scene sceneID="jOM-Q3-wUb">
             <objects>
-                <viewController title="Settings" id="ppB-xj-I66" customClass="SettingsViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SettingsViewController" title="Settings" id="ppB-xj-I66" customClass="SettingsViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="nFY-tr-D5g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

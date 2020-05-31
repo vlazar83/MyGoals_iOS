@@ -12,6 +12,7 @@ class Settings{
     
     static let shared = Settings()
     static let settingsKey = "SETTINGS_KEY"
+    static let emptyGoldenSentences = "There are no golden sentences to display, create one from menu"
 
     private var settingsData : SettingsData = SettingsData()
     //Initializer access level change now

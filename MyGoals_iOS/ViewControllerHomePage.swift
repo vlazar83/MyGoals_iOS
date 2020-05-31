@@ -44,9 +44,53 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         Utils.loadCreatedCardsFromUserDefaults()
         setupStatistics()
         
+        scheduleNotification()
+        
     }
     
-    func setStatusBar(backgroundColor: UIColor) {
+    func scheduleNotification(){
+        
+        UIApplication.shared.applicationIconBadgeNumber = 0
+        
+        // Define the custom actions.
+        let acceptAction = UNNotificationAction(identifier: "CLOSE_ACTION",
+              title: "Close",
+              options: UNNotificationActionOptions(rawValue: 0))
+
+        // Define the notification type
+        let meetingInviteCategory =
+              UNNotificationCategory(identifier: "GOLDEN_SENTENCE_NOTIFICATION",
+              actions: [acceptAction],
+              intentIdentifiers: [],
+              hiddenPreviewsBodyPlaceholder: "",
+              options: .customDismissAction)
+        // Register the notification type.
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.setNotificationCategories([meetingInviteCategory])
+        
+        let content = UNMutableNotificationContent()
+        content.title = "Golden Sentence"
+        content.body = Utils.getRandomGoldenSentence() ?? Settings.emptyGoldenSentences
+        content.userInfo = ["SAMPLE_DATA_1" : "111", "SAMPLE_DATA_2" : "222" ]
+        content.categoryIdentifier = "GOLDEN_SENTENCE_NOTIFICATION"
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        // Create the request
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                    content: content, trigger: trigger)
+
+        // Schedule the request with the system.
+        notificationCenter.add(request) { (error) in
+           if error != nil {
+              // Handle any errors.
+           }
+        }
+        
+        
+    }
+    
+    func setStatusBar() {
         let statusBarFrame: CGRect
         if #available(iOS 13.0, *) {
             statusBarFrame = view.window?.windowScene?.statusBarManager?.statusBarFrame ?? CGRect.zero
@@ -54,12 +98,21 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
             statusBarFrame = UIApplication.shared.statusBarFrame
         }
         let statusBarView = UIView(frame: statusBarFrame)
-        statusBarView.backgroundColor = backgroundColor
+        
+        if(statusBarView.tintColor == UIColor.black){
+            statusBarView.backgroundColor = UIColor.white
+        } else if(statusBarView.tintColor == UIColor.white){
+            statusBarView.backgroundColor = UIColor.black
+        } else {
+            statusBarView.backgroundColor = UIColor.darkGray
+        }
+        
+        
         view.addSubview(statusBarView)
     }
     
     override func viewDidAppear(_ animated: Bool) {
-        setStatusBar(backgroundColor: UIColor.black)
+        setStatusBar()
     }
     
     private func setupStatistics(){

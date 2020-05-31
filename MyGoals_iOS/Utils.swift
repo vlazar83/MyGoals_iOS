@@ -278,6 +278,12 @@ class Utils {
         }
     }
     
+    static func getRandomGoldenSentence() -> String?{
+        let goldenSentenceCount = Settings.shared.getSettingsData().goldenSentences.count
+        let number = Int.random(in: 0 ..< goldenSentenceCount)
+        return Settings.shared.getSettingsData().goldenSentences[number]
+    }
+    
 }
 
 extension Date {
