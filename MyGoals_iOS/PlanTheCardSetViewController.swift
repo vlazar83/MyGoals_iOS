@@ -18,6 +18,8 @@ class PlanTheCardSetViewController: UIViewController {
         private let buttonStackView = ButtonStackViewForPlanTheCardSet()
             
         private var cardModels = CreatedCardSet.shared.getCardModels() + DefaultCardSet.shared.getCardModels()
+    
+        private var wasCalledFromButton: Bool = false
         
         override func viewDidLoad() {
             super.viewDidLoad()
@@ -112,6 +114,9 @@ class PlanTheCardSetViewController: UIViewController {
         
         func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
             print("Swiped \(direction) on \(cardModels[index].cardGoal)")
+            if(direction == .right && !wasCalledFromButton){
+                addCardToPlannedSet(newCard: cardModels[index])
+            }
         }
         
         func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {
@@ -127,8 +132,8 @@ class PlanTheCardSetViewController: UIViewController {
             case 3:
                 openCreateNewCardView()
             case 4:
-                PlannedCardSet.shared.addCardModel(card: cardModels[cardStack.topCardIndex])
-                cardStack.swipe(.right, animated: true)
+                wasCalledFromButton = true
+                addCardToPlannedSet(newCard: cardModels[cardStack.topCardIndex])
             case 5:
                 // go back to home with the planned card set
                 Utils.storeCardsToUserDefaults(cardSet: PlannedCardSet.shared.getCardModels(), key: PlannedCardSet.plannedCardSetKey)
@@ -136,6 +141,12 @@ class PlanTheCardSetViewController: UIViewController {
             default:
                 break
             }
+        }
+        
+        func addCardToPlannedSet(newCard: SampleCardModel){
+            PlannedCardSet.shared.addCardModel(card: newCard)
+            cardStack.swipe(.right, animated: true)
+            wasCalledFromButton = false
         }
         
         func navigateBack(){

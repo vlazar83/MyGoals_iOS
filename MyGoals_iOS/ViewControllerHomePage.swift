@@ -21,6 +21,8 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         
     private var cardModels = PlannedCardSet.shared.getCardModels()
     
+    private var wasCalledFromButton: Bool = false
+    
     func refreshCards() {
       // do something
         PlannedCardSet.shared.setCardModels(NewCardModels: Utils.loadCardsFromUserDefaults(key: LeadingIdeaCardSet.leadingIdeaCardSetKey) + Utils.loadCardsFromUserDefaults(key: PlannedCardSet.plannedCardSetKey))
@@ -206,6 +208,9 @@ extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSou
     
     func cardStack(_ cardStack: SwipeCardStack, didSwipeCardAt index: Int, with direction: SwipeDirection) {
         print("Swiped \(direction) on \(cardModels[index].cardGoal)")
+        if(direction == .right && !wasCalledFromButton){
+            addToStatistics()
+        }
     }
     
     func cardStack(_ cardStack: SwipeCardStack, didSelectCardAt index: Int) {
@@ -225,26 +230,32 @@ extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSou
             cardStack.swipe(.up, animated: true)
         case 4:
             //cardStack.swipe(.right, animated: true)
-            
-            switch cardModels[cardStack.topCardIndex].cardType {
-                case SampleCardModel.cardTypes.Blue:
-                    Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).blueCardCount+=1
-                case SampleCardModel.cardTypes.Red:
-                    Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).redCardCount+=1
-                case SampleCardModel.cardTypes.Green:
-                    Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).greenCardCount+=1
-                case SampleCardModel.cardTypes.LightGreen:
-                    Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).lightGreenCardCount+=1
-                case SampleCardModel.cardTypes.LeadingIdea:
-                    // do nothing
-                    print("Leading Idea card does not calculated into Statistics!")
-                }
-            Utils.storeStatisticsToUserDefaults()
-            Utils.storeStatisticsYearToUserDefaults()
-            cardStack.swipe(.right, animated: true)
+            wasCalledFromButton = true
+            addToStatistics()
             
         default:
             break
         }
     }
+    
+    func addToStatistics(){
+        switch cardModels[cardStack.topCardIndex].cardType {
+            case SampleCardModel.cardTypes.Blue:
+                Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).blueCardCount+=1
+            case SampleCardModel.cardTypes.Red:
+                Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).redCardCount+=1
+            case SampleCardModel.cardTypes.Green:
+                Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).greenCardCount+=1
+            case SampleCardModel.cardTypes.LightGreen:
+                Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).lightGreenCardCount+=1
+            case SampleCardModel.cardTypes.LeadingIdea:
+                // do nothing
+                print("Leading Idea card does not calculated into Statistics!")
+            }
+        Utils.storeStatisticsToUserDefaults()
+        Utils.storeStatisticsYearToUserDefaults()
+        cardStack.swipe(.right, animated: true)
+        wasCalledFromButton = false
+    }
+    
 }
