@@ -73,7 +73,12 @@ class ViewController: UIViewController {
     }
     
     private func goToHomePage() {
-        self.present(ViewControllerHomePage(), animated: true, completion: nil)
+        let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+        let newViewController = storyBoard.instantiateViewController(withIdentifier: "ViewControllerHomePage") as! ViewControllerHomePage
+        
+        // instead of card presentation style let's use full screen instead
+        newViewController.modalPresentationStyle = .fullScreen
+        self.present(newViewController, animated: true, completion: nil)
     }
     
     private func setupPaperOnboardingView() {

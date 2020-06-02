@@ -25,6 +25,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             }
         }
         
+        // to be able to handle the actions upon notifications
+        notificationCenter.delegate = self
+        
         return true
     }
 
@@ -95,7 +98,6 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
     func userNotificationCenter(_ center: UNUserNotificationCenter,
                                 willPresent notification: UNNotification,
                                 withCompletionHandler completionHandler: @escaping (UNNotificationPresentationOptions) -> Void) {
-        
         /*
         if notification.request.content.categoryIdentifier ==
                  "MEETING_INVITATION" {
