@@ -231,8 +231,12 @@ extension ViewControllerHomePage: ButtonStackViewDelegate, SwipeCardStackDataSou
             cardStack.swipe(.up, animated: true)
         case 4:
             //cardStack.swipe(.right, animated: true)
-            wasCalledFromButton = true
-            addToStatistics()
+            // only swipe in case thera are any cards on top
+            if(cardStack.topCard != nil){
+                wasCalledFromButton = true
+                addToStatistics()
+            }
+
             
         default:
             break
