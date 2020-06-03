@@ -1,0 +1,132 @@
+
+/* Class = "UIViewController"; title = "Own Card Set"; ObjectID = "1Ve-8b-wG4"; */
+"1Ve-8b-wG4.title" = "Own Card Set";
+
+/* Class = "UIButton"; normalTitle = "Show Progress"; ObjectID = "6Km-Pb-BCo"; */
+"6Km-Pb-BCo.normalTitle" = "Show Progress";
+
+/* Class = "UITextField"; placeholder = "title goes here"; ObjectID = "6eG-3M-HrW"; */
+"6eG-3M-HrW.placeholder" = "title goes here";
+
+/* Class = "UILabel"; text = "Enter New Card Title:"; ObjectID = "6i4-iR-zcb"; */
+"6i4-iR-zcb.text" = "Enter New Card Title:";
+
+/* Class = "UITextField"; text = "40"; ObjectID = "7fs-Rc-6tN"; */
+"7fs-Rc-6tN.text" = "40";
+
+/* Class = "UILabel"; text = "Golden Sentences:"; ObjectID = "AMb-2B-OJK"; */
+"AMb-2B-OJK.text" = "Golden Sentences:";
+
+/* Class = "UIButton"; normalTitle = "Add"; ObjectID = "CMB-Ak-uys"; */
+"CMB-Ak-uys.normalTitle" = "Add";
+
+/* Class = "UIViewController"; title = "About"; ObjectID = "Dpp-gZ-iQ1"; */
+"Dpp-gZ-iQ1.title" = "About";
+
+/* Class = "UILabel"; text = "Introvert / Extrovert"; ObjectID = "EXy-qY-4Ce"; */
+"EXy-qY-4Ce.text" = "Introvert / Extrovert";
+
+/* Class = "UIButton"; normalTitle = "Settings"; ObjectID = "H5c-5f-DUa"; */
+"H5c-5f-DUa.normalTitle" = "Settings";
+
+/* Class = "UILabel"; text = "Enter Card Goal"; ObjectID = "HSG-zy-ugh"; */
+"HSG-zy-ugh.text" = "Enter Card Goal";
+
+/* Class = "UILabel"; text = "Statistics  Day / Week / Weekly target"; ObjectID = "HjX-UZ-ofx"; */
+"HjX-UZ-ofx.text" = "Statistics  Day / Week / Weekly target";
+
+/* Class = "UILabel"; text = "Owl / Lark"; ObjectID = "JJK-Lx-YNk"; */
+"JJK-Lx-YNk.text" = "Owl / Lark";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "MhO-lE-2gm"; */
+"MhO-lE-2gm.normalTitle" = "3";
+
+/* Class = "UILabel"; text = "Add new golden sentence:"; ObjectID = "Ois-Gw-cgu"; */
+"Ois-Gw-cgu.text" = "Add new golden sentence:";
+
+/* Class = "UILabel"; text = "Green Cards: "; ObjectID = "TYU-SF-FSn"; */
+"TYU-SF-FSn.text" = "Green Cards: ";
+
+/* Class = "UILabel"; text = "Leading Idea"; ObjectID = "VUo-U2-63E"; */
+"VUo-U2-63E.text" = "Leading Idea";
+
+/* Class = "UINavigationItem"; title = "Menu"; ObjectID = "We5-DM-vQd"; */
+"We5-DM-vQd.title" = "Menu";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "Yy0-Dh-FN2"; */
+"Yy0-Dh-FN2.normalTitle" = "3";
+
+/* Class = "UILabel"; text = "Enter Card Details"; ObjectID = "Zxi-bZ-LrV"; */
+"Zxi-bZ-LrV.text" = "Enter Card Details";
+
+/* Class = "UILabel"; text = "Label"; ObjectID = "b75-7V-nfX"; */
+"b75-7V-nfX.text" = "Label";
+
+/* Class = "UITextField"; placeholder = "details goes here"; ObjectID = "bcz-fK-lM5"; */
+"bcz-fK-lM5.placeholder" = "details goes here";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "caB-5X-p3B"; */
+"caB-5X-p3B.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Planning"; ObjectID = "cms-Vd-OQq"; */
+"cms-Vd-OQq.normalTitle" = "Planning";
+
+/* Class = "UILabel"; text = "Red Cards: "; ObjectID = "dpw-o6-B5U"; */
+"dpw-o6-B5U.text" = "Red Cards: ";
+
+/* Class = "UILabel"; text = "Alone / In Family"; ObjectID = "fQL-JO-vTa"; */
+"fQL-JO-vTa.text" = "Alone / In Family";
+
+/* Class = "UILabel"; text = "Age"; ObjectID = "far-Yl-eqN"; */
+"far-Yl-eqN.text" = "Age";
+
+/* Class = "UILabel"; text = "Blue Cards: "; ObjectID = "gBz-MA-M0C"; */
+"gBz-MA-M0C.text" = "Blue Cards: ";
+
+/* Class = "UIButton"; normalTitle = "About"; ObjectID = "hSq-oD-CSW"; */
+"hSq-oD-CSW.normalTitle" = "About";
+
+/* Class = "UIViewController"; title = "Home"; ObjectID = "hhl-5W-gbO"; */
+"hhl-5W-gbO.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Statistics"; ObjectID = "hlI-Ao-5BF"; */
+"hlI-Ao-5BF.normalTitle" = "Statisztika";
+
+/* Class = "UILabel"; text = "Weekly Targets:"; ObjectID = "iOD-bG-Lfj"; */
+"iOD-bG-Lfj.text" = "Weekly Targets:";
+
+/* Class = "UILabel"; text = "Kairosz application credits\nApplication version number: 1.0\nProject Code: https://github.com/vlazar83/MyGoals_iOS\nCopyright (c) 2020 Viktor Lázár\nLicense: MIT License\n\nOther libraries used in this application:\nName: PAPER ONBOARDING\nProject Code: https://github.com/Ramotion/paper-onboarding\nLicense: MIT license\n\nName: SideMenu\nProject Code: https://github.com/jonkykong/SideMenu\nLicense: MIT license\n\nName: Shuffle\nProject Code: https://github.com/mac-gallagher/Shuffle\nLicense: MIT License\n\nName: PopBounceButton\nProject Code: https://github.com/mac-gallagher/PopBounceButton\nLicense: MIT license\n\nName: UICircularProgressRing\nProject Code: https://github.com/luispadron/UICircularProgressRing\nLicense: --"; ObjectID = "jVy-Pp-gVc"; */
+"jVy-Pp-gVc.text" = "Kairosz application credits\nApplication version number: 1.0\nProject Code: https://github.com/vlazar83/MyGoals_iOS\nCopyright (c) 2020 Viktor Lázár\nLicense: MIT License\n\nOther libraries used in this application:\nName: PAPER ONBOARDING\nProject Code: https://github.com/Ramotion/paper-onboarding\nLicense: MIT license\n\nName: SideMenu\nProject Code: https://github.com/jonkykong/SideMenu\nLicense: MIT license\n\nName: Shuffle\nProject Code: https://github.com/mac-gallagher/Shuffle\nLicense: MIT License\n\nName: PopBounceButton\nProject Code: https://github.com/mac-gallagher/PopBounceButton\nLicense: MIT license\n\nName: UICircularProgressRing\nProject Code: https://github.com/luispadron/UICircularProgressRing\nLicense: --";
+
+/* Class = "UIButton"; normalTitle = "Update"; ObjectID = "jy3-dk-4Hm"; */
+"jy3-dk-4Hm.normalTitle" = "Update";
+
+/* Class = "UITextField"; placeholder = "enter card goal"; ObjectID = "laC-75-Jyv"; */
+"laC-75-Jyv.placeholder" = "enter card goal";
+
+/* Class = "UIButton"; normalTitle = "Own Card Set"; ObjectID = "nB5-LO-DFB"; */
+"nB5-LO-DFB.normalTitle" = "Own Card Set";
+
+/* Class = "UIButton"; normalTitle = "Leading Idea"; ObjectID = "oVI-jP-19N"; */
+"oVI-jP-19N.normalTitle" = "Leading Idea";
+
+/* Class = "UIViewController"; title = "Settings"; ObjectID = "ppB-xj-I66"; */
+"ppB-xj-I66.title" = "Settings";
+
+/* Class = "UILabel"; text = "Enter New Card Details:"; ObjectID = "qqe-nD-gnc"; */
+"qqe-nD-gnc.text" = "Enter New Card Details:";
+
+/* Class = "UITextField"; placeholder = "enter leading idea here"; ObjectID = "tTC-Hf-803"; */
+"tTC-Hf-803.placeholder" = "enter leading idea here";
+
+/* Class = "UIButton"; normalTitle = "3"; ObjectID = "vDu-V4-RvD"; */
+"vDu-V4-RvD.normalTitle" = "3";
+
+/* Class = "UITextField"; placeholder = "card details goes here..."; ObjectID = "xOj-jO-KSl"; */
+"xOj-jO-KSl.placeholder" = "card details goes here...";
+
+/* Class = "UIButton"; normalTitle = "skip"; ObjectID = "yYb-sg-HQ7"; */
+"yYb-sg-HQ7.normalTitle" = "skip";
+
+/* Class = "UIButton"; normalTitle = "Take Photo"; ObjectID = "yeZ-CH-GYb"; */
+"yeZ-CH-GYb.normalTitle" = "Take Photo";
