@@ -57,7 +57,7 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         
         // Define the custom actions.
         let acceptAction = UNNotificationAction(identifier: "CLOSE_ACTION",
-              title: "Close",
+              title: NSLocalizedString("Close", comment: ""),
               options: UNNotificationActionOptions(rawValue: 0))
 
         // Define the notification type
@@ -72,7 +72,7 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         notificationCenter.setNotificationCategories([meetingInviteCategory])
         
         let content = UNMutableNotificationContent()
-        content.title = "Golden Sentence"
+        content.title = NSLocalizedString("Golden Sentence", comment: "")
         content.body = Utils.getRandomGoldenSentence() ?? Settings.emptyGoldenSentences
         content.userInfo = ["SAMPLE_DATA_1" : "111", "SAMPLE_DATA_2" : "222" ]
         content.categoryIdentifier = "GOLDEN_SENTENCE_NOTIFICATION"

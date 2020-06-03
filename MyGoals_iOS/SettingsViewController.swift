@@ -37,11 +37,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func aloneOrInFamilySwitchClicked(_ sender: Any) {
         
         if aloneOrInFamilySwitch.isOn {
-            aloneOrInFamilyLabel.text = "In Family"
+            aloneOrInFamilyLabel.text = NSLocalizedString("In Family", comment: "")
             Settings.shared.getSettingsData().inFamily = true
         }
         else {
-            aloneOrInFamilyLabel.text = "Alone"
+            aloneOrInFamilyLabel.text = NSLocalizedString("Alone", comment: "")
             Settings.shared.getSettingsData().inFamily = false
         }
         
@@ -50,11 +50,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func introvertOrExtrovertSwitchClicked(_ sender: Any) {
         
         if introvertOrExtrovertSwitch.isOn {
-            introvertOrExtrovertLabel.text = "Extrovert"
+            introvertOrExtrovertLabel.text = NSLocalizedString("Extrovert", comment: "")
             Settings.shared.getSettingsData().isExtrovert = true
         }
         else {
-            introvertOrExtrovertLabel.text = "Introvert"
+            introvertOrExtrovertLabel.text = NSLocalizedString("Introvert", comment: "")
             Settings.shared.getSettingsData().isExtrovert = false
         }
         
@@ -63,11 +63,11 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     @IBAction func owlOrLarkSwitchClicked(_ sender: Any) {
         
         if owlOrLarkSwitch.isOn {
-            owlOrLarkLabel.text = "Lark"
+            owlOrLarkLabel.text = NSLocalizedString("Lark", comment: "")
             Settings.shared.getSettingsData().isLark = true
         }
         else {
-            owlOrLarkLabel.text = "Owl"
+            owlOrLarkLabel.text = NSLocalizedString("Owl", comment: "")
             Settings.shared.getSettingsData().isLark = false
         }
         
@@ -152,26 +152,26 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
         
         if(Settings.shared.getSettingsData().inFamily){
             aloneOrInFamilySwitch.isOn = true
-            aloneOrInFamilyLabel.text = "In Family"
+            aloneOrInFamilyLabel.text = NSLocalizedString("In Family", comment: "")
         } else {
             aloneOrInFamilySwitch.isOn = false
-            aloneOrInFamilyLabel.text = "Alone"
+            aloneOrInFamilyLabel.text = NSLocalizedString("Alone", comment: "")
         }
         
         if(Settings.shared.getSettingsData().isExtrovert){
             introvertOrExtrovertSwitch.isOn = true
-            introvertOrExtrovertLabel.text = "Extrovert"
+            introvertOrExtrovertLabel.text = NSLocalizedString("Extrovert", comment: "")
         } else {
             introvertOrExtrovertSwitch.isOn = false
-            introvertOrExtrovertLabel.text = "Introvert"
+            introvertOrExtrovertLabel.text = NSLocalizedString("Introvert", comment: "")
         }
         
         if(Settings.shared.getSettingsData().isLark){
             owlOrLarkSwitch.isOn = true
-            owlOrLarkLabel.text = "Lark"
+            owlOrLarkLabel.text = NSLocalizedString("Lark", comment: "")
         } else {
             owlOrLarkSwitch.isOn = false
-            owlOrLarkLabel.text = "Owl"
+            owlOrLarkLabel.text = NSLocalizedString("Owl", comment: "")
         }
         
         enteredAgeTextView.text = String(Settings.shared.getSettingsData().age)

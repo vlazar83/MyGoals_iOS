@@ -25,29 +25,29 @@ class ViewController: UIViewController {
     
     fileprivate let items = [
         OnboardingItemInfo(informationImage: Asset.church.image,
-                           title: "App's Goal",
-                           description: "To help us capture Kronos in Kairos",
+                           title: NSLocalizedString("App's Goal", comment: ""),
+                           description: NSLocalizedString("To help us capture Kronos in Kairos", comment: ""),
                            pageIcon: Asset.cross.image,
                            color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: Asset.growth.image,
-                           title: "How it helps?",
-                           description: "Make your own recepie",
+                           title: NSLocalizedString("How it helps?", comment: ""),
+                           description: NSLocalizedString("Make your own recepie", comment: ""),
                            pageIcon: Asset.shoppingCart.image,
                            color: UIColor(red: 0.61, green: 0.56, blue: 0.74, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: Asset.bible.image,
-                           title: "App\'s Method",
-                           description: "\"waking up by reminding\" - (2Pt 1, 13)",
+                           title: NSLocalizedString("App\'s Method", comment: ""),
+                           description: NSLocalizedString("\"waking up by reminding\" - (2Pt 1, 13)", comment: ""),
                            pageIcon: Asset.star.image,
                            color: UIColor(red: 0.85, green: 0.32, blue: 0.30, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
         OnboardingItemInfo(informationImage: Asset.dove.image,
-                            title: "The Soul in work",
-                            description: "The app helps us to capture the Soul in our life",
+                            title: NSLocalizedString("The Soul in work", comment: ""),
+                            description: NSLocalizedString("The app helps us to capture the Soul in our life", comment: ""),
                             pageIcon: Asset.key.image,
                             color: UIColor(red: 0.16, green: 0.21, blue: 0.31, alpha: 1.00),
                             titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont)

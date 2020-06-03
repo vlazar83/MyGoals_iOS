@@ -17,12 +17,12 @@ class CreateGoldenSentenceViewController: UIViewController {
     @IBAction func addButtonClicked(_ sender: Any) {
         
         if(!(enteredText.text?.isEmpty ?? true)){
-            Settings.shared.getSettingsData().goldenSentences.append(enteredText.text ?? "new golden sentence")
+            Settings.shared.getSettingsData().goldenSentences.append(enteredText.text ?? NSLocalizedString("new golden sentence", comment: ""))
             self.delegate?.refreshTableView()
             Utils.storeSettingsToUserDefaults()
             dismiss(animated: true, completion: nil)
         } else {
-            showToast(message: "Enter the new golden sentence first!")
+            showToast(message: NSLocalizedString("Enter the new golden sentence first!", comment: ""))
         }
         
 
