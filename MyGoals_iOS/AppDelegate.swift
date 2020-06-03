@@ -139,6 +139,16 @@ extension AppDelegate: UNUserNotificationCenterDelegate {
           switch response.actionIdentifier {
           case "CLOSE_ACTION":
              print(sampleData1 + sampleData2)
+
+             /* Open a specific VC
+             https://fluffy.es/open-app-in-specific-view-when-push-notification-is-tapped-ios-13/
+              
+             let storyBoard: UIStoryboard = UIStoryboard(name: "Main", bundle: nil)
+             let newViewController = storyBoard.instantiateViewController(withIdentifier: "SettingsViewController") as! SettingsViewController
+             
+             (UIApplication.shared.connectedScenes.first?.delegate as? SceneDelegate)?.window?.rootViewController?.present(newViewController, animated: false, completion: nil)
+             */
+             
              break
                     
           default:
