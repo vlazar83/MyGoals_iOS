@@ -47,11 +47,11 @@ class StatisticsViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
-        redCardsLabel.text?.append(contentsOf: String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).redCardCount) + " / " + String(Utils.getRedCardsCountFromWeek()))
+        redCardsLabel.text?.append(contentsOf: String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).redCardCount) + " / " + String(Utils.getRedCardsCountFromWeek()) + " / " + String(Settings.shared.getSettingsData().weeklyRedTarget))
         
-        blueCardsLabel.text?.append(contentsOf: String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).blueCardCount) + " / " + String(Utils.getBlueCardsCountFromWeek()))
+        blueCardsLabel.text?.append(contentsOf: String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).blueCardCount) + " / " + String(Utils.getBlueCardsCountFromWeek()) + " / " + String(Settings.shared.getSettingsData().weeklyBlueTarget))
         
-        greenCardsLabel.text?.append(contentsOf: String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).greenCardCount + Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).lightGreenCardCount) + " / " + String(Utils.getGreenCardsCountFromWeek() + Utils.getLightGreenCardsCountFromWeek()))
+        greenCardsLabel.text?.append(contentsOf: String(Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).greenCardCount + Statistics.shared.getStatisticsForDay(day: Utils.getDayOfYear()).lightGreenCardCount) + " / " + String(Utils.getGreenCardsCountFromWeek() + Utils.getLightGreenCardsCountFromWeek()) + " / " + String(Settings.shared.getSettingsData().weeklyGreenTarget))
         
         
     }

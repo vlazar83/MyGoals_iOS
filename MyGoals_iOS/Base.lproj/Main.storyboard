@@ -608,23 +608,6 @@ License: --</string>
                         <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="LnK-Ry-Jiu">
-                                <rect key="frame" x="98" y="16" width="179.5" height="49"/>
-                                <subviews>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics  Day / Week" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2HW-Gq-tRU">
-                                        <rect key="frame" x="7" y="0.0" width="166" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Cards: " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0xM-zh-7dR">
-                                        <rect key="frame" x="45.5" y="28.5" width="88.5" height="20.5"/>
-                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                        <nil key="textColor"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Km-Pb-BCo">
                                 <rect key="frame" x="136.5" y="597" width="103" height="30"/>
                                 <state key="normal" title="Show Progress"/>
@@ -633,7 +616,7 @@ License: --</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-Ym-o1K" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="68" y="73" width="239.5" height="144"/>
+                                <rect key="frame" x="68" y="78" width="239.5" height="139"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minValue">
@@ -696,7 +679,7 @@ License: --</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Cards: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBz-MA-M0C">
-                                <rect key="frame" x="98" y="416.5" width="182" height="20.5"/>
+                                <rect key="frame" x="143" y="416.5" width="92.5" height="20.5"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -707,29 +690,43 @@ License: --</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics  Day / Week / Weekly target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjX-UZ-ofx">
+                                <rect key="frame" x="16" y="20" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Cards: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpw-o6-B5U">
+                                <rect key="frame" x="16" y="49" width="343" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="LnK-Ry-Jiu" firstAttribute="top" secondItem="Sfw-RG-YO5" secondAttribute="top" constant="16" id="5ce-Wc-g4h"/>
+                            <constraint firstItem="HjX-UZ-ofx" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="16" id="47h-Ta-4Pd"/>
                             <constraint firstItem="0Mh-pE-Pyb" firstAttribute="top" secondItem="TYU-SF-FSn" secondAttribute="bottom" constant="8" id="6qz-V9-Nkf"/>
                             <constraint firstItem="6Km-Pb-BCo" firstAttribute="top" secondItem="edH-QF-Lgs" secondAttribute="bottom" constant="8" id="AIB-Fd-k8v"/>
                             <constraint firstItem="gBz-MA-M0C" firstAttribute="centerX" secondItem="0Mh-pE-Pyb" secondAttribute="centerX" id="Cf0-mU-9Ei"/>
                             <constraint firstAttribute="bottom" secondItem="gBz-MA-M0C" secondAttribute="bottom" constant="210" id="GYX-fD-HiF"/>
-                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="top" secondItem="LnK-Ry-Jiu" secondAttribute="bottom" constant="8" id="JMv-4m-4jR"/>
-                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="centerX" secondItem="LnK-Ry-Jiu" secondAttribute="centerX" id="M7U-9c-53G"/>
                             <constraint firstItem="edH-QF-Lgs" firstAttribute="leading" secondItem="0Mh-pE-Pyb" secondAttribute="leading" id="OzG-4d-bqq"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="HjX-UZ-ofx" secondAttribute="trailing" constant="16" id="PE5-zL-UGJ"/>
                             <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="TYU-SF-FSn" secondAttribute="trailing" constant="88" id="Pzv-EX-GKp"/>
                             <constraint firstItem="gBz-MA-M0C" firstAttribute="centerX" secondItem="TYU-SF-FSn" secondAttribute="centerX" id="UcO-Su-wQO"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="dpw-o6-B5U" secondAttribute="trailing" constant="16" id="V8S-rc-AGx"/>
                             <constraint firstItem="edH-QF-Lgs" firstAttribute="top" secondItem="gBz-MA-M0C" secondAttribute="bottom" constant="8" id="Vnh-9z-ei5"/>
                             <constraint firstItem="TYU-SF-FSn" firstAttribute="top" secondItem="zbH-L6-KoN" secondAttribute="top" constant="222" id="WP2-w4-3iQ"/>
-                            <constraint firstItem="LnK-Ry-Jiu" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="98" id="Zpg-tG-s8N"/>
                             <constraint firstItem="gBz-MA-M0C" firstAttribute="top" secondItem="0Mh-pE-Pyb" secondAttribute="bottom" constant="21" id="anR-tb-q3y"/>
-                            <constraint firstItem="gBz-MA-M0C" firstAttribute="leading" secondItem="LnK-Ry-Jiu" secondAttribute="leading" id="dhf-Tp-s6U"/>
+                            <constraint firstItem="HjX-UZ-ofx" firstAttribute="top" secondItem="Sfw-RG-YO5" secondAttribute="top" constant="20" id="cxX-N8-jJ1"/>
+                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="top" secondItem="dpw-o6-B5U" secondAttribute="bottom" constant="8" id="dvB-Ya-eYT"/>
                             <constraint firstItem="gBz-MA-M0C" firstAttribute="centerX" secondItem="edH-QF-Lgs" secondAttribute="centerX" id="fDa-S0-vrx"/>
-                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="LnK-Ry-Jiu" secondAttribute="trailing" constant="97.5" id="fSH-qu-zCu"/>
                             <constraint firstItem="TYU-SF-FSn" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="91" id="gqr-Xs-3nr"/>
                             <constraint firstItem="edH-QF-Lgs" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="70" id="jOy-Yw-xhV"/>
+                            <constraint firstItem="dpw-o6-B5U" firstAttribute="top" secondItem="HjX-UZ-ofx" secondAttribute="bottom" constant="8" id="oPd-hL-jgS"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="Glb-Ym-o1K" secondAttribute="trailing" constant="67.5" id="oca-hb-g7s"/>
                             <constraint firstItem="TYU-SF-FSn" firstAttribute="top" secondItem="Glb-Ym-o1K" secondAttribute="bottom" constant="5" id="qY6-Yg-49d"/>
+                            <constraint firstItem="dpw-o6-B5U" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="16" id="rZP-c4-LcB"/>
                             <constraint firstAttribute="bottom" secondItem="edH-QF-Lgs" secondAttribute="bottom" constant="58" id="wBb-5x-ejk"/>
                             <constraint firstItem="Glb-Ym-o1K" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="68" id="ysg-4R-aNj"/>
                             <constraint firstItem="Glb-Ym-o1K" firstAttribute="centerX" secondItem="6Km-Pb-BCo" secondAttribute="centerX" id="yuU-2j-pzr"/>
@@ -741,7 +738,7 @@ License: --</string>
                         <outlet property="blueCircleRing" destination="edH-QF-Lgs" id="tvM-1v-zVo"/>
                         <outlet property="greenCardsLabel" destination="TYU-SF-FSn" id="NBj-Pw-zEi"/>
                         <outlet property="greenCircleRing" destination="0Mh-pE-Pyb" id="aof-J3-1BS"/>
-                        <outlet property="redCardsLabel" destination="0xM-zh-7dR" id="3WV-mp-zjg"/>
+                        <outlet property="redCardsLabel" destination="dpw-o6-B5U" id="YUs-BM-Gai"/>
                         <outlet property="redCircleRing" destination="Glb-Ym-o1K" id="cjA-cH-5oL"/>
                     </connections>
                 </viewController>
