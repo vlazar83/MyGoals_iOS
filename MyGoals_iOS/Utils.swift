@@ -260,6 +260,11 @@ class Utils {
                 print("Unable to Decode Notes (\(error))")
             }
         }
+        
+        if(Settings.shared.getSettingsData().goldenSentences.count == 0){
+            Settings.shared.addDefaultGoldenSentences()
+        }
+        
     }
     
     static func storeSettingsToUserDefaults(){

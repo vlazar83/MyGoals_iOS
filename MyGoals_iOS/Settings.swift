@@ -25,6 +25,10 @@ class Settings{
     func setSettingsData(newSettings: SettingsData) -> (){
         self.settingsData = newSettings
     }
+    
+    func addDefaultGoldenSentences() -> (){
+        self.settingsData.goldenSentences = SettingsData.defaultGoldenSentences
+    }
 
 }
 
@@ -43,6 +47,8 @@ class SettingsData: NSObject, Codable{
     
     var goldenSentences : [String] = []
     
+    static let defaultGoldenSentences : [String] = ["Sok lud disznot gyöz","Ki mint vet ugy arat","TBDL...","TBDL..."]
+    
     internal override init() {
         
         self.weeklyRedTarget = defaultWeeklyTarget
@@ -52,6 +58,8 @@ class SettingsData: NSObject, Codable{
         self.isLark = true
         self.isExtrovert = true
         self.inFamily = true
+        
+        self.goldenSentences.append(contentsOf: SettingsData.defaultGoldenSentences)
         
     }
     
