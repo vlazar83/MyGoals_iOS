@@ -14,12 +14,14 @@
 
 // swiftlint:disable identifier_name line_length nesting type_body_length type_name
 internal enum Asset {
-  internal static let banks = ImageAsset(name: "Banks")
-  internal static let hotels = ImageAsset(name: "Hotels")
+    internal static let church = ImageAsset(name: "church_building_free_icon")
+    internal static let bible = ImageAsset(name: "bible_free_icon")
+    internal static let growth = ImageAsset(name: "growth_free_icon")
+    internal static let dove = ImageAsset(name: "dove_free_icon")
+    internal static let star = ImageAsset(name: "star_free_icon")
+    internal static let cross = ImageAsset(name: "cross_free_icon")
   internal static let key = ImageAsset(name: "Key")
   internal static let shoppingCart = ImageAsset(name: "Shopping-cart")
-  internal static let stores = ImageAsset(name: "Stores")
-  internal static let wallet = ImageAsset(name: "Wallet")
 }
 // swiftlint:enable identifier_name line_length nesting type_body_length type_name
 

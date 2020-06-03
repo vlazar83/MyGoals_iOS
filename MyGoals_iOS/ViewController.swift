@@ -24,26 +24,33 @@ class ViewController: UIViewController {
     }
     
     fileprivate let items = [
-        OnboardingItemInfo(informationImage: Asset.hotels.image,
-                           title: "Hotels",
-                           description: "All hotels and hostels are sorted by hospitality rating",
-                           pageIcon: Asset.key.image,
+        OnboardingItemInfo(informationImage: Asset.church.image,
+                           title: "App's Goal",
+                           description: "To help us capture Kronos in Kairos",
+                           pageIcon: Asset.cross.image,
                            color: UIColor(red: 0.40, green: 0.56, blue: 0.71, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
         
-        OnboardingItemInfo(informationImage: Asset.banks.image,
-                           title: "Banks",
-                           description: "We carefully verify all banks before add them into the app",
-                           pageIcon: Asset.wallet.image,
-                           color: UIColor(red: 0.40, green: 0.69, blue: 0.71, alpha: 1.00),
-                           titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
-        
-        OnboardingItemInfo(informationImage: Asset.stores.image,
-                           title: "Stores",
-                           description: "All local stores are categorized for your convenience",
+        OnboardingItemInfo(informationImage: Asset.growth.image,
+                           title: "How it helps?",
+                           description: "Make your own recepie",
                            pageIcon: Asset.shoppingCart.image,
                            color: UIColor(red: 0.61, green: 0.56, blue: 0.74, alpha: 1.00),
                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
+        
+        OnboardingItemInfo(informationImage: Asset.bible.image,
+                           title: "App\'s Method",
+                           description: "\"waking up by reminding\" - (2Pt 1, 13)",
+                           pageIcon: Asset.star.image,
+                           color: UIColor(red: 0.85, green: 0.32, blue: 0.30, alpha: 1.00),
+                           titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont),
+        
+        OnboardingItemInfo(informationImage: Asset.dove.image,
+                            title: "The Soul in work",
+                            description: "The app helps us to capture the Soul in our life",
+                            pageIcon: Asset.key.image,
+                            color: UIColor(red: 0.16, green: 0.21, blue: 0.31, alpha: 1.00),
+                            titleColor: UIColor.white, descriptionColor: UIColor.white, titleFont: titleFont, descriptionFont: descriptionFont)
         
         ]
     
@@ -109,7 +116,7 @@ class ViewController: UIViewController {
 extension ViewController: PaperOnboardingDelegate {
 
     func onboardingWillTransitonToIndex(_ index: Int) {
-        skipButton.isHidden = index == 2 ? false : true
+        skipButton.isHidden = index == 3 ? false : true
     }
 
     func onboardingConfigurationItem(_ item: OnboardingContentViewItem, index: Int) {
@@ -131,7 +138,7 @@ extension ViewController: PaperOnboardingDataSource {
     }
 
     func onboardingItemsCount() -> Int {
-        return 3
+        return items.count
     }
     
     //    func onboardinPageItemRadius() -> CGFloat {
