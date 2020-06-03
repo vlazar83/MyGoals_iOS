@@ -46,6 +46,7 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         Utils.loadCreatedCardsFromUserDefaults()
         setupStatistics()
         
+        Utils.loadSettingsFromUserDefaults()
         scheduleNotification()
         
     }

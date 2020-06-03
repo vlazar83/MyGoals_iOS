@@ -41,10 +41,7 @@ class SettingsData: NSObject, Codable{
     var isExtrovert: Bool
     var inFamily: Bool
     
-    var goldenSentences : [String] = ["Sok lud disznot gyoz",
-                                              "Ki koran kel aranyat lel",
-                                              "TBDL...",
-                                              "TBDL..."]
+    var goldenSentences : [String] = []
     
     internal override init() {
         

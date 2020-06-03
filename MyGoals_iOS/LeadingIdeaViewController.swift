@@ -9,11 +9,14 @@ import UIKit
 
 class LeadingIdeaViewController: UIViewController {
     
+    var delegate: RefreshCardsDelegateProtocol?
+    
     @IBOutlet weak var enteredLeadingIdea: UITextField!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        self.delegate = self.presentingViewController?.presentingViewController as? RefreshCardsDelegateProtocol
 
         
     }
@@ -42,6 +45,7 @@ class LeadingIdeaViewController: UIViewController {
     }
     
     func navigateBack(){
+        self.delegate?.refreshCards()
         dismiss(animated: true, completion: nil)
     }
     
