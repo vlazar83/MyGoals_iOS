@@ -30,6 +30,7 @@
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
+                            <constraint firstItem="yYb-sg-HQ7" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="6Tk-OE-BBY" secondAttribute="leading" symbolic="YES" id="DI2-UP-1Oh"/>
                             <constraint firstItem="yYb-sg-HQ7" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="20" id="eQL-yX-6nv"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="yYb-sg-HQ7" secondAttribute="trailing" constant="16" id="wmG-uH-pai"/>
                         </constraints>
@@ -376,38 +377,35 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4Zv-Jy-RAz">
-                                <rect key="frame" x="16" y="57" width="223" height="34"/>
+                                <rect key="frame" x="16" y="57" width="288" height="34"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new golden sentence:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ois-Gw-cgu">
+                                <rect key="frame" x="16" y="20" width="288" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="CMB-Ak-uys">
-                                <rect key="frame" x="112" y="123" width="30" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" constant="150" id="NeX-Ym-iqD"/>
-                                </constraints>
+                                <rect key="frame" x="110" y="107" width="100" height="30"/>
                                 <state key="normal" title="Add"/>
                                 <connections>
                                     <action selector="addButtonClicked:" destination="vGt-Uw-W9x" eventType="touchUpInside" id="d5c-1e-iwT"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add new golden sentence:" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ois-Gw-cgu">
-                                <rect key="frame" x="16" y="20" width="223" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="textColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="Ois-Gw-cgu" firstAttribute="top" secondItem="pnE-VK-FQ0" secondAttribute="top" constant="20" id="ENR-yX-TXV"/>
-                            <constraint firstItem="pnE-VK-FQ0" firstAttribute="trailing" secondItem="CMB-Ak-uys" secondAttribute="trailing" constant="113" id="MXD-fM-ZUH"/>
-                            <constraint firstItem="CMB-Ak-uys" firstAttribute="leading" secondItem="pnE-VK-FQ0" secondAttribute="leading" constant="112" id="VF6-Hy-ODA"/>
-                            <constraint firstItem="pnE-VK-FQ0" firstAttribute="trailing" secondItem="Ois-Gw-cgu" secondAttribute="trailing" constant="16" id="cby-2r-0Hg"/>
-                            <constraint firstItem="Ois-Gw-cgu" firstAttribute="leading" secondItem="pnE-VK-FQ0" secondAttribute="leading" constant="16" id="gyN-vt-D4p"/>
-                            <constraint firstItem="4Zv-Jy-RAz" firstAttribute="leading" secondItem="pnE-VK-FQ0" secondAttribute="leading" constant="16" id="pEJ-Qy-9Qg"/>
-                            <constraint firstItem="4Zv-Jy-RAz" firstAttribute="top" secondItem="Ois-Gw-cgu" secondAttribute="bottom" constant="16" id="wuw-FM-0BI"/>
-                            <constraint firstItem="CMB-Ak-uys" firstAttribute="top" secondItem="4Zv-Jy-RAz" secondAttribute="bottom" constant="32" id="yg4-XH-WQR"/>
-                            <constraint firstItem="pnE-VK-FQ0" firstAttribute="trailing" secondItem="4Zv-Jy-RAz" secondAttribute="trailing" constant="16" id="yx5-gP-3V6"/>
+                            <constraint firstItem="CMB-Ak-uys" firstAttribute="leading" secondItem="pnE-VK-FQ0" secondAttribute="leading" constant="110" id="3Wx-O4-XPb"/>
+                            <constraint firstItem="pnE-VK-FQ0" firstAttribute="trailing" secondItem="Ois-Gw-cgu" secondAttribute="trailing" constant="16" id="5TM-6V-sk8"/>
+                            <constraint firstItem="CMB-Ak-uys" firstAttribute="top" secondItem="4Zv-Jy-RAz" secondAttribute="bottom" constant="16" id="8SL-11-kpN"/>
+                            <constraint firstItem="pnE-VK-FQ0" firstAttribute="trailing" secondItem="4Zv-Jy-RAz" secondAttribute="trailing" constant="16" id="Shp-I1-ngT"/>
+                            <constraint firstItem="4Zv-Jy-RAz" firstAttribute="leading" secondItem="pnE-VK-FQ0" secondAttribute="leading" constant="16" id="T26-J2-vXa"/>
+                            <constraint firstItem="Ois-Gw-cgu" firstAttribute="leading" secondItem="pnE-VK-FQ0" secondAttribute="leading" constant="16" id="Vuy-oO-UqT"/>
+                            <constraint firstItem="Ois-Gw-cgu" firstAttribute="top" secondItem="pnE-VK-FQ0" secondAttribute="top" constant="20" id="f0N-3C-BQN"/>
+                            <constraint firstItem="pnE-VK-FQ0" firstAttribute="trailing" secondItem="CMB-Ak-uys" secondAttribute="trailing" constant="110" id="fgY-3Z-K3S"/>
+                            <constraint firstItem="4Zv-Jy-RAz" firstAttribute="top" secondItem="Ois-Gw-cgu" secondAttribute="bottom" constant="16" id="gHq-EZ-qIN"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="pnE-VK-FQ0"/>
                     </view>
@@ -417,7 +415,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Kzm-mM-gKY" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4144.8000000000002" y="-418.74062968515744"/>
+            <point key="canvasLocation" x="4143.75" y="-419.36619718309862"/>
         </scene>
         <!--Own Card Set-->
         <scene sceneID="nlc-A3-HYB">
@@ -627,8 +625,11 @@ License: --</string>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-Ym-o1K" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="68" y="78" width="184.5" height="139"/>
+                                <rect key="frame" x="88" y="78" width="144" height="111"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="AtZ-Vn-elH"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minValue">
                                         <real key="value" value="0.0"/>
@@ -647,30 +648,12 @@ License: --</string>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
                             </view>
-                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mh-pE-Pyb" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="70" y="250.5" width="183" height="46"/>
-                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
-                                        <real key="value" value="0.0"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
-                                        <real key="value" value="100"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
-                                        <color key="value" red="0.47193781740594953" green="0.78728141191709844" blue="0.18053570808945066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
-                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
-                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                            </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edH-QF-Lgs" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="70" y="346" width="183" height="144"/>
+                                <rect key="frame" x="88" y="374" width="144" height="111"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="Uuo-xY-Zqp"/>
+                                </constraints>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="minValue">
                                         <real key="value" value="0.0"/>
@@ -690,13 +673,13 @@ License: --</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Cards: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBz-MA-M0C">
-                                <rect key="frame" x="115.5" y="317.5" width="92.5" height="20.5"/>
+                                <rect key="frame" x="16" y="345" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green Cards: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYU-SF-FSn">
-                                <rect key="frame" x="91" y="222" width="141" height="20.5"/>
+                                <rect key="frame" x="16" y="197" width="288" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -713,34 +696,57 @@ License: --</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mh-pE-Pyb" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
+                                <rect key="frame" x="88" y="226" width="144" height="111"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="111" id="ktc-gz-eM8"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="minValue">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="maxValue">
+                                        <real key="value" value="100"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="outerRingColor">
+                                        <color key="value" red="0.47193781740594953" green="0.78728141191709844" blue="0.18053570808945066" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="innerRingColor">
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="color" keyPath="fontColor">
+                                        <color key="value" systemColor="systemGreenColor" red="0.20392156859999999" green="0.78039215689999997" blue="0.34901960780000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </view>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="HjX-UZ-ofx" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="16" id="47h-Ta-4Pd"/>
-                            <constraint firstItem="0Mh-pE-Pyb" firstAttribute="top" secondItem="TYU-SF-FSn" secondAttribute="bottom" constant="8" id="6qz-V9-Nkf"/>
-                            <constraint firstItem="6Km-Pb-BCo" firstAttribute="top" secondItem="edH-QF-Lgs" secondAttribute="bottom" constant="8" id="AIB-Fd-k8v"/>
-                            <constraint firstItem="gBz-MA-M0C" firstAttribute="centerX" secondItem="0Mh-pE-Pyb" secondAttribute="centerX" id="Cf0-mU-9Ei"/>
-                            <constraint firstAttribute="bottom" secondItem="gBz-MA-M0C" secondAttribute="bottom" constant="210" id="GYX-fD-HiF"/>
-                            <constraint firstItem="edH-QF-Lgs" firstAttribute="leading" secondItem="0Mh-pE-Pyb" secondAttribute="leading" id="OzG-4d-bqq"/>
-                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="HjX-UZ-ofx" secondAttribute="trailing" constant="16" id="PE5-zL-UGJ"/>
-                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="TYU-SF-FSn" secondAttribute="trailing" constant="88" id="Pzv-EX-GKp"/>
-                            <constraint firstItem="gBz-MA-M0C" firstAttribute="centerX" secondItem="TYU-SF-FSn" secondAttribute="centerX" id="UcO-Su-wQO"/>
-                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="dpw-o6-B5U" secondAttribute="trailing" constant="16" id="V8S-rc-AGx"/>
-                            <constraint firstItem="edH-QF-Lgs" firstAttribute="top" secondItem="gBz-MA-M0C" secondAttribute="bottom" constant="8" id="Vnh-9z-ei5"/>
-                            <constraint firstItem="TYU-SF-FSn" firstAttribute="top" secondItem="zbH-L6-KoN" secondAttribute="top" constant="222" id="WP2-w4-3iQ"/>
-                            <constraint firstItem="gBz-MA-M0C" firstAttribute="top" secondItem="0Mh-pE-Pyb" secondAttribute="bottom" constant="21" id="anR-tb-q3y"/>
-                            <constraint firstItem="HjX-UZ-ofx" firstAttribute="top" secondItem="Sfw-RG-YO5" secondAttribute="top" constant="20" id="cxX-N8-jJ1"/>
-                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="top" secondItem="dpw-o6-B5U" secondAttribute="bottom" constant="8" id="dvB-Ya-eYT"/>
-                            <constraint firstItem="gBz-MA-M0C" firstAttribute="centerX" secondItem="edH-QF-Lgs" secondAttribute="centerX" id="fDa-S0-vrx"/>
-                            <constraint firstItem="TYU-SF-FSn" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="91" id="gqr-Xs-3nr"/>
-                            <constraint firstItem="edH-QF-Lgs" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="70" id="jOy-Yw-xhV"/>
-                            <constraint firstItem="dpw-o6-B5U" firstAttribute="top" secondItem="HjX-UZ-ofx" secondAttribute="bottom" constant="8" id="oPd-hL-jgS"/>
-                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="Glb-Ym-o1K" secondAttribute="trailing" constant="67.5" id="oca-hb-g7s"/>
-                            <constraint firstItem="TYU-SF-FSn" firstAttribute="top" secondItem="Glb-Ym-o1K" secondAttribute="bottom" constant="5" id="qY6-Yg-49d"/>
-                            <constraint firstItem="dpw-o6-B5U" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="16" id="rZP-c4-LcB"/>
-                            <constraint firstAttribute="bottom" secondItem="edH-QF-Lgs" secondAttribute="bottom" constant="58" id="wBb-5x-ejk"/>
-                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="68" id="ysg-4R-aNj"/>
-                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="centerX" secondItem="6Km-Pb-BCo" secondAttribute="centerX" id="yuU-2j-pzr"/>
+                            <constraint firstItem="6Km-Pb-BCo" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="109" id="9cp-cX-Uxc"/>
+                            <constraint firstItem="gBz-MA-M0C" firstAttribute="top" secondItem="0Mh-pE-Pyb" secondAttribute="bottom" constant="8" id="Ajc-HO-CE1"/>
+                            <constraint firstItem="edH-QF-Lgs" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="88" id="ArS-oO-vEm"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="dpw-o6-B5U" secondAttribute="trailing" constant="16" id="G5A-BA-2MA"/>
+                            <constraint firstItem="dpw-o6-B5U" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="16" id="IdU-Jx-bbj"/>
+                            <constraint firstItem="TYU-SF-FSn" firstAttribute="top" secondItem="Glb-Ym-o1K" secondAttribute="bottom" constant="8" id="KIk-9C-9d2"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="0Mh-pE-Pyb" secondAttribute="trailing" constant="88" id="LAs-hE-h9l"/>
+                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="88" id="LP5-0S-RfH"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="6Km-Pb-BCo" secondAttribute="trailing" constant="108" id="QFa-sw-kPn"/>
+                            <constraint firstItem="HjX-UZ-ofx" firstAttribute="top" secondItem="Sfw-RG-YO5" secondAttribute="top" constant="20" id="Ree-84-e9G"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="bottom" secondItem="6Km-Pb-BCo" secondAttribute="bottom" constant="20" id="TIy-y0-xsK"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="HjX-UZ-ofx" secondAttribute="trailing" constant="16" id="Uo4-ig-NWN"/>
+                            <constraint firstItem="HjX-UZ-ofx" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="16" id="YKB-i9-dmJ"/>
+                            <constraint firstItem="gBz-MA-M0C" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="16" id="YqI-xM-4jC"/>
+                            <constraint firstItem="dpw-o6-B5U" firstAttribute="top" secondItem="HjX-UZ-ofx" secondAttribute="bottom" constant="8" id="aPG-1c-Qhm"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="gBz-MA-M0C" secondAttribute="trailing" constant="16" id="b03-C0-z1p"/>
+                            <constraint firstItem="edH-QF-Lgs" firstAttribute="top" secondItem="gBz-MA-M0C" secondAttribute="bottom" constant="8" id="b7H-Dn-lIx"/>
+                            <constraint firstItem="Glb-Ym-o1K" firstAttribute="top" secondItem="dpw-o6-B5U" secondAttribute="bottom" constant="8" id="b7i-cp-WVt"/>
+                            <constraint firstItem="0Mh-pE-Pyb" firstAttribute="top" secondItem="TYU-SF-FSn" secondAttribute="bottom" constant="8" id="dEZ-xS-93z"/>
+                            <constraint firstItem="TYU-SF-FSn" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="16" id="h53-Bu-0ns"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="Glb-Ym-o1K" secondAttribute="trailing" constant="88" id="lWL-xF-MyA"/>
+                            <constraint firstItem="0Mh-pE-Pyb" firstAttribute="leading" secondItem="Sfw-RG-YO5" secondAttribute="leading" constant="88" id="lzB-Qd-t7s"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="TYU-SF-FSn" secondAttribute="trailing" constant="16" id="suF-ID-lUE"/>
+                            <constraint firstItem="Sfw-RG-YO5" firstAttribute="trailing" secondItem="edH-QF-Lgs" secondAttribute="trailing" constant="88" id="zqI-Re-5s6"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Sfw-RG-YO5"/>
                     </view>
@@ -755,7 +761,7 @@ License: --</string>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="R5R-ey-kaB" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3301.5999999999999" y="-2522.7886056971515"/>
+            <point key="canvasLocation" x="3300" y="-2523.5915492957747"/>
         </scene>
         <!--Leading Idea View Controller-->
         <scene sceneID="iit-ez-183">
