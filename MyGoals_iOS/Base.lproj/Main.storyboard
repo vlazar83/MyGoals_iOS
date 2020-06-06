@@ -434,9 +434,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="30" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVy-Pp-gVc">
-                                <rect key="frame" x="16" y="16" width="288" height="394"/>
-                                <string key="text">Kairosz application credits
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="36" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVy-Pp-gVc">
+                                <rect key="frame" x="16" y="16" width="288" height="325"/>
+                                <mutableString key="text">Kairosz application credits
 Application version number: 1.0
 Project Code: https://github.com/vlazar83/MyGoals_iOS
 Copyright (c) 2020 Viktor Lázár
@@ -461,24 +461,32 @@ License: MIT license
 
 Name: UICircularProgressRing
 Project Code: https://github.com/luispadron/UICircularProgressRing
-License: --</string>
-                                <fontDescription key="fontDescription" type="system" pointSize="11"/>
+License: --
+
+Name: Toast-Swift
+Project Code: https://github.com/scalessec/Toast-Swift
+License: MIT License
+
+--------
+Graphics by Gallay-Nagy Krisztina:
+https://designfreak.hu/</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                         <constraints>
-                            <constraint firstItem="jVy-Pp-gVc" firstAttribute="leading" secondItem="LRL-Vh-Sww" secondAttribute="leading" constant="16" id="7Sq-4z-lk1"/>
-                            <constraint firstItem="jVy-Pp-gVc" firstAttribute="top" secondItem="LRL-Vh-Sww" secondAttribute="top" constant="16" id="CiF-Ud-c9D"/>
-                            <constraint firstItem="LRL-Vh-Sww" firstAttribute="trailing" secondItem="jVy-Pp-gVc" secondAttribute="trailing" constant="16" id="Ubo-aU-wLx"/>
+                            <constraint firstItem="jVy-Pp-gVc" firstAttribute="leading" secondItem="LRL-Vh-Sww" secondAttribute="leading" constant="16" id="1wp-I6-uRt"/>
+                            <constraint firstItem="LRL-Vh-Sww" firstAttribute="trailing" secondItem="jVy-Pp-gVc" secondAttribute="trailing" constant="16" id="3cH-7c-yu6"/>
+                            <constraint firstItem="jVy-Pp-gVc" firstAttribute="top" secondItem="LRL-Vh-Sww" secondAttribute="top" constant="16" id="HHS-fn-gMJ"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="LRL-Vh-Sww"/>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NGR-VN-Gwp" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3301.5999999999999" y="1052.9235382308846"/>
+            <point key="canvasLocation" x="3300" y="1051.056338028169"/>
         </scene>
         <!--Finalize New Card View Controller-->
         <scene sceneID="Jbr-jv-XtT">
