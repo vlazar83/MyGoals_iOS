@@ -49,6 +49,22 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         Utils.loadSettingsFromUserDefaults()
         scheduleNotification()
         
+        startToastIfInFamily()
+        
+    }
+    
+    func startToastIfInFamily(){
+        
+        if(Settings.shared.getSettingsData().inFamily && Utils.getBlueCardsCountFromWeek() < 1 && Utils.getDayOfWeek() > 4){
+            
+            let number = Int.random(in: 0 ..< 2)
+            if(number == 0){
+                self.view.makeToast(NSLocalizedString("Did you calculate in your planning with your family too?", comment: ""),duration:5.0, position: .bottom)
+            } else {
+                self.view.makeToast(NSLocalizedString("What activities did you favour, if not your family?", comment: ""),duration:5.0, position: .bottom)
+            }
+
+        }
     }
     
     func scheduleNotification(){
