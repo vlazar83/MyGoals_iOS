@@ -42,29 +42,44 @@ class FinalizeNewCardViewController: UIViewController, UINavigationControllerDel
     
     @IBAction func createNewBlueCard(_ sender: Any) {
         
-        createTheNewCard(type: SampleCardModel.cardTypes.Blue)
-        navigateBack()
+        if(imageTitle.text!.isEmpty || imageDetails.text!.isEmpty){
+            self.view.makeToast(NSLocalizedString("Fill all details first!", comment: ""),duration:5.0, position: .bottom)
+        } else {
+            createTheNewCard(type: SampleCardModel.cardTypes.Blue)
+            navigateBack()
+        }
         
     }
     
     @IBAction func createNewRedCard(_ sender: Any) {
         
-        createTheNewCard(type: SampleCardModel.cardTypes.Red)
-        navigateBack()
+        if(imageTitle.text!.isEmpty || imageDetails.text!.isEmpty){
+            self.view.makeToast(NSLocalizedString("Fill all details first!", comment: ""),duration:5.0, position: .bottom)
+        } else {
+            createTheNewCard(type: SampleCardModel.cardTypes.Red)
+            navigateBack()
+        }
         
     }
     
     @IBAction func createNewLightGreenCard(_ sender: Any) {
         
-        createTheNewCard(type: SampleCardModel.cardTypes.LightGreen)
-        navigateBack()
-        
+        if(imageTitle.text!.isEmpty || imageDetails.text!.isEmpty){
+            self.view.makeToast(NSLocalizedString("Fill all details first!", comment: ""),duration:5.0, position: .bottom)
+        } else {
+            createTheNewCard(type: SampleCardModel.cardTypes.LightGreen)
+            navigateBack()
+        }
     }
     
     @IBAction func createNewGreenCard(_ sender: Any) {
         
-        createTheNewCard(type: SampleCardModel.cardTypes.Green)
-        navigateBack()
+        if(imageTitle.text!.isEmpty || imageDetails.text!.isEmpty){
+            self.view.makeToast(NSLocalizedString("Fill all details first!", comment: ""),duration:5.0, position: .bottom)
+        } else {
+            createTheNewCard(type: SampleCardModel.cardTypes.Green)
+            navigateBack()
+        }
         
     }
     

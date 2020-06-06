@@ -43,12 +43,12 @@ class StatisticsViewController: UIViewController {
         }
         
         if(Settings.shared.getSettingsData().isExtrovert){
-            if(Utils.getGreenCardsCountFromWeek() < 3){
-                self.view.makeToast("Try to spend time with your family/friends!",duration:5.0, position: .bottom)
+            if(Utils.getGreenCardsCountFromWeek() < 1){
+                self.view.makeToast(NSLocalizedString("Try to spend time with your family/friends!", comment: ""), duration:5.0, position: .bottom, image: UIImage(named: "dove_free_icon"))
             }
         } else {
-            if(Utils.getLightGreenCardsCountFromWeek() < 3){
-                self.view.makeToast("Try to allocate time for yourself!",duration:5.0, position: .bottom)
+            if(Utils.getLightGreenCardsCountFromWeek() < 1){
+                self.view.makeToast(NSLocalizedString("Try to allocate time for yourself!", comment: ""), duration:5.0, position: .bottom, image: UIImage(named: "dove_free_icon"))
             }
         }
         
