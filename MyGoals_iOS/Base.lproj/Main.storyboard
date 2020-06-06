@@ -609,18 +609,18 @@ https://designfreak.hu/</string>
             <objects>
                 <viewController id="s4X-BZ-DRv" customClass="StatisticsViewController" customModule="MyGoals_iOS" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="zbH-L6-KoN">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="548"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="647"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="6Km-Pb-BCo">
-                                <rect key="frame" x="109" y="498" width="103" height="30"/>
+                                <rect key="frame" x="109" y="597" width="158" height="30"/>
                                 <state key="normal" title="Show Progress"/>
                                 <connections>
                                     <action selector="buttonClicked:" destination="s4X-BZ-DRv" eventType="touchUpInside" id="IBV-89-mFc"/>
                                 </connections>
                             </button>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Glb-Ym-o1K" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="88" y="78" width="144" height="111"/>
+                                <rect key="frame" x="88" y="78" width="199" height="111"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="AtZ-Vn-elH"/>
@@ -644,7 +644,7 @@ https://designfreak.hu/</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="edH-QF-Lgs" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="88" y="374" width="144" height="111"/>
+                                <rect key="frame" x="88" y="374" width="199" height="111"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="Uuo-xY-Zqp"/>
@@ -668,31 +668,31 @@ https://designfreak.hu/</string>
                                 </userDefinedRuntimeAttributes>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Blue Cards: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gBz-MA-M0C">
-                                <rect key="frame" x="16" y="345" width="288" height="21"/>
+                                <rect key="frame" x="16" y="345" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Green Cards: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TYU-SF-FSn">
-                                <rect key="frame" x="16" y="197" width="288" height="21"/>
+                                <rect key="frame" x="16" y="197" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Statistics  Day / Week / Weekly target" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HjX-UZ-ofx">
-                                <rect key="frame" x="16" y="20" width="288" height="21"/>
+                                <rect key="frame" x="16" y="20" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Red Cards: " textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dpw-o6-B5U">
-                                <rect key="frame" x="16" y="49" width="288" height="21"/>
+                                <rect key="frame" x="16" y="49" width="343" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="0Mh-pE-Pyb" customClass="UICircularProgressRing" customModule="UICircularProgressRing">
-                                <rect key="frame" x="88" y="226" width="144" height="111"/>
+                                <rect key="frame" x="88" y="226" width="199" height="111"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="111" id="ktc-gz-eM8"/>

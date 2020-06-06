@@ -47,7 +47,7 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         setupStatistics()
         
         Utils.loadSettingsFromUserDefaults()
-        scheduleNotification()
+        scheduleNotifications()
         
         startToastIfInFamily()
         
@@ -67,9 +67,30 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         }
     }
     
-    func scheduleNotification(){
-        
+    func scheduleNotifications(){
         UIApplication.shared.applicationIconBadgeNumber = 0
+        
+        let center = UNUserNotificationCenter.current()
+        // first remove all notifications, and re-schedule them
+        center.removeAllPendingNotificationRequests()
+
+        center.getNotificationSettings { settings in
+            guard (settings.authorizationStatus == .authorized) ||
+                  (settings.authorizationStatus == .provisional) else { return }
+
+            if settings.alertSetting == .enabled {
+                // Schedule an alert-only notification.
+                self.scheduleNotificationForGoldenSentences()
+                self.scheduleNotificationForOwnAndLark()
+            } else {
+                // Schedule a notification with a badge and sound.
+            }
+        }
+
+        
+    }
+    
+    func scheduleNotificationForGoldenSentences(){
         
         // Define the custom actions.
         let acceptAction = UNNotificationAction(identifier: "CLOSE_ACTION",
@@ -93,6 +114,56 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         content.userInfo = ["SAMPLE_DATA_1" : "111", "SAMPLE_DATA_2" : "222" ]
         content.categoryIdentifier = "GOLDEN_SENTENCE_NOTIFICATION"
         let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        
+        // Create the request
+        let uuidString = UUID().uuidString
+        let request = UNNotificationRequest(identifier: uuidString,
+                    content: content, trigger: trigger)
+
+        // Schedule the request with the system.
+        notificationCenter.add(request) { (error) in
+           if error != nil {
+              // Handle any errors.
+           }
+        }
+        
+        
+    }
+    
+    func scheduleNotificationForOwnAndLark(){
+        
+        // Define the custom actions.
+        let closeAction = UNNotificationAction(identifier: "CLOSE_ACTION",
+              title: NSLocalizedString("Close", comment: ""),
+              options: UNNotificationActionOptions(rawValue: 0))
+
+        // Define the notification type
+        let owlOrLarkNotificationCategory =
+              UNNotificationCategory(identifier: "OWL_OR_LARK_NOTIFICATION",
+              actions: [closeAction],
+              intentIdentifiers: [],
+              hiddenPreviewsBodyPlaceholder: "",
+              options: .customDismissAction)
+        // Register the notification type.
+        let notificationCenter = UNUserNotificationCenter.current()
+        notificationCenter.setNotificationCategories([owlOrLarkNotificationCategory])
+        
+        // Add notification for Friday (after 5 days) at 10:00 AM or 07:00 PM
+        var dateComponents = DateComponents()
+        dateComponents.weekday = 5
+        if(Settings.shared.getSettingsData().isLark) {
+            dateComponents.hour = 10
+        } else {
+            dateComponents.hour = 20
+        }
+        dateComponents.minute = 0
+        
+        let content = UNMutableNotificationContent()
+        content.title = NSLocalizedString("Question", comment: "")
+        content.body = NSLocalizedString("When are you the most active on a day?", comment: "")
+        content.userInfo = ["SAMPLE_DATA_1" : "111", "SAMPLE_DATA_2" : "222" ]
+        content.categoryIdentifier = "OWL_OR_LARK_NOTIFICATION"
+        let trigger = UNCalendarNotificationTrigger(dateMatching: dateComponents, repeats: true)
         
         // Create the request
         let uuidString = UUID().uuidString
