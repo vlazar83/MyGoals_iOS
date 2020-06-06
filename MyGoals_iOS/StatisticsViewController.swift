@@ -8,6 +8,7 @@
 
 import UIKit
 import UICircularProgressRing
+import Toast_Swift
 
 class StatisticsViewController: UIViewController {
     @IBOutlet weak var redCardsLabel: UILabel!
@@ -39,6 +40,16 @@ class StatisticsViewController: UIViewController {
         
         blueCircleRing.startProgress(to: CGFloat(blueProgress), duration: 5.0) {
 
+        }
+        
+        if(Settings.shared.getSettingsData().isExtrovert){
+            if(Utils.getGreenCardsCountFromWeek() < 3){
+                self.view.makeToast("Try to spend time with your family/friends!",duration:5.0, position: .bottom)
+            }
+        } else {
+            if(Utils.getLightGreenCardsCountFromWeek() < 3){
+                self.view.makeToast("Try to allocate time for yourself!",duration:5.0, position: .bottom)
+            }
         }
         
     }

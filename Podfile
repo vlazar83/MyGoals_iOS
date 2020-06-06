@@ -11,5 +11,6 @@ target 'MyGoals_iOS' do
   pod 'Shuffle-iOS'
   pod 'PopBounceButton'
   pod 'UICircularProgressRing'
+  pod 'Toast-Swift', '~> 5.0.1'
 
 end
