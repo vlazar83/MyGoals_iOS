@@ -10,6 +10,19 @@ import Foundation
 
 class Utils {
     
+    // age related messages, for each age group
+    static let defaultAge20RelatedSentences : [String] = ["Age 20","Age 21"]
+    
+    static let defaultAge30RelatedSentences : [String] = ["Age 30","Age 31"]
+    
+    static let defaultAge40RelatedSentences : [String] = ["Age 40","Age 41"]
+    
+    static let defaultAge50RelatedSentences : [String] = ["Age 50","Age 51"]
+    
+    static let defaultAge60RelatedSentences : [String] = ["Age 60","Age 61"]
+    
+    static let lastDisplayedAgeRelatedMessageKey = "LAST_DISPLAYED_AGE_RELATED_MESSAGE_KEY"
+    
     static func loadCreatedCardsFromUserDefaults() {
         if let data = UserDefaults.standard.data(forKey: CreatedCardSet.createdCardSetKey) {
             do {
@@ -292,6 +305,68 @@ class Utils {
             return nil
         }
         
+    }
+    
+    static func getRandomAgeRelatedMessage() -> String{
+        let age = Settings.shared.getSettingsData().age
+        var selectedMessage = ""
+        
+        if(age > 19 && age < 30){
+            let sizeOfList = defaultAge20RelatedSentences.count
+            let number = Int.random(in: 0 ..< sizeOfList)
+            selectedMessage = defaultAge20RelatedSentences[number]
+        } else if (age > 29 && age < 40){
+            let sizeOfList = defaultAge30RelatedSentences.count
+            let number = Int.random(in: 0 ..< sizeOfList)
+            selectedMessage = defaultAge30RelatedSentences[number]
+        } else if (age > 39 && age < 50){
+            let sizeOfList = defaultAge40RelatedSentences.count
+            let number = Int.random(in: 0 ..< sizeOfList)
+            selectedMessage = defaultAge40RelatedSentences[number]
+        } else if (age > 49 && age < 60){
+            let sizeOfList = defaultAge50RelatedSentences.count
+            let number = Int.random(in: 0 ..< sizeOfList)
+            selectedMessage = defaultAge50RelatedSentences[number]
+        } else if (age > 60){
+            let sizeOfList = defaultAge60RelatedSentences.count
+            let number = Int.random(in: 0 ..< sizeOfList)
+            selectedMessage = defaultAge60RelatedSentences[number]
+        }
+        
+        return selectedMessage
+    }
+    
+    static func storeDayAboutLastDisplayedAgeRelatedMessageToUserDefaults(){
+        let df = DateFormatter()
+        df.dateFormat = "dd/MM/yyyy HH:mm"
+        let str = df.string(from: Date())
+        UserDefaults.standard.setValue(str, forKey: lastDisplayedAgeRelatedMessageKey)
+
+    }
+    
+    static func loadDayAboutLastDisplayedAgeRelatedMessageToUserDefaults() -> Date{
+        
+        if let strOut = UserDefaults.standard.string(forKey: lastDisplayedAgeRelatedMessageKey) {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "dd/MM/yyyy HH:mm"
+            return dateFormatter.date(from: strOut)!
+            
+        } else {
+            let dateFormatter = DateFormatter()
+            dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+            dateFormatter.timeZone = TimeZone.current
+            dateFormatter.locale = Locale.current
+            return dateFormatter.date(from: "2015-04-01T11:42:00")!
+        }
+
+    }
+    
+    static func checkIfAgeRelatedMessageDisplayIsNeeded() ->Bool{
+        if(loadDayAboutLastDisplayedAgeRelatedMessageToUserDefaults().addingTimeInterval(604800) < Date()){
+            return true
+        } else {
+            return false
+        }
     }
     
 }

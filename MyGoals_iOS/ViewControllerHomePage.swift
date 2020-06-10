@@ -64,6 +64,9 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
                 self.view.makeToast(NSLocalizedString("What activities did you favour, if not your family?", comment: ""),duration:5.0, position: .bottom)
             }
 
+        } else if(Utils.checkIfAgeRelatedMessageDisplayIsNeeded()){
+            self.view.makeToast(Utils.getRandomAgeRelatedMessage(),duration:5.0, position: .bottom)
+            Utils.storeDayAboutLastDisplayedAgeRelatedMessageToUserDefaults()
         }
     }
     
