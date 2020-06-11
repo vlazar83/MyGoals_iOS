@@ -30,7 +30,7 @@ class LeadingIdeaViewController: UIViewController {
             LeadingIdeaCardSet.shared.addCardModel(card:
                 SampleCardModel(cardGoal: NSLocalizedString("Leading Idea", comment: ""),
                                 cardGoalDescription: enteredLeadingIdea.text!,
-                                image: SampleCardModel.Image(withImage: UIImage(named: "michelle")!),
+                                image: SampleCardModel.Image(withImage: UIImage(named: "default_graphics/leading_idea")!),
                                 cardType: SampleCardModel.cardTypes.LeadingIdea)
             )
             
