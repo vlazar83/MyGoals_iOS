@@ -65,7 +65,7 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
             }
 
         } else if(Utils.checkIfAgeRelatedMessageDisplayIsNeeded()){
-            self.view.makeToast(Utils.getRandomAgeRelatedMessage(),duration:5.0, position: .bottom)
+            self.view.makeToast(Utils.getRandomAgeRelatedMessage(),duration:8.0, position: .bottom)
             Utils.storeDayAboutLastDisplayedAgeRelatedMessageToUserDefaults()
         }
     }
@@ -116,7 +116,8 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
         content.body = Utils.getRandomGoldenSentence() ?? Settings.emptyGoldenSentences
         content.userInfo = ["SAMPLE_DATA_1" : "111", "SAMPLE_DATA_2" : "222" ]
         content.categoryIdentifier = "GOLDEN_SENTENCE_NOTIFICATION"
-        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 5, repeats: false)
+        // Fire in 1 day
+        let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (60*60*24), repeats: true)
         
         // Create the request
         let uuidString = UUID().uuidString
