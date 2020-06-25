@@ -12,9 +12,9 @@ import Toast_Swift
 
 class CreateNewCardViewController: UIViewController {
     
-    var sampleCard:SampleCardModel = SampleCardModel(cardGoal: "Michelle",
-    cardGoalDescription: "Graphic Designer",
-    image: SampleCardModel.Image(withImage: UIImage(named: "michelle")!),
+    var sampleCard:SampleCardModel = SampleCardModel(cardGoal: "goal",
+    cardGoalDescription: "description",
+    image: SampleCardModel.Image(withImage: UIImage(named: "default_graphics/blueCard_1")!),
     cardType: SampleCardModel.cardTypes.Blue)
     
     @IBOutlet weak var cardDetailsTextField: UITextField!

@@ -546,7 +546,8 @@
 			baseConfigurationReference = 21F4077C40794D2A9CEE2252 /* Pods-MyGoals_iOS.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = U2FF7T2ASG;
 				INFOPLIST_FILE = MyGoals_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -555,6 +556,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vlazar83.MyGoals-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Viktor Lazar";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -565,7 +567,8 @@
 			baseConfigurationReference = C7284B53FD6879B9FF889F17 /* Pods-MyGoals_iOS.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_TEAM = U2FF7T2ASG;
 				INFOPLIST_FILE = MyGoals_iOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -574,6 +577,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "com.vlazar83.MyGoals-iOS";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "Viktor Lazar";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
