@@ -1,6 +1,14 @@
+//
+//  SampleCardOverlayForPlanning.swift
+//  MyGoals_iOS
+//
+//  Created by admin on 2020. 07. 15..
+//  Copyright © 2020. admin. All rights reserved.
+//
+
 import UIKit
 
-class SampleCardOverlay: UIView {
+class SampleCardOverlayForPlanning: UIView {
     
     static func left() -> UIView {
         let overlay = UIView()
@@ -27,7 +35,7 @@ class SampleCardOverlay: UIView {
     
     static func right() -> UIView {
         let overlay = UIView()
-        let rightTextView = SampleOverlayLabelView(withTitle: NSLocalizedString("DONE", comment: ""),
+        let rightTextView = SampleOverlayLabelView(withTitle: NSLocalizedString("PLANNED", comment: ""),
                                                    color: .sampleGreen,
                                                    rotation: -CGFloat.pi/10)
         overlay.addSubview(rightTextView)
@@ -69,18 +77,4 @@ private class SampleOverlayLabelView: UIView {
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
-}
-
-extension NSAttributedString.Key {
-    
-    static var overlayAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 42)!,
-        NSAttributedString.Key.kern: 5.0
-    ]
-}
-
-extension UIColor {
-    static var sampleRed = UIColor(red: 252/255, green: 70/255, blue: 93/255, alpha: 1)
-    static var sampleGreen = UIColor(red: 49/255, green: 193/255, blue: 109/255, alpha: 1)
-    static var sampleBlue = UIColor(red: 52/255, green: 154/255, blue: 254/255, alpha: 1)
 }

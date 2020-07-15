@@ -95,7 +95,7 @@ class PlanTheCardSetViewController: UIViewController {
     extension PlanTheCardSetViewController: ButtonStackViewDelegateForPlanTheCardSet, SwipeCardStackDataSource, SwipeCardStackDelegate {
         
         func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
-            let card = SampleCard()
+            let card = SampleCardForPlanning()
             card.configure(withModel: cardModels[index])
             return card
         }

@@ -32,6 +32,8 @@ class CreateNewCardViewController: UIViewController {
             
             CreatedCardSet.shared.addCardModel(card: newCard)
             
+            Utils.storeCreatedCardsToUserDefaults()
+            
             dismiss(animated: true, completion: nil)
         }
         

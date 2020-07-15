@@ -33,6 +33,10 @@
 		84335433247BE28000280D75 /* ButtonStackViewForCreatedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84335432247BE28000280D75 /* ButtonStackViewForCreatedCards.swift */; };
 		84335435247BE3FA00280D75 /* FinalizeNewCardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84335434247BE3FA00280D75 /* FinalizeNewCardViewController.swift */; };
 		843C93DC248781CA00B09ECA /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 843C93DA248781CA00B09ECA /* Localizable.strings */; };
+		8447B41E24BF0540000DD0C1 /* SampleCardForPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447B41D24BF0540000DD0C1 /* SampleCardForPlanning.swift */; };
+		8447B42024BF0558000DD0C1 /* SampleCardOverlayForPlanning.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447B41F24BF0558000DD0C1 /* SampleCardOverlayForPlanning.swift */; };
+		8447B42224BF0E92000DD0C1 /* SampleCardForCreatedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447B42124BF0E92000DD0C1 /* SampleCardForCreatedCards.swift */; };
+		8447B42424BF0EC0000DD0C1 /* SampleCardOverlayForCreatedCards.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8447B42324BF0EC0000DD0C1 /* SampleCardOverlayForCreatedCards.swift */; };
 		8477E42324839A2100056F25 /* GoldenSentenceTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477E42224839A2100056F25 /* GoldenSentenceTableViewCell.swift */; };
 		8477E4292483A7A200056F25 /* CreateGoldenSentenceViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8477E4282483A7A200056F25 /* CreateGoldenSentenceViewController.swift */; };
 		84A7257D2482D1610029B598 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84A7257C2482D1610029B598 /* SettingsViewController.swift */; };
@@ -83,6 +87,10 @@
 		843C93D72487810400B09ECA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		843C93DB248781CA00B09ECA /* Base */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = Base; path = Base.lproj/Localizable.strings; sourceTree = "<group>"; };
 		843C93DD248781F200B09ECA /* hu */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = hu; path = hu.lproj/Localizable.strings; sourceTree = "<group>"; };
+		8447B41D24BF0540000DD0C1 /* SampleCardForPlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCardForPlanning.swift; sourceTree = "<group>"; };
+		8447B41F24BF0558000DD0C1 /* SampleCardOverlayForPlanning.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCardOverlayForPlanning.swift; sourceTree = "<group>"; };
+		8447B42124BF0E92000DD0C1 /* SampleCardForCreatedCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCardForCreatedCards.swift; sourceTree = "<group>"; };
+		8447B42324BF0EC0000DD0C1 /* SampleCardOverlayForCreatedCards.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SampleCardOverlayForCreatedCards.swift; sourceTree = "<group>"; };
 		8477E42224839A2100056F25 /* GoldenSentenceTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoldenSentenceTableViewCell.swift; sourceTree = "<group>"; };
 		8477E4282483A7A200056F25 /* CreateGoldenSentenceViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreateGoldenSentenceViewController.swift; sourceTree = "<group>"; };
 		84A7257C2482D1610029B598 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
@@ -137,8 +145,12 @@
 			isa = PBXGroup;
 			children = (
 				8406BA11244DDE9200F6BABF /* SampleCard.swift */,
+				8447B41D24BF0540000DD0C1 /* SampleCardForPlanning.swift */,
+				8447B42124BF0E92000DD0C1 /* SampleCardForCreatedCards.swift */,
 				8406BA12244DDE9200F6BABF /* SampleCardContentView.swift */,
 				8406BA13244DDE9200F6BABF /* SampleCardOverlay.swift */,
+				8447B41F24BF0558000DD0C1 /* SampleCardOverlayForPlanning.swift */,
+				8447B42324BF0EC0000DD0C1 /* SampleCardOverlayForCreatedCards.swift */,
 				8406BA14244DDE9200F6BABF /* SampleCardFooterView.swift */,
 				8406BA15244DDE9200F6BABF /* SampleCardModel.swift */,
 				8411AE1F245196D9001D0737 /* DefaultCardSet.swift */,
@@ -360,9 +372,11 @@
 				8406BA21244DE0B300F6BABF /* ViewControllerHomePage.swift in Sources */,
 				84FDBB0C24815A750055CEFC /* Statistics.swift in Sources */,
 				8424E4A4247FDEEE00E4664F /* PlanTheCardSetViewController.swift in Sources */,
+				8447B42024BF0558000DD0C1 /* SampleCardOverlayForPlanning.swift in Sources */,
 				8409B5CF2449825900D83EC8 /* ViewController.swift in Sources */,
 				8477E4292483A7A200056F25 /* CreateGoldenSentenceViewController.swift in Sources */,
 				8406BA1C244DDE9300F6BABF /* SampleCardModel.swift in Sources */,
+				8447B42224BF0E92000DD0C1 /* SampleCardForCreatedCards.swift in Sources */,
 				8424E4A8247FE5BF00E4664F /* PlannedCardSet.swift in Sources */,
 				8406BA1B244DDE9300F6BABF /* SampleCardFooterView.swift in Sources */,
 				8424E4A6247FDFFB00E4664F /* ButtonStackViewForPlanTheCardSet.swift in Sources */,
@@ -370,6 +384,7 @@
 				84FDBB08248153310055CEFC /* LeadingIdeaViewController.swift in Sources */,
 				84335435247BE3FA00280D75 /* FinalizeNewCardViewController.swift in Sources */,
 				8409B5CB2449825900D83EC8 /* AppDelegate.swift in Sources */,
+				8447B41E24BF0540000DD0C1 /* SampleCardForPlanning.swift in Sources */,
 				8406BA1F244DDEDC00F6BABF /* UIView+Extensions.swift in Sources */,
 				84F238612449852800D474A7 /* Images.swift in Sources */,
 				84335433247BE28000280D75 /* ButtonStackViewForCreatedCards.swift in Sources */,
@@ -381,6 +396,7 @@
 				8406BA16244DDE9300F6BABF /* ButtonStackView.swift in Sources */,
 				840D03A6247D198F00376145 /* Utils.swift in Sources */,
 				8409B5D52449825900D83EC8 /* MyGoals_iOS.xcdatamodeld in Sources */,
+				8447B42424BF0EC0000DD0C1 /* SampleCardOverlayForCreatedCards.swift in Sources */,
 				8477E42324839A2100056F25 /* GoldenSentenceTableViewCell.swift in Sources */,
 				84A7257D2482D1610029B598 /* SettingsViewController.swift in Sources */,
 				84FB83802483832F00ADAAA8 /* Settings.swift in Sources */,

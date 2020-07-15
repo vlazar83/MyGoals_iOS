@@ -1,16 +1,28 @@
+//
+//  SampleCardOverlayForCreatedCards.swift
+//  MyGoals_iOS
+//
+//  Created by admin on 2020. 07. 15..
+//  Copyright © 2020. admin. All rights reserved.
+//
+
 import UIKit
 
-class SampleCardOverlay: UIView {
+class SampleCardOverlayForCreatedCards: UIView {
     
     static func left() -> UIView {
         let overlay = UIView()
-        let leftTextView = SampleOverlayLabelView(withTitle: NSLocalizedString("LATER", comment: ""),
-                                                  color: .sampleRed,
-                                                  rotation: CGFloat.pi/10)
-        overlay.addSubview(leftTextView)
-        leftTextView.anchor(top: overlay.topAnchor,
-                            right: overlay.rightAnchor,
-                            paddingTop: 30, paddingRight: 14)
+        
+        // we do not need any overlay in created cards set
+        
+        //let leftTextView = SampleOverlayLabelView(withTitle: "",
+        //                                          color: .sampleRed,
+        //                                          rotation: CGFloat.pi/10)
+
+        //overlay.addSubview(leftTextView)
+        //leftTextView.anchor(top: overlay.topAnchor,
+        //                    right: overlay.rightAnchor,
+        //                    paddingTop: 30, paddingRight: 14)
         return overlay
     }
     
@@ -27,14 +39,18 @@ class SampleCardOverlay: UIView {
     
     static func right() -> UIView {
         let overlay = UIView()
-        let rightTextView = SampleOverlayLabelView(withTitle: NSLocalizedString("DONE", comment: ""),
-                                                   color: .sampleGreen,
-                                                   rotation: -CGFloat.pi/10)
-        overlay.addSubview(rightTextView)
-        rightTextView.anchor(top: overlay.topAnchor,
-                             left: overlay.leftAnchor,
-                             paddingTop: 26,
-                             paddingLeft: 14)
+        
+        // we do not need any overlay in created cards set
+        
+        //let rightTextView = SampleOverlayLabelView(withTitle: "",
+        //                                           color: .sampleGreen,
+        //                                           rotation: -CGFloat.pi/10)
+
+        //overlay.addSubview(rightTextView)
+        //rightTextView.anchor(top: overlay.topAnchor,
+        //                     left: overlay.leftAnchor,
+        //                     paddingTop: 26,
+        //                     paddingLeft: 14)
         return overlay
     }
 }
@@ -69,18 +85,4 @@ private class SampleOverlayLabelView: UIView {
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
-}
-
-extension NSAttributedString.Key {
-    
-    static var overlayAttributes: [NSAttributedString.Key: Any] = [
-        NSAttributedString.Key.font: UIFont(name: "HelveticaNeue-Bold", size: 42)!,
-        NSAttributedString.Key.kern: 5.0
-    ]
-}
-
-extension UIColor {
-    static var sampleRed = UIColor(red: 252/255, green: 70/255, blue: 93/255, alpha: 1)
-    static var sampleGreen = UIColor(red: 49/255, green: 193/255, blue: 109/255, alpha: 1)
-    static var sampleBlue = UIColor(red: 52/255, green: 154/255, blue: 254/255, alpha: 1)
 }

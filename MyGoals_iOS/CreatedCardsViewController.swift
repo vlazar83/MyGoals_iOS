@@ -98,7 +98,7 @@ class CreatedCardsViewController: UIViewController, RefreshOwnCardsDelegateProto
 extension CreatedCardsViewController: ButtonStackViewDelegateForCreatedCards, SwipeCardStackDataSource, SwipeCardStackDelegate {
     
     func cardStack(_ cardStack: SwipeCardStack, cardForIndexAt index: Int) -> SwipeCard {
-        let card = SampleCard()
+        let card = SampleCardForCreatedCards()
         card.configure(withModel: cardModels[index])
         return card
     }
