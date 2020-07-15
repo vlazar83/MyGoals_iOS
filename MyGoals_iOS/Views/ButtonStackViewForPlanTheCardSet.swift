@@ -41,7 +41,7 @@ class ButtonStackViewForPlanTheCardSet: UIStackView {
     
     private let likeButton: TinderButton = {
         let button = TinderButton()
-        button.setImage(UIImage(named: "heart"), for: .normal)
+        button.setImage(UIImage(named: "check_mark"), for: .normal)
         button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
         button.tag = 4
         return button
@@ -49,7 +49,7 @@ class ButtonStackViewForPlanTheCardSet: UIStackView {
     
     private let takeTheseChosenCardsButton: TinderButton = {
         let button = TinderButton()
-        button.setImage(UIImage(named: "lightning"), for: .normal)
+        button.setImage(UIImage(named: "ok_button"), for: .normal)
         button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
         button.tag = 5
         return button
