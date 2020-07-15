@@ -12,6 +12,8 @@ import Toast_Swift
 
 class CreateNewCardViewController: UIViewController {
     
+    var delegate: RefreshPlanningCardsDelegateProtocol?
+    
     var sampleCard:SampleCardModel = SampleCardModel(cardGoal: "goal",
     cardGoalDescription: "description",
     image: SampleCardModel.Image(withImage: UIImage(named: "default_graphics/blueCard_1")!),
@@ -44,6 +46,9 @@ class CreateNewCardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        self.delegate = self.presentingViewController as? RefreshPlanningCardsDelegateProtocol
+        
         switch sampleCard.cardType {
         case .Red:
             createButtonOutlet.setImage(UIImage(named: "plusRed"), for: .normal)
@@ -58,6 +63,10 @@ class CreateNewCardViewController: UIViewController {
         }
         //
         
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.delegate?.refreshPlanningCards()
     }
     
 }

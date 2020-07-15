@@ -9,7 +9,11 @@ import Shuffle_iOS
 import UIKit
 import PopBounceButton
 
-class PlanTheCardSetViewController: UIViewController {
+protocol RefreshPlanningCardsDelegateProtocol {
+  func refreshPlanningCards()
+}
+
+class PlanTheCardSetViewController: UIViewController, RefreshPlanningCardsDelegateProtocol {
     
         var delegate: RefreshCardsDelegateProtocol?
     
@@ -21,6 +25,13 @@ class PlanTheCardSetViewController: UIViewController {
     
         private var wasCalledFromButton: Bool = false
         
+        func refreshPlanningCards() {
+
+            cardModels = CreatedCardSet.shared.getCardModels() + DefaultCardSet.shared.getCardModels()
+            
+            cardStack.reloadData()
+        }
+    
         override func viewDidLoad() {
             super.viewDidLoad()
             // Do any additional setup after loading the view.
@@ -39,11 +50,11 @@ class PlanTheCardSetViewController: UIViewController {
             PlannedCardSet.shared.emptySet()
             
         }
-        
-    override func viewWillDisappear(_ animated: Bool) {
-        Utils.storeCardsToUserDefaults(cardSet: PlannedCardSet.shared.getCardModels(), key: PlannedCardSet.plannedCardSetKey)
-        self.delegate?.refreshCards()
-    }
+    
+        override func viewWillDisappear(_ animated: Bool) {
+            Utils.storeCardsToUserDefaults(cardSet: PlannedCardSet.shared.getCardModels(), key: PlannedCardSet.plannedCardSetKey)
+            self.delegate?.refreshCards()
+        }
 
         private func configureNavigationBar() {
             let backButton = UIBarButtonItem(title: "Back",
