@@ -33,7 +33,7 @@ class ButtonStackViewForPlanTheCardSet: UIStackView {
     
     private let createCardBasedOnTheTopCardButton: TinderButton = {
         let button = TinderButton()
-        button.setImage(UIImage(named: "star"), for: .normal)
+        button.setImage(UIImage(named: "lightning"), for: .normal)
         button.addTarget(self, action: #selector(handleTap), for: .touchUpInside)
         button.tag = 3
         return button
@@ -71,7 +71,7 @@ class ButtonStackViewForPlanTheCardSet: UIStackView {
         let smallMultiplier: CGFloat = 54/414 //based on width of iPhone 8+
         //addArrangedSubview(from: undoButton, diameterMultiplier: smallMultiplier)
         addArrangedSubview(from: passButton, diameterMultiplier: largeMultiplier)
-        addArrangedSubview(from: takeTheseChosenCardsButton, diameterMultiplier: smallMultiplier)
+        //addArrangedSubview(from: takeTheseChosenCardsButton, diameterMultiplier: smallMultiplier)
         addArrangedSubview(from: createCardBasedOnTheTopCardButton, diameterMultiplier: smallMultiplier)
         //addArrangedSubview(from: takephotoButton, diameterMultiplier: smallMultiplier)
         addArrangedSubview(from: likeButton, diameterMultiplier: largeMultiplier)

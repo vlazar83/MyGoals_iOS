@@ -39,6 +39,11 @@ class PlanTheCardSetViewController: UIViewController {
             PlannedCardSet.shared.emptySet()
             
         }
+        
+    override func viewWillDisappear(_ animated: Bool) {
+        Utils.storeCardsToUserDefaults(cardSet: PlannedCardSet.shared.getCardModels(), key: PlannedCardSet.plannedCardSetKey)
+        self.delegate?.refreshCards()
+    }
 
         private func configureNavigationBar() {
             let backButton = UIBarButtonItem(title: "Back",
@@ -134,10 +139,12 @@ class PlanTheCardSetViewController: UIViewController {
             case 4:
                 wasCalledFromButton = true
                 addCardToPlannedSet(newCard: cardModels[cardStack.topCardIndex])
-            case 5:
+                
+            //case 5 is not needed anymore, since we solve it in viewWillDisappear function
+            //case 5:
                 // go back to home with the planned card set
-                Utils.storeCardsToUserDefaults(cardSet: PlannedCardSet.shared.getCardModels(), key: PlannedCardSet.plannedCardSetKey)
-                navigateBack()
+                //Utils.storeCardsToUserDefaults(cardSet: PlannedCardSet.shared.getCardModels(), key: PlannedCardSet.plannedCardSetKey)
+                //navigateBack()
             default:
                 break
             }
@@ -149,11 +156,12 @@ class PlanTheCardSetViewController: UIViewController {
             wasCalledFromButton = false
         }
         
+        /*
         func navigateBack(){
             // refresh the cards set with delegate
             self.delegate?.refreshCards()
             dismiss(animated: true, completion: nil)
-        }
+        } */
         
         func openCreateNewCardView(){
             if(cardStack.topCard != nil) {
