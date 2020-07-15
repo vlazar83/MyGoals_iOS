@@ -7,6 +7,7 @@
 //
 
 import Foundation
+import UIKit
 
 class Utils {
     
@@ -22,6 +23,15 @@ class Utils {
     static let defaultAge60RelatedSentences : [String] = ["Age 60","Age 61"]
     
     static let lastDisplayedAgeRelatedMessageKey = "LAST_DISPLAYED_AGE_RELATED_MESSAGE_KEY"
+    
+    static func generateLeadingIdeaCard(withIdea: String) -> SampleCardModel{
+        
+        return SampleCardModel(cardGoal: NSLocalizedString("Leading Idea", comment: ""),
+        cardGoalDescription: withIdea,
+        image: SampleCardModel.Image(withImage: UIImage(named: "default_graphics/leading_idea")!),
+        cardType: SampleCardModel.cardTypes.LeadingIdea)
+        
+    }
     
     static func loadCreatedCardsFromUserDefaults() {
         if let data = UserDefaults.standard.data(forKey: CreatedCardSet.createdCardSetKey) {

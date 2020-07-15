@@ -34,6 +34,16 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
+        
+        // inserting a default leading idea card for the first usage
+        
+        let leadingIdeaCard = Utils.loadCardsFromUserDefaults(key: LeadingIdeaCardSet.leadingIdeaCardSetKey)
+        if(leadingIdeaCard.count == 0){
+            LeadingIdeaCardSet.shared.addCardModel(card: Utils.generateLeadingIdeaCard(withIdea: NSLocalizedString("You can update it in menu", comment: "")))
+            Utils.storeCardsToUserDefaults(cardSet: LeadingIdeaCardSet.shared.getCardModels(), key: LeadingIdeaCardSet.leadingIdeaCardSetKey)
+            LeadingIdeaCardSet.shared.dropAllCards()
+        }
+        
         cardModels = Utils.loadCardsFromUserDefaults(key: LeadingIdeaCardSet.leadingIdeaCardSetKey) + Utils.loadCardsFromUserDefaults(key: PlannedCardSet.plannedCardSetKey)
         cardStack.delegate = self
         cardStack.dataSource = self

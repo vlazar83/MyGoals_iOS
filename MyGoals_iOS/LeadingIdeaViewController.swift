@@ -27,12 +27,7 @@ class LeadingIdeaViewController: UIViewController {
             
             LeadingIdeaCardSet.shared.dropAllCards()
             
-            LeadingIdeaCardSet.shared.addCardModel(card:
-                SampleCardModel(cardGoal: NSLocalizedString("Leading Idea", comment: ""),
-                                cardGoalDescription: enteredLeadingIdea.text!,
-                                image: SampleCardModel.Image(withImage: UIImage(named: "default_graphics/leading_idea")!),
-                                cardType: SampleCardModel.cardTypes.LeadingIdea)
-            )
+            LeadingIdeaCardSet.shared.addCardModel(card: Utils.generateLeadingIdeaCard(withIdea: enteredLeadingIdea.text!))
             
             Utils.storeCardsToUserDefaults(cardSet: LeadingIdeaCardSet.shared.getCardModels(), key: LeadingIdeaCardSet.leadingIdeaCardSetKey)
             
