@@ -45,7 +45,7 @@
 "Ois-Gw-cgu.text" = "Új aranymondás hozzáadása:";
 
 /* Class = "UILabel"; text = "Green Cards: "; ObjectID = "TYU-SF-FSn"; */
-"TYU-SF-FSn.text" = "Zöld kártyák: ";
+"TYU-SF-FSn.text" = "Zöld kártyák (Én-idő): ";
 
 /* Class = "UILabel"; text = "Leading Idea"; ObjectID = "VUo-U2-63E"; */
 "VUo-U2-63E.text" = "Vezérgondolat";
@@ -72,7 +72,7 @@
 "cms-Vd-OQq.normalTitle" = "Tervezés";
 
 /* Class = "UILabel"; text = "Red Cards: "; ObjectID = "dpw-o6-B5U"; */
-"dpw-o6-B5U.text" = "Piros kártyák: ";
+"dpw-o6-B5U.text" = "Piros kártyák (Munka): ";
 
 /* Class = "UILabel"; text = "Alone / In Family"; ObjectID = "fQL-JO-vTa"; */
 "fQL-JO-vTa.text" = "Egyedülálló / Családos";
@@ -81,7 +81,7 @@
 "far-Yl-eqN.text" = "Életkor";
 
 /* Class = "UILabel"; text = "Blue Cards: "; ObjectID = "gBz-MA-M0C"; */
-"gBz-MA-M0C.text" = "Kék kártyák: ";
+"gBz-MA-M0C.text" = "Kék kártyák (Család): ";
 
 /* Class = "UIButton"; normalTitle = "About"; ObjectID = "hSq-oD-CSW"; */
 "hSq-oD-CSW.normalTitle" = "Info";
