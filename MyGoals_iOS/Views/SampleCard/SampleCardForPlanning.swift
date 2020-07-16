@@ -38,6 +38,20 @@ class SampleCardForPlanning: SwipeCard {
     
     func configure(withModel model: SampleCardModel) {
         content = SampleCardContentView(withImage: model.image?.getImage())
-        footer = SampleCardFooterView(withTitle: "\(model.cardGoal)", subtitle: model.cardGoalDescription)
+        
+        switch model.cardType {
+        case .Red:
+            footer = SampleCardFooterView(withTitle: "\(model.cardGoal)", subtitle: model.cardGoalDescription, withColor: UIColor.red)
+        case .Blue:
+            footer = SampleCardFooterView(withTitle: "\(model.cardGoal)", subtitle: model.cardGoalDescription, withColor: UIColor(red: 102.0/255.0, green: 134.0/255.0, blue: 214.0/255.0, alpha: 1.0))
+        case .Green:
+            footer = SampleCardFooterView(withTitle: "\(model.cardGoal)", subtitle: model.cardGoalDescription, withColor: UIColor.green)
+        case .LightGreen:
+            footer = SampleCardFooterView(withTitle: "\(model.cardGoal)", subtitle: model.cardGoalDescription, withColor: UIColor(red: 26.0/255.0, green: 188.0/255.0, blue: 156.0/255.0, alpha: 1.0))
+        case .LeadingIdea: // this should not be the case ever. The planning card set does not contain the Leading Idea card. We need to have it here to avoid compiler error.
+            footer = SampleCardFooterView(withTitle: "\(model.cardGoal)", subtitle: model.cardGoalDescription)
+        }
+        
+        //footer = SampleCardFooterView(withTitle: "\(model.cardGoal)", subtitle: model.cardGoalDescription)
     }
 }

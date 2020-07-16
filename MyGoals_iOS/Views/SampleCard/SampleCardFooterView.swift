@@ -16,6 +16,16 @@ class SampleCardFooterView: UIView {
         initialize(title: title, subtitle: subtitle)
     }
     
+    init(withTitle title: String?, subtitle: String?, withColor: UIColor) {
+        super.init(frame: CGRect.zero)
+        backgroundColor = .clear
+        layer.maskedCorners = [.layerMinXMaxYCorner, .layerMaxXMaxYCorner]
+        layer.cornerRadius = 10
+        clipsToBounds = true
+        isOpaque = false
+        initialize(title: title, subtitle: subtitle, withColor: withColor)
+    }
+    
     required init?(coder aDecoder: NSCoder) {
         return nil
     }
@@ -32,6 +42,22 @@ class SampleCardFooterView: UIView {
         }
         
         label.attributedText = attributedText
+        addSubview(label)
+    }
+    
+    private func initialize(title: String?, subtitle: String?, withColor: UIColor) {
+        let attributedText = NSMutableAttributedString(string: (title ?? "") + "\n", attributes: NSAttributedString.Key.titleAttributes)
+        if let subtitle = subtitle, subtitle != "" {
+            attributedText.append(NSMutableAttributedString(string: subtitle, attributes: NSAttributedString.Key.subtitleAttributes))
+            let paragraphStyle = NSMutableParagraphStyle()
+            paragraphStyle.lineSpacing = 4
+            paragraphStyle.lineBreakMode = .byTruncatingTail
+            attributedText.addAttributes([NSAttributedString.Key.paragraphStyle: paragraphStyle], range: NSRange(location: 0, length: attributedText.length))
+            label.numberOfLines = 2
+        }
+        
+        label.attributedText = attributedText
+        label.textColor = withColor
         addSubview(label)
     }
     
