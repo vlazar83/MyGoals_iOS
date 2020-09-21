@@ -75,7 +75,18 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
             }
 
         } else if(Utils.checkIfAgeRelatedMessageDisplayIsNeeded()){
-            self.view.makeToast(Utils.getRandomAgeRelatedMessage(),duration:8.0, position: .bottom)
+            //self.view.makeToast(Utils.getRandomAgeRelatedMessage(),duration:12.0, position: .bottom)
+            
+            // create the alert instead of the Toast
+            let alert = UIAlertController(title: NSLocalizedString("Age related message", comment: ""), message: Utils.getRandomAgeRelatedMessage(), preferredStyle: UIAlertController.Style.alert)
+
+            // add an action OK
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+            DispatchQueue.main.async(execute: {
+                self.present(alert, animated: true)
+            })
+            
             Utils.storeDayAboutLastDisplayedAgeRelatedMessageToUserDefaults()
         }
     }

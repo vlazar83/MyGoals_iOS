@@ -436,8 +436,8 @@
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="36" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jVy-Pp-gVc">
                                 <rect key="frame" x="16" y="16" width="343" height="325"/>
-                                <string key="text">Kairosz application credits
-Application version number: 1.0
+                                <mutableString key="text">Kairosz application credits
+Application version number: 1.2
 Project Code: https://github.com/vlazar83/MyGoals_iOS
 Copyright (c) 2020 Viktor Lázár
 License: MIT License
@@ -469,7 +469,7 @@ License: MIT License
 
 --------
 Graphics by Gallay-Nagy Krisztina:
-https://designfreak.hu/</string>
+https://designfreak.hu/</mutableString>
                                 <fontDescription key="fontDescription" type="system" pointSize="8"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
