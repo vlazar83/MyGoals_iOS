@@ -24,6 +24,90 @@ class Utils {
     
     static let defaultAge40RelatedSentences_en : [String] = ["One of the characteristic questions of this stage of life is: what can I create that will remain after me?","One of the most important changes in this stage of life is that the system of relationships complicated in the first half of life is transformed: some of it disintegrates in the midst of real crisis processes and then re-weaves. (315)", "According to Jung's psychological approach, changes take place in the middle of life that are, in the broadest sense of the word, religious issues. The search for existence, the depths of human life, begins. (316)", "In the middle of his life, our shadow personality greets us (or as Endre Gyökössy calls us: our dark neighbor) and calls us to clarify our relationship with him (this is not our theologically old man, but a denied, oppressed part of our personality so far).", "From a spiritual point of view, one of the most important tasks in the middle of life is to experience deeply, to understand the true depth of God's mercy given to us in Jesus. We get a chance to hear with Paul, „My grace is sufficient for you” (2 Cor 12: 9)", "„You were in me and I was out (...) You were with me and I was not with you (...) Then your voice roared, you broke the deaf silence of my soul, your bright light shone within me, and you cast away the blinding gloom from me. Your scent was poured out, and my breath ceased” (St. Augustine's Confessions, Chapter 27, translated by Dr. József Vass)", "The middle-aged generation forms a kind of mirror axis. They reflect the possible values ​​of previous generations, carrying their curses and blessings in their own decisions, but in the same way they can already see the result or bankruptcy of their own upbringing in the evolution of the fate of their children and grandchildren. (328.)", "At this age, the values ​​of life are weighted. What is it worth? Everyone sees that everything has consequences, and his actions leave a mark on his surroundings. In more and more situations, the „inner voice”, which warns of its own shadows. Or he feels his actions so far are less valuable, and he makes a complete turn. This can be a completely incomprehensible Paul turn for either the family or the environment.", "This stage of life is a great shift in the transition between creation and passing away. The former is still in full swing, but the experience of the latter is becoming more real, closer and closer ..."]
     
+    static let workRelatedQuestions : [String] = ["Milyen elvárásaid vannak magaddal szemben?",
+        "Mennyi energiát fektetsz be a munkádba, mennyit kapsz vissza abból?",
+        "Meg tudsz-e elégedni az elég jóval?",
+        "Milyen tevékenységedben lenne szükséged segítségre?",
+        "Meg tudod tenni, hogy segítséget kérsz?",
+        "Szabad vágy vezérel-e a szolgálatod végzésekor vagy kényszer?",
+        "Mi a legfontosabb belső motivációd a szolgálatod végzéséhez?",
+        "Mihez szükséges a legnagyobb erőfeszítés a szolgálatod végzésében?",
+        "Mennyi napi, heti, havi és éves pihenés, regenerálódás szükséges számodra, hogy tudd végezni a szolgálatodat? Megadod-e ezt magadnak? Megengedsz-e ennyit magadnak?",
+        "Mi jelenti számodra a legerősebb külső/belső konfliktust?",
+        "Mikor érzed, hogy a rutin elveszi a szolgálatod ízét?",
+        "Mikor kapaszkodsz a rutinba a szolgálatod során?",
+        "Mik azok a rutinossá vált tevékenységeid, megoldási módjaid, amik negatívan hatnak személyiségedre, családodra, hivatásod gyakorlására?",
+        "Mik azok a feladatok, amiknek rendszerint nehezen kezdesz neki? Miért?",
+        "Ha hivatásbeli feladataidat fontossági sorrendbe kell állítani, a te listád hogy néz ki?",
+        "Mi előzte meg a most elmaradt feladatot?"]
+    
+    static let workRelatedQuestions_en : [String] = ["What are your expectations of yourself?",
+        "How much energy do you invest in your work, how much do you get back from it?",
+        "Can you be satisfied with that well enough?",
+        "In what activities do you need help?",
+        "Can you do that to ask for help?",
+        "Does free desire guide you in your service or compulsion?",
+        "What is your most important intrinsic motivation to do your service?",
+        "What does it take to put in the greatest effort to do your service?",
+        "How much daily, weekly, monthly and annual rest, regeneration do you need to be able to do your service? Do you give it to yourself? Do you allow yourself that much?",
+        "What does the strongest external / internal conflict mean to you?",
+        "When do you feel the routine takes away the taste of your service?",
+        "When do you stick to routine during your service?",
+        "What are your routine activities and solutions that negatively affect your personality, your family, your practice?",
+        "What are the tasks you usually have a hard time starting for him? Why?",
+        "If your professional duties need to be prioritized, what does your list look like?",
+        "What preceded the task now missed?"]
+    
+    static let selfTimeRelatedQuestions : [String] = ["Mi motivál téged? Az, hogy növekedj, megfelelj vagy betöltsd a hiányt?",
+        "El tudsz-e köteleződni a döntéseid mellett? Milyen döntéseid mellett tudsz elköteleződni?",
+        "Mi az, amit teljes elmélyüléssel végzel?",
+        "Mik a hosszú távú életcéljaid?",
+        "Vannak-e belső életcéljaid is a külső célok mellett?",
+        "Mi az, ami kimozdít az egyensúlyodból?",
+        "Milyen következménye van az életedben az egyensúlyvesztésnek?",
+        "Mi segít visszaállítani az egyensúlyt?",
+        "Szánsz-e tudatosan időt az istenkapcsolatod ápolására, egyéni csendességre?",
+        "Beírod-e a naptárodba, a teendőid közé a hobbidra, kikapcsolódásra szánt időt?",
+        "Tudatosan osztod-e be az énidődet vagy a maradék időddel gazdálkodsz?",
+        "Van-e olyan személy, akinek az én-idő felhasználását követendő példának tartod. Miért ő?"]
+    
+    static let selfTimeRelatedQuestions_en : [String] = ["What motivates you? Is it to grow, meet or fill the gap?",
+        "Can you commit to your decisions? What decisions can you commit to?",
+        "What are you doing with complete immersion?",
+        "What are your long-term life goals?",
+        "Do you have internal goals in addition to external goals?",
+        "What is moving you out of balance?",
+        "What are the consequences of an imbalance in your life?",
+        "What helps to restore balance?",
+        "Do you consciously take the time to nurture your relationship with God, individual silence?",
+        "Do you include in your calendar, in your tasks, the time for your hobbies and recreation?",
+        "Do you consciously allocate your self time or do you manage the rest of your time?",
+        "Is there a person you consider an example to use for the use of self-time. Why is he?"]
+    
+    static let familyRelatedQuestions : [String] = ["Miért vagy leginkább hálás a családodban? Miért vagy leginkább hálás a hivatásodban? Hogyan tudod kifejezni a háládat? Meg tudod-e fogalmazni a háládat?",
+        "Mik életed kulcseseményei? Ma is erőforrást jelentenek-e ezek neked?",
+        "Elégedett vagy az életeddel?",
+        "Előfordul-e veled, hogy háttérbe szorítod a családodat a szolgálatod végzése miatt?",
+        "Mikor fordul ez elő rendszerint?",
+        "Mikor fordult ez elő utoljára?",
+        "Milyen családi program jelenti számodra a legnagyobb örömöt?",
+        "Mi az a családoddal közös tevékenység, amire nem sajnálod az időt?",
+        "Jelen tudsz-e lenni igazán a családoddal töltött programokon?",
+        "Van-e embered, akinek őszintén megmutathatod gyengeségedet?",
+        "Van-e embered, akivel megünnepelheted a kiemelt pillanataidat?"]
+    
+    static let familyRelatedQuestions_en : [String] = ["Why are you most grateful in your family? Why are you most grateful in your profession? How can you express your gratitude? Can you express your gratitude?",
+        "What are the key events in your life? Are they still a resource for you today?",
+        "Are you happy with your life?",
+        "Do you happen to push your family into the background because of your service?",
+        "When does this usually happen?",
+        "When was the last time this happened?",
+        "What family program is the greatest joy for you?",
+        "What is an activity with your family that you don't regret taking the time for?",
+        "Can you really be present at programs with your family?",
+        "Do you have somebody to whom you can honestly show your weakness?",
+        "Do you have somebody with whom you can celebrate your highlights?"]
+    
     static let lastDisplayedAgeRelatedMessageKey = "LAST_DISPLAYED_AGE_RELATED_MESSAGE_KEY"
     
     static func generateLeadingIdeaCard(withIdea: String) -> SampleCardModel{
@@ -356,6 +440,44 @@ class Utils {
                 let number = Int.random(in: 0 ..< sizeOfList)
                 selectedMessage = defaultAge40RelatedSentences_en[number]
             }
+            
+        }
+        
+        return selectedMessage
+    }
+    
+    static func getRandomFamilyLifeWorkRelatedMessage() -> String{
+        var selectedMessage = ""
+        let defaultMessage = "Erős vár a mi Istenünk"
+        let defaultMessage_en = "Our God is a strong castle"
+        
+        let locale = NSLocale.current.languageCode
+        
+        if (locale == "hu"){
+            
+            let collection : [String]?
+            if (Settings.shared.getSettingsData().inFamily) {
+                collection = workRelatedQuestions + selfTimeRelatedQuestions + familyRelatedQuestions
+            } else {
+                collection = workRelatedQuestions + selfTimeRelatedQuestions
+            }
+            
+            guard let sizeOfCollection = collection?.count else { return defaultMessage }
+            let selectedMessageNr = Int.random(in: 0 ..< sizeOfCollection)
+            selectedMessage = collection?[selectedMessageNr] ?? defaultMessage
+            
+        } else {
+            
+            let collection : [String]?
+            if (Settings.shared.getSettingsData().inFamily) {
+                collection = workRelatedQuestions_en + selfTimeRelatedQuestions_en + familyRelatedQuestions_en
+            } else {
+                collection = workRelatedQuestions_en + selfTimeRelatedQuestions_en
+            }
+            
+            guard let sizeOfCollection = collection?.count else { return defaultMessage_en }
+            let selectedMessageNr = Int.random(in: 0 ..< sizeOfCollection)
+            selectedMessage = collection?[selectedMessageNr] ?? defaultMessage_en
             
         }
         

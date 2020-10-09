@@ -65,16 +65,7 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
     
     func startToastIfInFamily(){
         
-        if(Settings.shared.getSettingsData().inFamily && Utils.getBlueCardsCountFromWeek() < 1 && Utils.getDayOfWeek() > 4){
-            
-            let number = Int.random(in: 0 ..< 2)
-            if(number == 0){
-                self.view.makeToast(NSLocalizedString("Did you calculate in your planning with your family too?", comment: ""),duration:5.0, position: .bottom)
-            } else {
-                self.view.makeToast(NSLocalizedString("What activities did you favour, if not your family?", comment: ""),duration:5.0, position: .bottom)
-            }
-
-        } else if(Utils.checkIfAgeRelatedMessageDisplayIsNeeded()){
+        if(Utils.checkIfAgeRelatedMessageDisplayIsNeeded()){
             //self.view.makeToast(Utils.getRandomAgeRelatedMessage(),duration:12.0, position: .bottom)
             
             // create the alert instead of the Toast
@@ -88,6 +79,20 @@ class ViewControllerHomePage: UIViewController, RefreshCardsDelegateProtocol {
             })
             
             Utils.storeDayAboutLastDisplayedAgeRelatedMessageToUserDefaults()
+            
+        } else {
+            
+            //self.view.makeToast(Utils.getRandomFamilyLifeWorkRelatedMessage(),duration:6.0, position: .bottom)
+            
+            // create the alert instead of the Toast
+            let alert = UIAlertController(title: NSLocalizedString("Work/Family/Self-Time related message", comment: ""), message: Utils.getRandomFamilyLifeWorkRelatedMessage(), preferredStyle: UIAlertController.Style.alert)
+
+            // add an action OK
+            alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+
+            DispatchQueue.main.async(execute: {
+                self.present(alert, animated: true)
+            })
         }
     }
     
