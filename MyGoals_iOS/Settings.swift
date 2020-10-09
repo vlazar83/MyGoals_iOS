@@ -47,7 +47,7 @@ class SettingsData: NSObject, Codable{
     
     var goldenSentences : [String] = []
     
-    static let defaultGoldenSentences : [String] = ["Sok lud disznot gyöz","Ki mint vet ugy arat","TBDL...","TBDL..."]
+    static let defaultGoldenSentences : [String] = ["Sample Golden Sentence 1","Sample Golden Sentence 2"]
     
     internal override init() {
         

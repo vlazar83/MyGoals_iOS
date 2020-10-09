@@ -195,8 +195,26 @@ class SettingsViewController: UIViewController, UITableViewDataSource, UITableVi
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        Settings.shared.getSettingsData().goldenSentences.remove(at: indexPath.row)
-        self.tableView.reloadData()
+        
+        // create the alert instead of the Toast
+        let alert = UIAlertController(title: NSLocalizedString("Really delete?", comment: ""), message: NSLocalizedString("Really delete this golden sentence?", comment: ""), preferredStyle: UIAlertController.Style.alert)
+
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Cancel", comment: ""), style: UIAlertAction.Style.default, handler: { _ in
+            //Cancel Action
+        }))
+        alert.addAction(UIAlertAction(title: NSLocalizedString("Delete", comment: ""),
+                                      style: UIAlertAction.Style.destructive,
+                                      handler: {(_: UIAlertAction!) in
+                                      
+                                    Settings.shared.getSettingsData().goldenSentences.remove(at: indexPath.row)
+                                    self.tableView.reloadData()
+        }))
+
+        DispatchQueue.main.async(execute: {
+            self.present(alert, animated: true)
+        })
+        
+        
     }
     
 }
